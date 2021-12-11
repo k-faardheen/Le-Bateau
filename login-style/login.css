@@ -96,7 +96,7 @@ body*/
 }
 
 .left-section{
-    position: absolute;
+    position: auto;
     left:0;
     width: 950px;
     height: 750px;
