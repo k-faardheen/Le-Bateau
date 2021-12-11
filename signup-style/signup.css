@@ -1,147 +1,138 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family:'poppins', sans-serif;
+body {
+  font-family: "poppins", sans-serif;
 }
-.menu-container{
-    position: auto;
-    background-color: white;
-    display: flex;
-    color:#1F7A8C;
+.menu-container {
+  position: auto;
+  background-color: white;
+  display: flex;
+  color: #1f7a8c;
 
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top:2px;
-    padding-bottom:2px;
-    
-}
-
-.logo{
-    flex:1;
-    font-size:30px;
-    
-}
-.menu{
-    justify-content: right;
-    font-size:18px;
-}
-.menu ul{
-    list-style-type:none;
-
+  margin-left: 24px;
+  margin-right: 24px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
-li{
-    display: inline-block;
-    margin: 0 0.5rem;
-    padding: 10px;
+.logo {
+    flex: 1;
+  font-size: 30px;
 }
-a{
-    text-decoration: none;
-    color: #1F7A8C;
+.menu {
+  justify-content: right;
+  font-size: 18px;
+}
+.menu ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 10px;
+}
+a {
+  text-decoration: none;
+  color: #1f7a8c;
 }
 a:visited {
-    color: #1F7A8C;
-  }
+  color: #1f7a8c;
+}
 
 /* 
 body*/
-.main{
-     position:relative;
-
+.main {
+  display: flex;
+  flex-direction: row-reverse;
 }
-h1{
-    font-size: 40;
+h1 {
+  font-size: 40;
 }
-.form-group{
-    
-    position: absolute;
-    right:0;
-    padding-top: 200px;
-    padding-right: 100px;
-    
+.form-group {
+  
+  justify-content: flex-end;
+  right: 0;
+  padding-top: 200px;
+  padding-right: 100px;
+  padding-left: 60px;
 }
-
 
 .form-name input {
-    width: 180px;
-    height: 45px;
-    font-size: 18px;
-    border-radius: 5px;
-    border: 1px solid;
-    padding: 5px;
-    margin-right: 45px;
-    margin-top: 10px;
-}  
-
-
-.form-name{
-    padding-bottom: 16px;
+  width: 180px;
+  height: 45px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 5px;
+  margin-right: 2.813rem;
+  margin-top: 10px;
 }
 
-.email{
-    padding-bottom: 16px;
-}
- .email input{
-     width:410px;
-     height: 45px;
-     font-size: 18px;
-     border-radius: 5px;
-    border: 1px solid;
-    padding: 5px;
- }
- .password input{
-    width:410px;
-    height: 45px;
-    font-size: 18px;
-    border-radius: 5px;
-    border: 1px solid;
-    padding: 5px;
+.form-name {
+  padding-bottom: 16px;
 }
 
-.btn{
-    font-size: 18px;
-    background-color: #1F7A8C;
-    color: white;
-    width:410px;
-    height: 45px;
-    border-radius: 5px;
-    margin-top: 25px;
+.email {
+  padding-bottom: 16px;
+}
+.email input {
+  width: 410px;
+  height: 45px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 5px;
+}
+.password input {
+  width: 410px;
+  height: 45px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 5px;
 }
 
-.left-section{
-    position: auto;
-    left:0;
-    width: 950px;
-    height: 750px;
-    background-color: #E1E5F2;
+.btn {
+  font-size: 18px;
+  background-color: #1f7a8c;
+  color: white;
+  width: 410px;
+  height: 45px;
+  border-radius: 5px;
+  margin-top: 25px;
 }
-h2{
-    padding-top: 300px;
-    padding-left: 30px;
-    font-size: 40px;
-}
-.bateau{
-    color: #1F7A8C;
-}
-.line{
-    padding-left: 40px;
-}
-hr{
-    background-color: #1F7A8C;
-    width: 205px;
-    height: 10px;
-    border-radius: 25px;
-    
-}
-h3{
-    font-size: 20px;
-    padding-top: 20px;
-    padding-left: 30px;
 
+.left-section {
+  flex-grow:1;
+  height: 900px;
+  background-color: #e1e5f2;
+  
+}
+h2 {
+  padding-top: 300px;
+  padding-left: 30px;
+  font-size: 40px;
+}
+.bateau {
+  color: #1f7a8c;
+}
+.line {
+  padding-left: 40px;
+}
+hr {
+  background-color: #1f7a8c;
+  width: 205px;
+  height: 10px;
+  border-radius: 25px;
+}
+h3 {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 30px;
 }
