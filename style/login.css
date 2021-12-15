@@ -12,6 +12,7 @@ body {
   position: auto;
   background-color: white;
   display: flex;
+  align-items: center;
   color: #1f7a8c;
 
   padding-left: 24px;
