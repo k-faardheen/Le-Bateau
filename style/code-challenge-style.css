@@ -109,12 +109,13 @@ img {
 
 .footer-container {
   background-color: #bfdbf7;
-  height: 100px;
+  height: 15vh;
   display: flex;
   justify-content: center;
 }
 footer p {
   background-color: #bfdbf7;
+  color: white;
   padding-bottom: 10px;
 }
 

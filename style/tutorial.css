@@ -1,0 +1,69 @@
+.html-card-wrapper, .css-card-wrapper, .js-card-wrapper{ 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 50vh; 
+    padding: 3rem;
+}
+
+.html-card-wrapper, .js-card-wrapper { 
+    background-color: #E1E5F2;
+}
+
+.html-description, .css-description, .js-description { 
+    min-width: 45%;
+    text-align: center;
+}
+
+.html-card, .css-card, .js-card {
+    background-color: #D6D7D9;
+    border-radius: 20px;
+    min-width: 40%;
+    padding: 1rem 2rem;
+
+}
+
+.html-display, .css-display, .js-display { 
+    min-width: 25%;
+    padding: 1rem;
+    background-color: white;
+}
+
+
+.html-btn, .css-btn, .js-btn{ 
+    text-decoration: none;
+    background-color: #1F7A8C;
+    display: inline-block;
+    margin: 1rem;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 40px;
+}
+
+
+span.symbol, span.symbol-rev { 
+    color: #0000CD;
+    margin: 0 -3px;
+}
+
+span.tag { 
+    color: #A52A2A;
+}
+
+span.css-tag { 
+    color: #FF0000;
+}
+
+span.arguments { 
+    color: #0000CD;
+}
+
+.try-it-yourself-btn { 
+    text-decoration: none;
+    background-color: #1F7A8C;
+    color: white;
+    display: inline-block;
+    margin: 0.5rem 0;
+    padding: 0.5rem 2rem;
+    border-radius: 40px;
+}
