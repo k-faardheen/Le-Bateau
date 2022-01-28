@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/*menu*/
 * {
   margin: 0;
   padding: 0;
@@ -81,32 +82,22 @@ img {
   margin-right: auto;
 }
 
-.first-row {
+.first-row,
+.second-row,
+.third-row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
-.second-row {
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
-.third-row {
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 .box a {
   display: flex;
   justify-content: right;
   margin-right: 20px;
   margin-top: 35px;
 }
-
+/* Footer*/
 .footer-container {
   background-color: #bfdbf7;
   height: 15vh;
@@ -119,30 +110,10 @@ footer p {
   padding-bottom: 10px;
 }
 
-.tutorial {
-  margin-top: 40px;
-  margin-right: 45px;
-  margin-left: 45px;
-}
-
-.code-challenge {
-  margin-top: 40px;
-  margin-right: 45px;
-  margin-left: 45px;
-}
-
-.about {
-  margin-top: 40px;
-  margin-right: 45px;
-  margin-left: 45px;
-}
-
-.privacy {
-  margin-top: 40px;
-  margin-right: 45px;
-  margin-left: 45px;
-}
-
+.tutorial,
+.code-challenge,
+.about,
+.privacy,
 .terms {
   margin-top: 40px;
   margin-right: 45px;
