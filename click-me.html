@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Bateau- click Me!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+
+    <link rel="stylesheet" href="style/click-me.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="menu-container">
+          <div class="logo"><a href="#">>_ Le Bateau</a></div>
+          <div class="menu">
+            <div><a href="./tutorial.html">Tutorial</a></div>
+            <div><a href="./code-challenge.html">Code Challenge</a></div>
+            <div><a href="#">About Us</a></div>
+            <div><a href="./log-in.html">Log In</a></div>
+            <div><a href="./sign-up.html">Sign Up</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="click-banner">
+      <h1>JavaScript: Click Me!</h1>
+      <div class="btn">
+        <button><a href="#question">Let's Start</a></button>
+      </div>
+    </div>
+
+    <div class="question" id="question">
+      <div class="text">
+        <p>
+          When working on HTML and JavaScript projects it is very likely that
+          you will want to respond to events. For instance you may want to run
+          some JavaScript code when a button is clicked.
+        </p>
+        <p>Examples of HTML events:</p>
+        <ul>
+          <li>When a user clicks the mouse (onClick event)</li>
+          <li>When a web page has loaded (onLoad event)</li>
+          <li>
+            When the mouse moves over an element (onMouseOver and onMouseOut
+            events)
+          </li>
+          <li>
+            When an input field get the focus (onFocus event) or loses the focus
+            (onBlur event)
+          </li>
+          <li>When an input field is changed (onChange event))</li>
+          <li>When an HTML form is submitted (onSubmit event)</li>
+          <li>When a user strokes a key (onKeyPress event)</li>
+        </ul>
+        <p>
+          To assign events to HTML elements you can use event attributes within
+          your HTML code. For instance:
+        </p>
+        <div class="c-tabs">
+          <p>
+            &lt;INPUT type="button" value="Click Me!" onClick="JavaScript:
+            alert('Ouch!');"&gt;
+          </p>
+        </div>
+
+        <p>Let’s look at a few examples:</p>
+        <h2>onClick Event</h2>
+      </div>
+    </div>
+
+    <div id="container1">
+      <div id="editor1"></div>
+
+      <iframe id="iframe1" frameborder="0"> </iframe>
+    </div>
+    <script src="script/onclick-event.js"></script>
+    <div class="question" id="question">
+      <div class="text">
+        <h2>onFocus and onBlur Events</h2>
+      </div>
+    </div>
+    <div id="container2">
+      <div id="editor2"></div>
+
+      <iframe id="iframe2" frameborder="0"> </iframe>
+    </div>
+    <script src="script/onfocus-onblur.js"></script>
+    <div class="question" id="question">
+      <div class="text">
+        <h2>onChange Event</h2>
+        <p>
+          Did you notice? Using “this” as a parameter in the JavaScript function
+          enables to access the form control that triggered the event. So the
+          same function could be used for more than one form control.
+        </p>
+      </div>
+    </div>
+    <div id="container3">
+      <div id="editor3"></div>
+
+      <iframe id="iframe3" frameborder="0"> </iframe>
+    </div>
+    <script src="script/onchange.js"></script>
+    <div class="question" id="question">
+      <div class="text">
+        <h2>onMouseOver and onMouseOut Events</h2>
+      </div>
+    </div>
+    <div id="container4">
+      <div id="editor4"></div>
+
+      <iframe id="iframe4" frameborder="0"> </iframe>
+    </div>
+    <script src="script/onmouse.js"></script>
+    <footer>
+      <nav>
+        <div class="footer-container">
+          <div class="tutorial"><a href="#">Tutorial</a></div>
+          <div class="code-challenge"><a href="#">Code Challenge</a></div>
+          <div class="about"><a href="#">About Us</a></div>
+          <div class="privacy"><a href="#">Privacy Policy</a></div>
+          <div class="terms"><a href="#">Terms and conditions</a></div>
+        </div>
+      </nav>
+      <p>© 2021 Copyright • Le Bateau</p>
+    </footer>
+  </body>
+</html>

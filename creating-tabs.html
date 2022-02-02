@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Bateau- Creating Tabs</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+
+    <link rel="stylesheet" href="style/tabs.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="menu-container">
+          <div class="logo"><a href="#">>_ Le Bateau</a></div>
+          <div class="menu">
+            <div><a href="./tutorial.html">Tutorial</a></div>
+            <div><a href="./code-challenge.html">Code Challenge</a></div>
+            <div><a href="#">About Us</a></div>
+            <div><a href="./log-in.html">Log In</a></div>
+            <div><a href="./sign-up.html">Sign Up</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="tabs-banner">
+      <h1>Creating tabs in HTML + CSS + JS</h1>
+      <div class="btn">
+        <button><a href="#question">Let's Start</a></button>
+      </div>
+    </div>
+
+    <div class="question" id="question">
+      <div class="text">
+        <p>
+          In previous posts we looked at how JavaScript can interact with HTML
+          using:
+        </p>
+        <ul>
+          <li>Event Handlers in HTML such as onClick, onFocus, onBlur…</li>
+          <li>
+            the DOM (Document Object Model) to access HTML objects using:
+            document.getElementById(“objectId”)
+          </li>
+        </ul>
+        <p>
+          CSS is applied to HTML objects. Using JavaScript you can change the
+          <strong>CSS attributes</strong> of all your HTML objects using:
+        </p>
+        <ul>
+          <li>document.getElementById(“objectID”).style</li>
+        </ul>
+
+        <p>For instance:</p>
+        <ul>
+          <li>
+            document.getElementById(“myTextBox”).style.background=”#FF0000″;
+          </li>
+          <li>document.getElementById(“myHeading”).style.padding=”25px”;</li>
+          <li>
+            document.getElementById(“myDiv”).style.display=”none”; //This will
+            make the DIV tag invisible
+          </li>
+          <li>
+            document.getElementById(“myDiv”).style.display=”block”; //This will
+            make the DIV tag visible
+          </li>
+        </ul>
+
+        <p>Let’s combine all these techniques to create some tabs:</p>
+
+        <p>
+          The HTML code is fairly straightforward: Each tab needs a DIV tag for
+          the tab itself and a DIV tag for its content:
+        </p>
+
+        <div class="c-tabs">
+          <p>
+            &lt;div id="tab1" onClick="JavaScript:selectTab(1);">Tab 1&lt;/div
+            &gt;<br />
+            &lt;div id="tab2" onClick="JavaScript:selectTab(2);">Tab 2&lt;/div
+            &gt;<br />
+            &lt;div id="tab3" onClick="JavaScript:selectTab(3);">Tab 3&lt;/div
+            &gt;<br />
+
+            &lt;br/ &gt;<br />
+
+            &lt;div id="tab1Content" &gt;<br />
+            This is the content to display in the first tab.<br />
+            &lt;/div &gt;<br />
+            &lt;div id="tab2Content" &gt;<br />
+            Welcome to tab 2!<br />
+            &lt;/div &gt;<br />
+            &lt;div id="tab3Content" &gt;<br />
+            Tab 3 is probably the best of the three tabs.<br />
+            &lt;/div &gt;<br />
+          </p>
+        </div>
+
+        <p>
+          Then CSS code can be used to customise the look and feel of the tabs
+          (Background colours, borders, padding…) But mainly CSS is used to only
+          display the first tab’s content area and hide the other two. This is
+          done using the display attribute in CSS:.
+        </p>
+        <div class="c-tabs">
+          <p>
+            #tab1Content { display: block; } #tab2Content, #tab3Content {
+            display: none; }
+          </p>
+        </div>
+        <p>
+          Finaly the JavaScript code is used to handle the onClick event
+          triggered by the tabs. It accesses the style attribute of each tab’s
+          content area to eithe hide or display the content of the tab based on
+          which tab has been clicked.
+        </p>
+        <div class="c-tabs">
+          <p>
+            function selectTab(tabIndex) { //Hide All Tabs
+            document.getElementById('tab1Content').style.display="none";
+            document.getElementById('tab2Content').style.display="none";
+            document.getElementById('tab3Content').style.display="none"; //Show
+            the Selected Tab document.getElementById('tab' + tabIndex +
+            'Content').style.display="block"; }
+          </p>
+        </div>
+        <p style="text-align: center; margin-top: 50px;"><u>Let’s see all this code in action:</u></p>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="editor"></div>
+
+      <iframe id="iframe" frameborder="0"> </iframe>
+    </div>
+    <script src="script/create-tabs.js"></script>
+    <div class="question">
+      <div class="text">
+        <h2 >Your challenge:</h2>
+        <p style="text-align: center;">
+          Tweak this code to add an extra
+          tab (Tab 4) to this script. You will need to tweak the HTML code
+          first, then the CSS then the JavaScript.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <nav>
+        <div class="footer-container">
+          <div class="tutorial"><a href="#">Tutorial</a></div>
+          <div class="code-challenge"><a href="#">Code Challenge</a></div>
+          <div class="about"><a href="#">About Us</a></div>
+          <div class="privacy"><a href="#">Privacy Policy</a></div>
+          <div class="terms"><a href="#">Terms and conditions</a></div>
+        </div>
+      </nav>
+      <p>© 2021 Copyright • Le Bateau</p>
+    </footer>
+  </body>
+</html>

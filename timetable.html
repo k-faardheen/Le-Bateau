@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Bateau- Time Table</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+
+    <link rel="stylesheet" href="style/timetable.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="menu-container">
+          <div class="logo"><a href="#">>_ Le Bateau</a></div>
+          <div class="menu">
+            <div><a href="./tutorial.html">Tutorial</a></div>
+            <div><a href="./code-challenge.html">Code Challenge</a></div>
+            <div><a href="#">About Us</a></div>
+            <div><a href="./log-in.html">Log In</a></div>
+            <div><a href="./sign-up.html">Sign Up</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="timetable-banner">
+      <h1>My Timetable in HTML / CSS</h1>
+      <div class="btn">
+        <button><a href="#question">Let's Start</a></button>
+      </div>
+    </div>
+
+    <div class="question" id="question">
+      <div class="text">
+        <h2>Learning Objectives</h2>
+        <p>
+          In this challenge we are learning how to draw and format a
+          <strong>table</strong> on a web page using a range of
+          <strong>HTML tags</strong> and <strong>CSS properties.</strong>
+        </p>
+        <h2>HTML Tables</h2>
+        <p>
+          First you may want to<a
+            href="https://www.w3schools.com/tags/tag_table.asp"
+            >read a bit more about how HTML tables are built</a
+          >using the &lt;TABLE&gt;, &lt;THEAD&gt;, &ltTBODY&gt;, &lt;TR&gt;,
+          &lt;TH&gt; and &lt;TD&gt; HTML tags
+        </p>
+        <h2>Css Code</h2>
+        <p>Remember the key syntax for CSS is as follows:</p>
+        <img src="assets/css-syntax.png" alt="css syntax" id="syntax" />
+
+        <p style="margin: 10px">
+          To customise the look & feel of your poster using CSS code, you will
+          use different types of selectors such as:
+        </p>
+        <ul>
+          <li>TAG</li>
+          <li>.class</li>
+          <li>#id</li>
+          <li>element child-element</li>
+          <li>element child-element:first-child</li>
+        </ul>
+        <br />
+        <p>
+          You can learn more about all these<a
+            href="https://www.w3schools.com/cssref/css_selectors.asp"
+            >CSS selectors on w3schools.com.</a
+          >
+        </p>
+        <p style="margin: 10px">
+          In this challenge we will use various CSS properties such as:
+        </p>
+        <ul>
+          <li>font-family</li>
+          <li>font-size</li>
+          <li>color</li>
+          <li>font-weight</li>
+          <li>font-style</li>
+          <li>text-align</li>
+          <li>padding</li>
+          <li>margin</li>
+          <li>background-image</li>
+          <li>etc</li>
+        </ul>
+
+        <h2>My Timetable</h2>
+        <p>We have created a timetable for you.</p>
+        <p>
+          <strong>Task 1:</strong> By changing the <strong>HTML code</strong>,
+          you can now change the content of this timetable: you can add your own
+          lessons to reproduce your own timetable. You may want to change the
+          structure of the day (e.g. Does your school day consist of 5 lessons?)
+          by adding or deleting rows to this timetable.
+        </p>
+        <p>
+            <strong>Task 2:</strong> By changing the <strong>CSS code</strong>, you can now change the look & feel
+          of your timetable. Change the colour scheme, the choice of fonts, the
+          spacing (padding / margin) between table cells, etc.
+        </p>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="editor"></div>
+
+      <iframe id="iframe" frameborder="0"> </iframe>
+    </div>
+<script src="script/timetable.js"></script>
+    <footer>
+      <nav>
+        <div class="footer-container">
+          <div class="tutorial"><a href="#">Tutorial</a></div>
+          <div class="code-challenge"><a href="#">Code Challenge</a></div>
+          <div class="about"><a href="#">About Us</a></div>
+          <div class="privacy"><a href="#">Privacy Policy</a></div>
+          <div class="terms"><a href="#">Terms and conditions</a></div>
+        </div>
+      </nav>
+      <p>© 2021 Copyright • Le Bateau</p>
+    </footer>
+  </body>
+</html>
