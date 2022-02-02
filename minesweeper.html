@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Bateau- Minesweeper</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+
+    <link rel="stylesheet" href="style/minesweeper.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="menu-container">
+          <div class="logo"><a href="#">>_ Le Bateau</a></div>
+          <div class="menu">
+            <div><a href="./tutorial.html">Tutorial</a></div>
+            <div><a href="./code-challenge.html">Code Challenge</a></div>
+            <div><a href="#">About Us</a></div>
+            <div><a href="./log-in.html">Log In</a></div>
+            <div><a href="./sign-up.html">Sign Up</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="minesweeper-banner">
+      <h1>Minesweeper in Javascript</h1>
+      <div class="btn">
+        <button><a href="#question">Let's Start</a></button>
+      </div>
+    </div>
+
+    <div class="question" id="question">
+      <div class="text">
+        <p>
+          In this blog post we will work on the classic game of Minesweeper.
+          Minesweeper is a single-player puzzle video game. The objective of the
+          game is to clear a rectangular board containing hidden “mines” or
+          bombs without detonating any of them, with help from clues about the
+          number of neighbouring mines in each field. The game originates from
+          the 1960s, and has been written for many computing platforms in use
+          today.
+        </p>
+
+        <p>
+          We have created a fully working version of the game using HTML, CSS
+          and JavaScript. Your task will be to reverse-engineer the code to be
+          able to improve this game further.
+        </p>
+        <h2>Full Code</h2>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="editor"></div>
+
+      <iframe id="iframe" frameborder="0"> </iframe>
+    </div>
+    <script src="script/minesweeper.js"></script>
+    <div class="question" id="question">
+    <div class="text">
+      <h2>Your Challenge</h2>
+
+      <p>Improve this code further to:</p>
+      <ul>
+        <li>
+          Calculate and display a score in real time (number of cells that have
+          been visited).
+        </li>
+        <li>
+          Allow the user to add a cross to a cell (by right clicking?) to
+          indicate the position of a mine.
+        </li>
+        <li>
+          Allow the user to choose a difficulty level or change some settings
+          (e.g. Number of mines, size of the grid).
+        </li>
+        <li>Add a timer to the game.</li>
+      </ul>
+    </div>
+</div>
+    <footer>
+      <nav>
+        <div class="footer-container">
+          <div class="tutorial"><a href="#">Tutorial</a></div>
+          <div class="code-challenge"><a href="#">Code Challenge</a></div>
+          <div class="about"><a href="#">About Us</a></div>
+          <div class="privacy"><a href="#">Privacy Policy</a></div>
+          <div class="terms"><a href="#">Terms and conditions</a></div>
+        </div>
+      </nav>
+      <p>© 2021 Copyright • Le Bateau</p>
+    </footer>
+  </body>
+</html>

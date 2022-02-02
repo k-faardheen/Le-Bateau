@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Bateau- digicode</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+
+    <link rel="stylesheet" href="style/digicode.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="menu-container">
+          <div class="logo"><a href="#">>_ Le Bateau</a></div>
+          <div class="menu">
+            <div><a href="./tutorial.html">Tutorial</a></div>
+            <div><a href="./code-challenge.html">Code Challenge</a></div>
+            <div><a href="#">About Us</a></div>
+            <div><a href="./log-in.html">Log In</a></div>
+            <div><a href="./sign-up.html">Sign Up</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="digicode-banner">
+      <h1>Digicode – CSS Challenge</h1>
+      <div class="btn">
+        <button><a href="#question">Let's Start</a></button>
+      </div>
+    </div>
+
+    <div class="question" id="question">
+      <div class="text">
+        <p>
+          In this challenge you are going to use <strong>CSS</strong> to create
+          your own digicode keypad.
+        </p>
+        <h2>Learning Objectives</h2>
+        <p>
+          By completing this challenge you will familiarise yourself with
+          <strong>CSS pseudo-classes.</strong>
+          A pseudo-class is used to define a special state of an element.
+        </p>
+        <p>For example, it can be used to:</p>
+        <ul>
+          <li>document.getElementById(“objectID”).style</li>
+        </ul>
+
+        <p>For instance:</p>
+        <ul>
+          <li>Style an element when a user rolls over it.</li>
+          <li>Style visited and unvisited hyperlinks differently.</li>
+          <li>
+            document.getElementById(“myDiv”).style.display=”none”; //This will
+            make the DIV tag invisible
+          </li>
+          <li>
+            Style active elements (for instance when a user clicks on an
+            element, it becomes active).
+          </li>
+        </ul>
+
+        <p>Let’s combine all these techniques to create some tabs:</p>
+
+        <p>The syntax of pseudo-classes:</p>
+
+        <div class="c-tabs">
+          <p>selector:pseudo-class { property:value; }</p>
+        </div>
+
+        <p>For instance to create a roll-over effect for hyperlinks:</p>
+
+        <div class="c-tabs">
+          <p>A:hover { color:#FF0000; }</p>
+        </div>
+        <p>
+          You can also have a pseudo-class for when a link or button is active
+          (being clicked on):
+        </p>
+        <div class="c-tabs">
+          <p>A:active { font-weight:bold; }</p>
+        </div>
+        <a href="https://www.w3schools.com/css/css_pseudo_classes.asp"
+          >Find out more on pseudo classes</a
+        >
+        <p>Let’s see the code in practice by completing this challenge.</p>
+        <h2>Your Task</h2>
+        <p>
+          Tweak the code below to create your own look & feel for your
+          “digicode”:
+        </p>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="editor"></div>
+
+      <iframe id="iframe" frameborder="0"> </iframe>
+    </div>
+    <script src="script/digicode.js"></script>
+
+    <footer>
+      <nav>
+        <div class="footer-container">
+          <div class="tutorial"><a href="#">Tutorial</a></div>
+          <div class="code-challenge"><a href="#">Code Challenge</a></div>
+          <div class="about"><a href="#">About Us</a></div>
+          <div class="privacy"><a href="#">Privacy Policy</a></div>
+          <div class="terms"><a href="#">Terms and conditions</a></div>
+        </div>
+      </nav>
+      <p>© 2021 Copyright • Le Bateau</p>
+    </footer>
+  </body>
+</html>
