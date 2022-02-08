@@ -1,0 +1,145 @@
+.banner-html { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E1E5F2;
+    margin: 1rem 0;
+    padding: 3.5rem;
+    height: 50vh;
+    max-width: 100%;
+}
+
+.banner-html span { 
+    justify-self: center;
+    align-self: center;
+    font-size: 2rem;
+}
+
+.banner-html-start { 
+    margin: 3rem;
+}
+
+.banner-html-start a { 
+    text-decoration: none;
+    color: white;
+    background-color: #1F7A8C;
+    padding: 0.5rem 2.5rem;
+    border-radius: 40px;  
+}
+
+
+section.overview-wrapper { 
+    margin: 3rem;
+}
+
+section div.overview-title { 
+    font-size: 1.7rem;
+    display: inline-block;
+}
+
+section article.overview-html { 
+    margin: 2rem 0;
+}
+
+.html-syllabus { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%; 
+    padding: 5rem 0;
+    background-color: #E1E5F2;
+}
+
+ol { 
+    min-width: 75%;
+    max-width: 40%;
+    border-left: #1F7A8C solid .50rem;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
+.syllabus-list li { 
+    display: block;
+    background-color: #fff;
+    padding: 2rem;
+    margin: 0;
+    margin-bottom: 0.1rem;
+}
+
+.syllabus-list li a { 
+    color: #1F7A8C;
+    font-weight: bold;
+}
+
+.syllabus-list li div.list-container { 
+    display: flex;
+}
+
+.list-container .list-order { 
+    font-size: 2rem;
+    min-width: 5%; 
+    margin-right: 2rem;
+    text-align: center;
+    align-self: center;
+}
+
+.list-container .list-description a { 
+    font-size: 1.2rem;
+}
+
+
+section.build { 
+    margin-top: 10%;
+}
+
+.build-wrapper { 
+  text-align: center;
+}
+
+.build-wrapper .heading { 
+    margin-bottom: 2.5rem;
+}
+
+.build-wrapper .heading h1 { 
+    font-weight: bold;
+}
+
+.code-challenge{ 
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.rainbow,.lemon, .road-sign{ 
+    width: 25%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #E1E5F2;
+}
+
+.build-wrapper a { 
+    text-decoration: none;
+    color: black;
+}
+
+.build-wrapper .lets-try { 
+    position: absolute;
+    right: 1vw;
+    bottom: 1vh;
+}
+
+.build-wrapper .lets-try a { 
+    color: #1F7A8C;
+}
+
+.footer-container {
+    margin-top: 30vh;
+    background-color: #BFDBF7;
+}
+
+.footer-container a { 
+    color: black;
+}

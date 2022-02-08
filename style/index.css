@@ -93,9 +93,6 @@ section.work span{
     color: white;
 }
 
-.quiz-wrapper { 
-    max-height: 100vh;
-}
 .quiz-heading { 
     text-align: center;
     padding: 5vh;

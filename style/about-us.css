@@ -1,0 +1,53 @@
+section { 
+    padding: 2rem;
+}
+
+section .heading h1{
+    width: 65%; 
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.wrapper { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-wrapper { 
+    min-width: 50%;
+}
+
+.faardheen, .wally  { 
+    margin: 7rem 2rem; 
+    display: flex;
+    align-items: center;
+}
+
+.bio { 
+    margin: 1rem;
+}
+ 
+.bio a { 
+    text-decoration: none;
+    color: black;
+    margin-right: 0.5vw;
+}       
+
+.about-us { 
+    min-width: 50%;
+}
+.about-us h1 { 
+    padding: 0.5rem 0;
+}
+
+.about-us .separator { 
+    width: 55%;
+    border: #1f7a8c solid 2px;
+    border-radius: 50px
+}
+
+.about-us span{
+    white-space:pre-line;
+}
