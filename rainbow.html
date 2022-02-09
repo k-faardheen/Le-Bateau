@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Bateau- rainbow</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+    <link rel="stylesheet" href="style/rainbow.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="menu-container">
+          <div class="logo"><a href="#">>_ Le Bateau</a></div>
+          <div class="menu">
+            <div><a href="./tutorial.html">Tutorial</a></div>
+            <div><a href="./code-challenge.html">Code Challenge</a></div>
+            <div><a href="#">About Us</a></div>
+            <div><a href="./log-in.html">Log In</a></div>
+            <div><a href="./sign-up.html">Sign Up</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="rainbow-banner">
+      <h1>The colours of the rainbow (HTML task)</h1>
+      <div class="btn">
+        <button><a href="#question">Let's Start</a></button>
+      </div>
+    </div>
+
+    <div class="question" id="question">
+      <div class="text">
+        <p>
+          In this blog post we are going to help Asya complete her homework
+          research task about rainbows. Asya has collated a range of interesting
+          facts about rainbows and has decided to submit her work as an HTML
+          page.
+        </p>
+        <p>
+          She has started her page but needs your help to format this page
+          further using a range of HTML tags. To help her improve the look and
+          feel of her page you will need to complete the six tasks listed below.
+        </p>
+        <p>But first let’s look at Asya’s HTML page so far:</p>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="editor"></div>
+
+      <iframe id="iframe" frameborder="0"> </iframe>
+    </div>
+
+    <script src="script/rainbow.js"></script>
+    <div class="task">
+      <h2>Your task</h2>
+    </div>
+    <div class="myTask">
+      <input type="radio" id="task1" name="mytask" checked="checked" />
+      <label for="task1">Task 1: Headings</label>
+      <div class="tab" id="tab1">
+        <h3>Task 1: Headings and Paragraphs</h3>
+        <br />
+        <p>
+          In order to give this page more structure we are going to add some
+          headings, subheadings and paragraphs. We will do so using the
+          following HTML tags:
+        </p>
+        <h1>&lt;h1&gt;Heading 1&lt;/h1&gt;</h1>
+        <h2>&lt;h2&gt;Heading 2&lt;/h2&gt;</h2>
+        <h3>&lt;h3&gt;Heading 3&lt;/h3&gt;</h3>
+        <h4>&lt;h4&gt;Heading 4&lt;/h4&gt;</h4>
+        <h5>&lt;h5&gt;Heading 5&lt;/h5&gt;</h5>
+        <h6>&lt;h6&gt;Heading 6&lt;/h6&gt;</h6>
+        <hr />
+        <p>&lt;p&gt;Paragraph&lt;/p&gt;</p>
+        <hr />
+        <p>
+          Your task is to update Asya’s code by adding some
+          <strong>&lt;h1&gt; tags</strong> for the main heading:
+        </p>
+        <ul>
+          <li>Rainbow facts!</li>
+        </ul>
+        <p>
+          And some <strong>&lt;h2&gt; tags</strong> for the subheading of the
+          page:
+        </p>
+        <ul>
+          <li>Colours of the rainbow</li>
+          <li>What Makes a Rainbow?</li>
+          <li>Rainbow Myths</li>
+          <li>Find out more:</li>
+        </ul>
+        <p>
+          All other pieces of text should be displayed as paragraphs using
+          <strong>&lt;p&gt; tags.</strong>
+        </p>
+        <div class="btn" id="btn1">
+          <button onclick="showAns1()">Show Answer</button>
+        </div>
+        <div id="answer1"></div>
+      </div>
+
+      <input type="radio" id="task2" name="mytask" />
+      <label for="task2">Task 2: Bullet Points</label>
+      <div class="tab" id = "tab2">
+        <h3>Bullet Points Lists</h3>
+        <p>
+          In HTML, you can create a list of bullet points using both &lt;ul&gt;
+          tags and &lt;li&gt; tags as follows.
+        </p>
+        <br />
+        <br />
+        <p>
+          &lt;ul&gt;<br />
+          &emsp;&lt;li&gt;First Bullet point!&lt;/li&gt;<br />
+          &emsp;&lt;li&gt;Second Bullet point!&lt;/li&gt;<br />
+          &emsp;&lt;li&gt;Third Bullet point!&lt;/li&gt;<br />
+          &lt;/ul&gt;<br />
+        </p>
+        <br />
+        <p>
+          Your task consist of displaying the seven colours of the rainbow using
+          bullet points so that it appears on the web page as follows:
+        </p>
+        <ul>
+          <li>Red,</li>
+          <li>Orange,</li>
+          <li>Yellow,</li>
+          <li>Green,</li>
+          <li>Blue,</li>
+          <li>Indigo,</li>
+          <li>Violet.</li>
+        </ul>
+        <div class="btn" id= "btn2">
+          <button onclick="showAns2()">Show Answer</button>
+        </div>
+        <div id="answer2"></div>
+      </div>
+
+      <input type="radio" id="task3" name="mytask" />
+      <label for="task3">Task 3: Colours</label>
+      <div class="tab" id="tab3">
+        <h3>Adding Colours!</h3>
+        <p>
+          We are now going to change the text colour using the
+          <strong>&lt;font&gt; tag.</strong>
+        </p>
+        <p>
+          For instance to make
+          <font color="red">text appear in red</font> we can use the following
+          code:
+        </p>
+        <p>
+          &lt;font color="red"&gt;This text will appear in red!&lt;/font&gt;
+        </p>
+        <p>
+          Notice the American spelling for the attribute “color” inside the font
+          tag!
+        </p>
+        <p>
+          Your task is to use several <strong>&lt;font&gt; tag</strong> to
+          display each colour of the rainbow in its own colour.
+        </p>
+        <div class="btn" id = "btn3">
+          <button onclick="showAns3()">Show Answer</button>
+        </div>
+        <div id="answer3"></div>
+      </div>    
+
+      <input type="radio" id="task4" name="mytask" />
+      <label for="task4">Task 4: Formatting text</label>
+      <div class="tab" id="tab4">
+        <h3>Centred ,Bold, Italic and Underlined Text</h3>
+        <p>
+          You can use the <strong>&lt;center&gt;</strong>,
+          <strong>&lt;b&gt;</strong>, <strong>&lt;i&gt;</strong> and
+          <strong>&lt;b&gt;</strong> tags to make text appear in the centre, in
+          <b>bold</b>, in <i>italic</i> or <u>underlined.</u>
+        </p>
+
+        <p>
+          &lt;center&gt;This text will appear in the centre!&lt;/center&gt;<br />
+          &lt;b&gt;This text will appear in bold!&lt;/b&gt; <br />
+          &lt;i&gt;This text will appear in italic!&lt;/i&gt;<br />
+          &lt;u&gt;This text will appear underlined!&lt;/u&gt;
+        </p>
+
+        <p>
+          Adapt Asya’s code so that the myth “There’s a pot of gold at the
+          rainbow’s end.” appears in the centre of the page, in bold, and in
+          italic.
+        </p>
+        <div class="btn" id="btn4">
+          <button onclick="showAns4()">Show Answer</button>
+        </div>
+        <div id="answer4"></div>
+      </div>
+
+      <input type="radio" id="task5" name="mytask" />
+      <label for="task5">Task 5: Hyperlinks</label>
+      <div class="tab" id="tab5">
+        <h3>Adding hyperlinks</h3>
+        <p>
+          To add a hyperlink, you will need to use the
+          <strong>&lt;a&gt; tag</strong> as follows:
+        </p>
+        <p>
+          &lt;a href="https://www.101computing.net">Visit our computing
+          blog!&lt;/a&gt;
+        </p>
+        <p>
+          You can now add a hyperlink to the last paragraph to point to the
+          wikipedia page about rainbows. The URL of the page is:
+          https://en.wikipedia.org/wiki/Rainbow
+        </p>
+        <div class="btn" id="btn5">
+          <button onclick="showAns5()">Show Answer</button>
+        </div>
+        <div id="answer5"></div>
+      </div>
+
+      <input type="radio" id="task6" name="mytask" />
+      <label for="task6">Task 6: Your turn</label>
+      <div class="tab">
+        <h3>Your Turn</h3>
+        <p>
+          Now that you know how to use the basic HTML tags needed to create a
+          web page, add some more content to this webpage:
+        </p>
+        <ul>
+          <li>
+            Find some cool facts about rainbows and add them to the existing
+            sections or create a <strong>new sub-heading</strong> to add your
+            new content.
+          </li>
+          <li>
+            Find some other webpages about rainbows and create
+            <strong>hyperlinks</strong> to these pages.
+          </li>
+        </ul>
+    </div>
+    </div>
+    <footer>
+      <nav>
+        <div class="footer-container">
+          <div class="tutorial"><a href="./tutorial.html">Tutorial</a></div>
+          <div class="code-challenge"><a href="./code-challenge.html">Code Challenge</a></div>
+          <div class="about"><a href="#">About Us</a></div>
+          <div class="privacy"><a href="">Privacy Policy</a></div>
+          <div class="terms"><a href="#">Terms and conditions</a></div>
+        </div>
+      </nav>
+      <p>© 2021 Copyright • Le Bateau</p>
+    </footer>
+  </body>
+</html>
