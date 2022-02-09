@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Bateau- Wanted poster</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+
+    <link rel="stylesheet" href="style/wanted-poster.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="menu-container">
+          <div class="logo"><a href="#">>_ Le Bateau</a></div>
+          <div class="menu">
+            <div><a href="./tutorial.html">Tutorial</a></div>
+            <div><a href="./code-challenge.html">Code Challenge</a></div>
+            <div><a href="#">About Us</a></div>
+            <div><a href="./log-in.html">Log In</a></div>
+            <div><a href="./sign-up.html">Sign Up</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="wanted-banner">
+      <h1>Wanted Poster (CSS Task)</h1>
+      <div class="btn">
+        <button><a href="#question">Let's Start</a></button>
+      </div>
+    </div>
+
+    <div class="question" id="question">
+      <div class="text">
+        <p>
+          For this challenge we will create a Wanted Poster using a range of
+          HTML and CSS skills.
+        </p>
+        <h2 style="margin: 10px">CSS Selectors & CSS Properties</h2>
+        <p>
+          In order to complete this challenge, you need a good understanding of
+          how CSS selectors work. You can learn about<a
+            href="https://www.w3schools.com/cssref/css_selectors.asp"
+            >CSS selectors on w3schools.com.</a
+          >
+        </p>
+        <img src="assets/css-syntax.png" alt="css syntax" id="syntax" />
+        
+        <p style="margin: 10px">
+          To customise the look & feel of your poster using CSS code, you will
+          use different types of selectors such as:
+        </p>
+        <ul>
+          <li>TAG</li>
+          <li>.class</li>
+          <li>#id</li>
+          <li>element child-element</li>
+          <li>element child-element:first-child</li>
+        </ul>
+        <p style="margin: 10px">
+          In this challenge we will use various CSS properties such as:
+        </p>
+        <ul>
+          <li>font-family</li>
+          <li>font-size</li>
+          <li>color</li>
+          <li>font-weight</li>
+          <li>font-style</li>
+          <li>text-align</li>
+          <li>padding</li>
+          <li>margin</li>
+          <li>background-image</li>
+          <li>etc</li>
+        </ul>
+      </div>
+    </div>
+    <div id="container">
+      <div id="editor"></div>
+
+      <iframe id="iframe" frameborder="0"> </iframe>
+    </div>
+    <script src="script/wanted-poster.js"></script>
+    <div class="img-link">
+      <p>
+        Note that this script will use three pictures. In case these are not
+        displaying properly, you may have to replace their URLs, using the
+        following addresses:
+      </p>
+      <ul>
+        <li>
+          Mugshot Image:<a
+            href="https://www.101computing.net/wp/wp-content/uploads/mugshot.png"
+            >https://www.101computing.net/wp/wp-content/uploads/mugshot.png</a
+          >
+        </li>
+        <li>
+          Wood Texture:
+          <a href="https://www.101computing.net/wp/wp-content/uploads/wood.jpg"
+            >https://www.101computing.net/wp/wp-content/uploads/wood.jpg</a
+          >
+        </li>
+        <li>
+          Parchment Texture:<a
+            href="https://www.101computing.net/wp/wp-content/uploads/parchment.jpg"
+            >https://www.101computing.net/wp/wp-content/uploads/parchment.jpg</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="task">
+      
+      <h2>Your task</h2>
+    </div>
+    <div class="myTask">
+      <input type="radio" id="task1" name="mytask" checked="checked" />
+      <label for="task1">Wooden Texture</label>
+      <div class="tab">
+        <p>
+          Your first task is to apply a wooden texture to the whole page. To do
+          so you will need to:
+        </p>
+
+        <ol>
+          <li>
+            <input type="checkbox" /> Apply a background picture to the BODY of
+            the page. The URL for this picture is the wooden texture as provided
+            above
+          </li>
+          <li>
+            <input type="checkbox" />Apply a 20px padding to the whole page.
+          </li>
+        </ol>
+        <div class="btn">
+          <button>Show Answer</button>
+        </div>
+        <div class="answer1"></div>
+      </div>
+
+      <input type="radio" id="task2" name="mytask" />
+      <label for="task2">Paper Texture</label>
+      <div class="tab">
+        <p>To create the poster:</p>
+
+        <ol>
+          <li>
+            <input type="checkbox" />Use CSS to resize the poster (&lt;div
+            class=”poster”&gt;…&lt;/div&gt;) by resizing this container to 488px
+            wide by 640px high
+          </li>
+          <li>
+            <input type="checkbox" />Apply the following background image to
+            this container as provided above "mugshot Image"
+          </li>
+          <li>
+            <input type="checkbox" />Apply a padding of 20px to the poster.
+          </li>
+          <li>
+            <input type="checkbox" />All the content should be aligned to the
+            centre.
+          </li>
+          <li>
+            <input type="checkbox" /> Using an
+            <a href="https://html-css-js.com/css/generator/box-shadow/"
+              >online CSS shadow generator</a
+            >, add a shadow effect to your poster
+          </li>
+        </ol>
+        <div class="btn">
+          <button>Show Answer</button>
+        </div>
+        <div class="answer2"></div>
+      </div>
+
+      <input type="radio" id="task3" name="mytask" />
+      <label for="task3">Mugshot</label>
+      <div class="tab">
+        <p>Then we will customise the mugshot picture of Billy the Kid.</p>
+        <ol>
+          <li>
+            <input type="checkbox" /> Resize the picture to: 300px wide by 325px
+            high.
+          </li>
+          <li>
+            <input type="checkbox" /> Add a solid border of 2px and dark brown
+            colour: #291200.
+          </li>
+          <li><input type="checkbox" />Add a 10px margin to the picture..</li>
+        </ol>
+        <div class="btn">
+          <button>Show Answer</button>
+        </div>
+        <div class="answer3"></div>
+      </div>
+
+      <input type="radio" id="task4" name="mytask" />
+      <label for="task4">Wanted</label>
+      <div class="tab">
+        <p>
+          Then we will customise the title of the Poster (H1 heading saying
+          “WANTED”).
+        </p>
+
+        <ol>
+          <li>
+            <input type="checkbox" /> Resize the picture to: 300px wide by 325px
+            high.
+          </li>
+          <li>
+            <input type="checkbox" /> The font colour should be dark brown:
+            #291200.
+          </li>
+          <li><input type="checkbox" />The font size should be 44pt.</li>
+          <li>
+            <input type="checkbox" />This heading should not appear in bold..
+          </li>
+          <li>
+            <input type="checkbox" /> This heading should not have any margins.
+          </li>
+        </ol>
+        <div class="btn">
+          <button>Show Answer</button>
+        </div>
+        <div class="answer4"></div>
+      </div>
+
+      <input type="radio" id="task5" name="mytask" />
+      <label for="task5">Typography</label>
+      <div class="tab">
+        <p>
+          To complete your poster change the typography of the different
+          headings, subheadings of the poster.
+        </p>
+        <ol>
+          <li>
+            <input type="checkbox" />You should use a combination of the
+            following two google fonts:
+            <ul>
+              <li>Ewert</li>
+              <li>Ultra</li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" />All the text should appear in dark brown:
+            #291200.
+          </li>
+          <li><input type="checkbox" />The font size should be 44pt.</li>
+          <li>
+            <input type="checkbox" />All the text should fit on the poster. To
+            do so you will need to update margins and font sizes
+          </li>
+          <li>
+            <input type="checkbox" /> Different font sizes and weights should be
+            used to make key information standout nicely.
+          </li>
+          <li>
+            <input type="checkbox" />The description: “Armed and very dangerous”
+            should appear in italic.
+          </li>
+          <li>
+            <input type="checkbox" /> The reward price should have a double
+            underline!
+          </li>
+        </ol>
+        <div class="btn">
+          <button>Show Answer</button>
+        </div>
+        <div class="answer5"></div>
+      </div>
+
+      <input type="radio" id="task6" name="mytask" />
+      <label for="task6">Sepia Filter</label>
+      <div class="tab">
+        <input type="checkbox" />The final touch to complete this poster is to
+        apply a sepia filter to the mugshot picture.
+        <div class="btn">
+          <button>Show Answer</button>
+        </div>
+        <div class="answer6"></div>
+      </div>
+    </div>
+    <div class="final-answer">
+      <h2>Final Poster Preview</h2>
+      <p>This is what your poster should look like at the end of this task:</p>
+   <img src="assets/wanted-poster-css.jpg" alt="final image result of the poster">
+    </div>
+    <footer>
+      <nav>
+        <div class="footer-container">
+          <div class="tutorial"><a href="#">Tutorial</a></div>
+          <div class="code-challenge"><a href="#">Code Challenge</a></div>
+          <div class="about"><a href="#">About Us</a></div>
+          <div class="privacy"><a href="#">Privacy Policy</a></div>
+          <div class="terms"><a href="#">Terms and conditions</a></div>
+        </div>
+      </nav>
+      <p>© 2021 Copyright • Le Bateau</p>
+    </footer>
+  </body>
+</html>
