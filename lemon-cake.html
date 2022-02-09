@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Bateau- Lemon drizzle cake</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+    <link rel="stylesheet" href="style/lemon-cake.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="menu-container">
+          <div class="logo"><a href="#">>_ Le Bateau</a></div>
+          <div class="menu">
+            <div><a href="./tutorial.html">Tutorial</a></div>
+            <div><a href="./code-challenge.html">Code Challenge</a></div>
+            <div><a href="#">About Us</a></div>
+            <div><a href="./log-in.html">Log In</a></div>
+            <div><a href="./sign-up.html">Sign Up</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="lemon-banner">
+      <h1>Lemon Drizzle Cake Recipe (HTML Task)</h1>
+      <div class="top-btn">
+        <button><a href="#question">Let's Start</a></button>
+      </div>
+    </div>
+
+    <div class="question" id = "question">
+      <div class="text">
+        <p>
+          In this post we are going to help Elian save his favourite cake recipe
+          as a web page.<br />
+          Elian has already typed all the instructions for his lemon drizzle
+          cake recipe but needs your help to format how the text appears on the
+          page.<br />
+          To help him improve the look and feel of his page you will need to
+          complete the six tasks listed below
+        </p>
+        <p>But first let’s look at Elian’s HTML page so far:</p>
+      </div>
+    </div>
+    
+      <div id="container">
+        <div id="editor"></div>
+  
+        <iframe id="iframe" frameborder="0"> </iframe>
+      </div>
+    
+    
+    <div class="task">
+      <h2>Your task</h2>
+    </div>
+    <div class="myTask">
+      <input type="radio" id="task1" name="mytask" checked="checked" />
+      <label for="task1">Task 1: Headings</label>
+      <div class="tab" id="tab1">
+        <h3>Task 1: Headings and Paragraphs</h3>
+        <br />
+        <p>
+          In order to give this page more structure we are going to add some
+          headings, subheadings and paragraphs. We will do so using the
+          following HTML tags:
+        </p>
+        <h1>&lt;h1&gt;Heading 1&lt;/h1&gt;</h1>
+        <h2>&lt;h2&gt;Heading 2&lt;/h2&gt;</h2>
+        <h3>&lt;h3&gt;Heading 3&lt;/h3&gt;</h3>
+        <h4>&lt;h4&gt;Heading 4&lt;/h4&gt;</h4>
+        <h5>&lt;h5&gt;Heading 5&lt;/h5&gt;</h5>
+        <h6>&lt;h6&gt;Heading 6&lt;/h6&gt;</h6>
+        <hr />
+        <p>&lt;p&gt;Paragraph&lt;/p&gt;</p>
+        <hr />
+        <p>
+          Your task is to update Elian’s code by adding some
+          <strong>&lt;h1&gt; tags</strong> for the main heading
+        </p>
+        <ul>
+          <li>Lemon Drizzle Cake Recipe</li>
+        </ul>
+        <p>
+          And some <strong>&lt;h2&gt; tags</strong> for the subheading of the
+          page:
+        </p>
+        <ul>
+          <li>About the Recipe:</li>
+          <li>Ingredients:</li>
+          <li>Recipe for the cake:</li>
+          <li>Recipe for the lemon drizzle:</li>
+          <li>Finding more recipes online:</li>
+        </ul>
+        <p>
+          All other pieces of text should be displayed as paragraphs using
+          <strong>&lt;p&gt; tags.</strong>
+        </p>
+
+        <p>
+          Note that, within a paragraph, we can also force the text to go to the
+          next line using the <strong>&lt;br&gt; tags.</strong>
+        </p>
+        <div class="btn" id = "btn1">
+          <button onclick="showAns1()">Show Answer</button>
+        </div>
+        <div id="answer1">
+        </div>
+      </div>
+
+      <input type="radio" id="task2" name="mytask" />
+      <label for="task2">Task 2: Bullet Points</label>
+      <div class="tab" id="tab2">
+        <h3>Bullet Points Lists</h3>
+        <p>
+          In HTML, you can create a list of bullet points using both &lt;ul&gt;
+          tags and &lt;li&gt; tags as follows.
+        </p>
+        <br />
+        <br />
+        <p>
+          &lt;ul&gt;<br />
+          &emsp;&lt;li&gt;First Bullet point!&lt;/li&gt;<br />
+          &emsp;&lt;li&gt;Second Bullet point!&lt;/li&gt;<br />
+          &emsp;&lt;li&gt;Third Bullet point!&lt;/li&gt;<br />
+          &lt;/ul&gt;<br />
+        </p>
+        <br />
+        <p>
+          Your task consist of displaying all the ingredients using bullet
+          points so that it appears on the web page as follows:
+        </p>
+        <ul>
+          <li>225g unsalted butter</li>
+          <li>180g caster sugar</li>
+          <li>4 eggs</li>
+          <li>1 lemon, zested</li>
+          <li>2 lemons, juiced</li>
+          <li>65g caster sugar</li>
+        </ul>
+        <p>
+          You can also use a similar approach to create a numbered list as
+          opposed to a bullet point list. To do so, use an
+          <strong>&lt;ol&gt; tag</strong>instead of the
+          <strong>&lt;ul&gt; tag</strong>. You can for instance display the
+          steps of the recipe using a numbered list:
+        </p>
+
+        <ul>
+          <li>Pre-heat the oven to 180°C.</li>
+          <li>
+            Beat together the butter and caster sugar until creamy, then add the
+            eggs, one at a time, slowly mixing through.
+          </li>
+          <li>
+            Sift in the self-raising flour, then add the lemon zest and mix
+            until well combined.
+          </li>
+          <li>
+            Line a loaf tin (8 x 21cm) with greaseproof paper, then pour in the
+            mixture and level the top with a spoon.
+          </li>
+          <li>Bake for 45 to 50 minutes.</li>
+        </ul>
+        <div class="btn" id="btn2">
+          <button onclick="showAns2()">Show Answer</button>
+        </div>
+        <div id="answer2">
+        </div>
+      </div>
+
+      <input type="radio" id="task3" name="mytask" />
+      <label for="task3">Task 3: Colours</label>
+      <div class="tab" id="tab3">
+        <h3>Adding Colours!</h3>
+        <p>
+          We are now going to change the text colour using the
+          <strong>&lt;font&gt; tag.</strong>
+        </p>
+        <p>
+          For instance to make
+          <font color="orange">text appear in orange</font> we can use the
+          following code:
+        </p>
+        <p>
+          &lt;font color="orange"&gt;This text will appear in
+          orange!&lt;/font&gt;
+        </p>
+        <p>
+          Notice the American spelling for the attribute “color” inside the font
+          tag!
+        </p>
+        <p>
+          Your task is to use several <strong>&lt;font&gt; tag.</strong> to make
+          the information such as preparation time, cooking time, level of
+          difficulty and number of servings standout on the page using the
+          colours of your choice.
+        </p>
+        <div class="btn" id="btn3">
+          <button onclick="showAns3()">Show Answer</button>
+        </div>
+        <div id="answer3">
+        </div>
+      </div>
+
+      <input type="radio" id="task4" name="mytask" />
+      <label for="task4">Task 4: Formatting text</label>
+      <div class="tab" id="tab4">
+        <h3>Centred ,Bold, Italic and Underlined Text</h3>
+        <p>
+          You can use the <strong>&lt;center&gt;</strong>,
+          <strong>&lt;b&gt;</strong>, <strong>&lt;i&gt;</strong> and
+          <strong>&lt;b&gt;</strong> tags to make text appear in the centre, in
+          <b>bold</b>, in <i>italic</i> or <u>underlined.</u>
+        </p>
+
+        <p>
+          &lt;center&gt;This text will appear in the centre!&lt;/center&gt;<br />
+          &lt;b&gt;This text will appear in bold!&lt;/b&gt; <br />
+          &lt;i&gt;This text will appear in italic!&lt;/i&gt;<br />
+          &lt;u&gt;This text will appear underlined!&lt;/u&gt;
+        </p>
+
+        <p>
+          Adapt Elian’s code so that some of the key information from the recipe
+          appear in bold or in italic.
+        </p>
+        <div class="btn" id="btn4">
+          <button onclick="showAns4()">Show Answer</button>
+        </div>
+        <div id="answer4">
+        </div>
+      </div>
+
+      <input type="radio" id="task5" name="mytask" />
+      <label for="task5">Task 5: Hyperlinks</label>
+      <div class="tab" id="tab5">
+        <h3>Adding hyperlinks</h3>
+        <p>
+          To add a hyperlink, you will need to use the
+          <strong>&lt;a&gt; tag</strong> as follows:
+        </p>
+        <p>
+          &lt;a href="https://www.101computing.net">Visit our computing
+          blog!&lt;/a&gt;
+        </p>
+        <p>
+          You can now add a hyperlink to the last paragraph to point to the BBC
+          Good Food website. The URL of the page is:
+          https://www.bbcgoodfood.com/
+        </p>
+        <div class="btn" id="btn5">
+          <button onclick="showAns5()">Show Answer</button>
+        </div>
+        <div id="answer5">
+        </div>
+      </div>
+
+      <input type="radio" id="task6" name="mytask" />
+      <label for="task6">Task 6: Your turn</label>
+      <div class="tab">
+        <h3>Your Turn</h3>
+        <p>
+          Now that you know how to use the basic HTML tags needed to create a
+          web page, add some more content to this webpage:
+        </p>
+        <ul>
+          <li>
+            Add a section called “Tip of the day” (as a Heading 2). Add a
+            paragraph to this section with the following text:
+          </li>
+        </ul>
+        <center>
+          <i
+            >“To find out is your cake can come out of the oven, insert a thin
+            skewer or knife into the centre of the cake. Your skewer/knife
+            should come out clean. If it doesn’t you will need to leave the cake
+            to bake for a bit longer.”</i
+          >
+        </center>
+        <ul>
+          <li>
+            Find some other recipes online and create
+            <strong>hyperlinks</strong> to these pages.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="script/lemon.js"></script>
+    <footer>
+      <nav>
+        <div class="footer-container">
+          <div class="tutorial"><a href="#">Tutorial</a></div>
+          <div class="code-challenge"><a href="#">Code Challenge</a></div>
+          <div class="about"><a href="#">About Us</a></div>
+          <div class="privacy"><a href="#">Privacy Policy</a></div>
+          <div class="terms"><a href="#">Terms and conditions</a></div>
+        </div>
+      </nav>
+      <p>© 2021 Copyright • Le Bateau</p>
+    </footer>
+  </body>
+</html>
