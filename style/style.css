@@ -7,6 +7,15 @@
     box-sizing: border-box;
 }
 
+body { 
+    font-family:'Poppins', sans-serif;
+    max-width: 100%;
+}
+header { 
+    padding: 1rem;
+    font-size: 1rem;
+}
+
 .nav-container { 
     display: flex;
     align-items: center;
@@ -24,15 +33,6 @@
     text-decoration: none;
     font-size: 1.5rem;
     color: black;
-}
-
-body { 
-    font-family:'Poppins', sans-serif;
-    max-width: 100%;
-}
-header { 
-    padding: 1rem;
-    font-size: 1rem;
 }
 
 ul { 
@@ -79,8 +79,4 @@ button {
     color: white;
     position: absolute;
     bottom: 1vh;
-}
-
-.btn-wrapper { 
-   
 }

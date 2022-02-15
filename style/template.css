@@ -1,0 +1,184 @@
+.header-wrapper { 
+    position: relative;
+    display: flex;
+    height: 30vh;
+    background-color: #E1E5F2;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-wrapper > h1 { 
+    font-size: 3rem;
+}
+
+.menu { 
+    width: 20%;
+    position: absolute;
+    background-color: white;
+    border: 2px black solid;
+    left: 5%;
+    bottom:-70%;
+}
+
+.menu ul { 
+    display: flex;
+    flex-direction: column;
+}
+
+.menu li { 
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    margin: 0.5rem 1.5rem 0.5rem 0rem;
+    padding-left: 1rem;
+    transition: .3s ease-in;
+}
+
+.menu ul > li:nth-child(2):hover, .menu ul > li:nth-child(3):hover ,.menu ul > li:nth-child(4):hover { 
+    border-left: 4px black solid;
+}
+
+.main-wrapper { 
+    margin: 15% 5%;
+}
+
+.main-wrapper article { 
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span.highlight-keyword { 
+    background-color: #eee;
+}
+
+main .heading { 
+    margin-bottom: 0.5rem;
+}
+
+.main-wrapper .explanation { 
+    max-width: 50%;
+}
+
+.main-wrapper ul { 
+    margin-top: 1rem;
+}
+
+.main-wrapper li { 
+    display: block; 
+    margin-bottom: 1rem;
+}
+
+
+.code-snippet { 
+    width: 35vw;
+    padding: 1rem 1.5rem;
+    background-color: #E1E5F2;
+}
+
+
+.code-snippet-wrapper > .correct, .code-snippet-wrapper > .wrong { 
+    position: relative;
+    padding: 1rem 1.5rem;
+    width: 35vw;
+    text-align: center;
+} 
+
+.code-snippet-wrapper .correct > a { 
+    position: absolute;
+    text-decoration: none;
+    color: #04a96d;
+    right: 1%;
+    bottom: 0;
+}
+
+@keyframes icon-animation {
+    from {transform: rotate(360deg);}
+    to {transform:rotate(0deg);}
+}
+
+@keyframes display-text {
+    from {opacity: 0;}
+    to {opacity: 100%;}
+}
+
+.tick i, .cross i{ 
+    font-size: 4rem;
+    animation-name:icon-animation;
+    animation-duration: 1.5s;
+}
+
+.code-snippet-wrapper .correct > span, .code-snippet-wrapper .wrong > span { 
+    font-size: 1.2rem;
+    animation-name: display-text;
+    animation-duration: 2s;
+}
+
+.code-snippet-wrapper .correct { 
+    color: #04a96d;
+    background-color: #d9eee1;
+}
+.code-snippet-wrapper .wrong { 
+    color: #b94a48;
+    background-color: #FFC0C7;
+}
+
+.code-snippet .tag{ 
+    color: #A52A2A;
+}
+
+.code-snippet .attribute-tag { 
+    color: green;
+}
+
+.code-snippet .attribute-value { 
+    color: #ffd021;
+}
+
+.code-snippet input#quiz { 
+    border: none;
+    width: 15%;
+    color: #A52A2A;
+    font-family:inherit;
+    font-size: 1rem;
+    margin: 1% 0;
+    padding: 0.2%;
+    outline: none;
+}
+
+.btn-wrapper { 
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) { 
+
+    .header-wrapper > h1 { 
+        font-size: 2rem;
+    }
+
+    article { 
+        flex-direction: column;
+    }
+
+    article > .explanation { 
+        min-width: 100%;
+    }
+
+    article form , .code-snippet-wrapper > .code-snippet{ 
+        min-width: 100%;
+    }
+
+    article > .code-snippet, article > form, .attribute-tag .code-snippet-wrapper > .code-snippet { 
+        margin: 1rem;
+        width: 100%;
+    }
+
+    .code-snippet-wrapper > .correct, .code-snippet-wrapper > .wrong {
+        width: 100%;
+    }
+}
+  
+
+

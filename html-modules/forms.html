@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/template.css">
+    <title>Learn HTML - Forms</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="lebateau">
+                <a href="./index.html"> >_Le Bateau</a>
+            </div>
+ 
+             <nav>
+                <div class="links">
+                    <ul>
+                        <li><a href="./tutorial.html">Tutorials</a></li>
+                        <li><a href="./code-challenge.html">Code Challenges</a></li>
+                        <li><a href="./about-us.html">About Us</a></li>
+                        <li><a href="./log-in.html">Log in</a></li>
+                        <li><a href="./sign-up.html">Sign up</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>  
+    </header>
+
+    <section class="header">
+        <div class="header-wrapper">
+            <h1>Forms</h1>
+            <div class="menu">
+                <ul>
+                    <li><h3>TOPICS</h3></li>
+                    <li><a href="./elements and structures.html">Elements and Structures</a></li>
+                    <li><a href="./tables.html">Tables</a></li>
+                    <li><a href="./forms.html">Forms</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-wrapper">
+        <article class="form">
+            <div class="explanation">
+                <h2 class="heading">&lt;form&gt; Element</h2>
+                <p>The HTML <span class="highlight-keyword">&lt;form&gt;</span> element is used to collect and send information to an external source.</p>
+                <br>
+                <p><span class="highlight-keyword">&lt;form&gt;</span> can contain various input elements. When a user submits the form, information in these input elements is passed to the source which is named in the <span class="highlight-keyword">&lt;action&gt;</span> attribute of the form.</p>
+            </div>
+
+            <div class="code-snippet">
+                <span class="tag">&lt;form&gt;</span>
+                <br>
+                ...
+                <br>
+                <i>form elements</i>  
+                <br>
+                ...
+                <br>
+                <span class="tag">&lt;/form&gt;</span>
+            </div>
+        </article>
+        <article class="input">
+            <div class="explanation">
+                <h2 class="heading">&lt;input&gt; Element</h2>
+                <p>The HTML <span class="highlight-keyword">&lt;input&gt;</span> element is used to render a variety of input fields on a webpage including text fields, checkboxes, buttons, etc.</p>
+                <br>
+                <p><span class="highlight-keyword">&lt;input&gt;</span> element have a <span class="highlight-keyword">&lt;type&gt;</span> attribute that determines how it gets rendered to a page.</p>
+                <br>
+                <p>The example code block will create a text input field on a webpage.</p>
+            </div>
+
+            <div class="code-snippet">
+                <span class="tag">&lt;label </span>
+                <span class="attribute-tag">for</span>=
+                <span class="attribute-value">"fname"</span>
+                <span class="tag">></span>First name:
+                <span class="tag">&lt;/label&gt;</span>
+
+                <br>
+                
+                <span class="tag">&lt;input </span>
+                <span class="attribute-tag">type</span>=
+                <span class="attribute-value">"text"</span>
+                <span class="attribute-tag">name</span>=
+                <span class="attribute-value">"fname"</span>
+                <span class="attribute-tag">id</span>=
+                <span class="attribute-value">"fname"</span>
+                <span class="tag">&gt;</span>
+            </div>
+        </article>
+        <article class="input-text">
+            <div class="explanation">
+                <h2 class="heading">&lt;input&gt;: Text Type</h2>
+                <p>
+                    HTML <span class="highlight-keyword">&lt;input&gt;</span> elements can support text input by setting the attribute <span class="highlight-keyword">type="text"</span>.
+                    This renders a single row input field that users can type text inside.
+                </p>
+                <br>
+                <p>The value od the <span class="highlight-keyword">&lt;input&gt;</span>'s <span class="highlight-keyword">name</span> and <span class="highlight-keyword">value</span> attribute of the element are sent as key-value pair when the form is submitted.</p>
+                <br>
+                <p>The example code block will create a text input field on a webpage.</p>
+            </div>
+
+            <div class="code-snippet">
+                <span class="tag">&lt;input </span>
+                <span class="attribute-tag">type</span>=
+                <span class="attribute-value">"text"</span>
+                <span class="attribute-tag">name</span>=
+                <span class="attribute-value">"username"</span>
+                <span class="tag">/&gt;</span>
+            </div>
+        </article>
+
+        <article class="input-number">
+            <div class="explanation">
+                <h2 class="heading">&lt;input&gt;: Number Type</h2>
+                <p>
+                    HTML input elements can be of type <span class="highlight-keyword">number</span>. These input field allow the user to enter only numbers inside the field.
+                </p>
+                <br>
+                <p>The example code block shows an input with a type of <span class="highlight-keyword">number</span> and a name of <span class="highlight-keyword">balance</span>.</p>
+            </div>
+
+            <div class="code-snippet">
+                <span class="tag">&lt;input </span>
+                <span class="attribute-tag">type</span>=
+                <span class="attribute-value">"number"</span>
+                <span class="attribute-tag">name</span>=
+                <span class="attribute-value">"balance"</span>
+                <span class="tag">/&gt;</span>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

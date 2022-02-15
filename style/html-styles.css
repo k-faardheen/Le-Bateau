@@ -4,6 +4,7 @@ h3 {
     border-bottom: #1F7A8C 3px solid;
 }
 .html-setup-wrapper { 
+    position: relative; 
     height: 100vh;
     margin: 2rem;
     display: flex;
@@ -36,6 +37,7 @@ article .description li input {
     margin-right: 0.5rem;
     cursor: pointer;
 }
+
 
 .btn { 
     display: flex; 
@@ -87,7 +89,7 @@ article .description li input {
       max-width: 100%;
   }
 
-  .btn { 
+  .next-btn { 
       margin: 10%;
       position: static;
       align-self: center;
