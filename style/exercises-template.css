@@ -6,3 +6,11 @@
     display: block;
     width: 100%;
 }
+
+section { 
+    margin-bottom: 3rem;
+}
+
+.code-snippet-wrapper > .correct, .code-snippet-wrapper > .wrong {
+    width: 100%;
+}

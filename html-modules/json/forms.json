@@ -13,5 +13,8 @@
         "1": "input type=\"text\"", 
         "2": "<label for=\"balance\">Balance</label>", 
         "3": "input type=\"number\""
+    }, 
+    {
+        "0": "<button>click me</button>"
     }
 ]

@@ -1,0 +1,17 @@
+[
+    {}, 
+    {
+        "0": "Ferrari", 
+        "1": "Mercedes", 
+        "2": "Red Bull"
+    }, 
+    {
+        "0": "cars[2]"
+    }, 
+    {
+        "0": "cars[1]"
+    }, 
+    {
+        "0":"cars.length"
+    }
+]

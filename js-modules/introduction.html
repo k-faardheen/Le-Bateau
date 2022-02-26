@@ -70,6 +70,45 @@
                 <span class="comments">// Prints: Hi there!</span>
             </div>
         </article>
+
+        <article class="activity">
+            <div class="explanation">
+                <h2 class="heading">An activity for you!</h2>
+                <p>log "hello world" to the console.</p>
+            </div>
+
+            <form action="" id="1" class="activity">
+                <div class="code-snippet-wrapper">
+
+                    <div class="correct" style="display: none;">
+                        <div class="tick">
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                        <span class="correct-msg">Correct!</span>
+                        <br>
+                        <a href="./introduction.html">Try More -></a>
+                    </div>
+
+                    <div class="wrong" style="display: none;">
+                        <div class="cross">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <span class="wrong-msg">Wrong!</span>
+                    </div>
+
+                    <div class="code-snippet">
+                        <input type="text" id="quiz">.<input type="text" id="quiz">("<span class="k1">Hello World!</span>"); 
+                    </div>
+    
+                    <div class="btn-wrapper">
+                        <button id="submit">Submit your answer</button>
+                        <br>
+                        <button id="show-answer">Show Answer</button>
+                    </div>
+                </div>
+            </form>
+        </article>
+        
         <article class="single-line-comments">
             <div class="explanation">
                 <h2 class="heading">Single-Line Comments</h2>
@@ -249,6 +288,7 @@
             </div>
         </article>
     </main>
-    
+    <script src="../script/styleLi.js"></script>
+    <script src="./script/validate js-answer.js"></script>
 </body>
 </html>

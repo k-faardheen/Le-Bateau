@@ -37,9 +37,11 @@
             <div class="menu">
                 <ul>
                     <li><h3>TOPICS</h3></li>
-                    <li id="1"><a href="./exercises-elements and structures.html">Elements and Structures</a></li>
-                    <li id="2"><a href="./exercises-table.html">Tables</a></li>
-                    <li id="3"><a href="./exercise-forms.html">Forms</a></li>
+                    <li id="1"><a href="./exercises-introduction.html">Fundamentals</a></li>
+                    <li id="2"><a href="./exercises-conditionals.html">Conditionals</a></li>
+                    <li id="3"><a href="./exercises-functions.html">Functions</a></li>
+                    <li id="4"><a href="./exercises-arrays.html">Arrays</a></li>
+                    <li id="5"><a href="./exercises-loops.html">Loops</a></li>
                 </ul>
             </div>
         </div>
@@ -48,8 +50,7 @@
     <main class="main-wrapper">
         <section>
             <div class="explanation">
-                <p>Add a table row with two tables headers.</p>
-                <p>The two table headers should have the value "Name" and "Age".</p>
+                <p>Fix the if statement to alert "Hello World" if x is greater than y.</p>
             </div>
 
             <form action="" id="2">
@@ -70,25 +71,11 @@
                     </div>
 
                     <div class="code-snippet">
-                        <span>&lt;table&gt;</span>
+                        if <input type="text" id="quiz" style="width: 3%;">x > y <input type="text" id="quiz" style="width: 3%;"> <input type="text" id="quiz" style="width: 3%;">
                         <br>
-                        <input type="text" id="quiz">
+                        alert("Hello World"); 
                         <br>
-                        <input type="text" id="quiz" style="width: 40%;">
-                        <br>
-                        <input type="text" id="quiz" style="width: 40%;">
-                        <br>
-                        <input type="text" id="quiz">
-                        <br>
-                        <span>&lt;tr&gt;</span>
-                        <br>
-                        <span>&lt;td&gt;Jill Smith&lt;/td&gt;</span>
-                        <br>
-                        <span>&lt;td&gt;50&lt;/td&gt;</span>
-                        <br>
-                        <span>&lt;/tr&gt;</span>
-                        <br>
-                        <span>&lt;/table&gt;</span>
+                        <input type="text" id="quiz" style="width: 3%;">
                     </div>
     
                     <div class="btn-wrapper">
@@ -101,8 +88,7 @@
         </section>
         <section>
             <div class="explanation">
-                <p>Add a table row at the end of the table, with two table cells.</p>
-                <p>The two table cells should have the value "Eve Jackson" and "94".</p>
+                <p>Fix the if statement to alert "Hello World" if x is greater than y, otherwise alert "Goodbye".</p>
             </div>
 
             <form action="" id="3">
@@ -123,33 +109,15 @@
                     </div>
 
                     <div class="code-snippet">
-                        <span>&lt;table&gt;</span>
+                        <input type="text" id="quiz" style="width: 5%;"> (x <input type="text" id="quiz" style="width: 5%;"> y) { 
                         <br>
-                        <span>&lt;tr&gt;</span>
+                        alert("Hello World"); 
                         <br>
-                        <span>&lt;th&gt;Name&lt;/th&gt;</span>
+                         } <input type="text" id="quiz" style="width: 5%;"> {
                         <br>
-                        <span>&lt;th&gt;Age&lt;/th&gt;</span>
+                        alert("Goodbye"); 
                         <br>
-                        <span>&lt;/tr&gt;</span>
-                        <br>
-                        <span>&lt;tr&gt;</span>
-                        <br>
-                        <span>&lt;td&gt;Jill Smith&lt;/td&gt;</span>
-                        <br>
-                        <span>&lt;td&gt;50&lt;/td&gt;</span>
-                        <br>
-                        <span>&lt;/tr&gt;</span>
-                        <br>
-                        <input type="text" id="quiz">
-                        <br>
-                        <input type="text" id="quiz" style="width: 40%;">
-                        <br>
-                        <input type="text" id="quiz" style="width: 40%;">
-                        <br>
-                        <input type="text" id="quiz">
-                        <br>
-                        <span>&lt;/table&gt;</span>
+                         }
                     </div>
     
                     <div class="btn-wrapper">
@@ -160,61 +128,55 @@
                 </div>
             </form>
         </section>
-        <form action="" id="4">
-            <div class="code-snippet-wrapper">
-                <div class="correct" style="display: none;">
-                    <div class="tick">
-                        <i class="fa-regular fa-circle-check"></i>
+        <section>
+            <form action="" id="4">
+                <div class="explanation">
+                    <p>Create a switch statement that will alert "Miam" if dinner is "burger", and "Ewww!" if dinner is "salad"</p>
+                </div>
+                <div class="code-snippet-wrapper">
+                    <div class="correct" style="display: none;">
+                        <div class="tick">
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                        <span class="correct-msg">Correct!</span>
+                        <br>
                     </div>
-                    <span class="correct-msg">Correct!</span>
-                    <br>
-                </div>
 
-                <div class="wrong" style="display: none;">
-                    <div class="cross">
-                        <i class="fa-regular fa-circle-xmark"></i>
+                    <div class="wrong" style="display: none;">
+                        <div class="cross">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <span class="wrong-msg">Wrong!</span>
                     </div>
-                    <span class="wrong-msg">Wrong!</span>
-                </div>
 
-                <div class="code-snippet">
-                    <span>&lt;table&gt;</span>
-                    <br>
-                    <span>&lt;tr&gt;</span>
-                    <br>
-                    <span>&lt;th&gt;<input type="text" id="quiz" style="width: 20%;">&gt;Name&lt;/th&gt;</span>
-                    <br>
-                    <span>&lt;th&gt;Age&lt;/th&gt;</span>
-                    <br>
-                    <span>&lt;/tr&gt;</span>
-                    <br>
-                    <span>&lt;tr&gt;</span>
-                    <br>
-                    <span>&lt;td&gt;Jill Smith&lt;/td&gt;</span>
-                    <br>
-                    <span>&lt;td&gt;50&lt;/td&gt;</span>
-                    <br>
-                    <span>&lt;/tr&gt;</span>
-                    <br>
-                    <span>&lt;tr&gt;</span>
-                    <br>
-                    <span>&lt;td&gt;Eve Smith&lt;/td&gt;</span>
-                    <br>
-                    <span>&lt;td&gt;45&lt;/td&gt;</span>
-                    <br>
-                    <span>&lt;/tr&gt;</span>
-                    <span>&lt;/table&gt;</span>
-                </div>
+                    <div class="code-snippet">
+                       <input type="text" id="quiz">(dinner) {
+                        <br>
+                        <input type="text" id="quiz"> "Burger":
+                        <br>
+                        alert("Miam")
+                        <br>
+                        break; 
+                        <br>
+                        <input type="text" id="quiz"> "Salad":
+                        <br>
+                        alert("Ewww!")
+                        <br>
+                        break; 
+                        <br>
+                       }
+                    </div>
 
-                <div class="btn-wrapper">
-                    <button id="submit">Submit your answer</button>
-                    <br>
-                    <button id="show-answer">Show Answer</button>
+                    <div class="btn-wrapper">
+                        <button id="submit">Submit your answer</button>
+                        <br>
+                        <button id="show-answer">Show Answer</button>
+                    </div>
                 </div>
-            </div>
-        </form>
-    </section>
+            </form>
+        </section>
     </main>
-    <script src="./script/validateAnswer.js"></script>
+    <script src="../script/styleLi.js"></script>
+    <script src="./script/validate js-answer.js"></script>
 </body>
 </html>

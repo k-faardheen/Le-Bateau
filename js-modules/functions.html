@@ -32,7 +32,7 @@
 
 
     <section class="header">
-        <div class="header-wrapper" id="1">
+        <div class="header-wrapper" id="3">
             <h1>Functions</h1>
             <div class="menu">
                 <ul>
@@ -108,6 +108,50 @@
                 }
             </div>
         </article>
+        <article class="activity">
+            <div class="explanation">
+                <h2 class="heading">An activity for you!</h2>
+                <p>Pass the variable name as a parameter for the function "hello".</p>
+            </div>
+
+            <form action="" id="1" class="activity">
+                <div class="code-snippet-wrapper">
+
+                    <div class="correct" style="display: none;">
+                        <div class="tick">
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                        <span class="correct-msg">Correct!</span>
+                        <br>
+                        <a href="./exercises-functions.html">Try More -></a>
+                    </div>
+
+                    <div class="wrong" style="display: none;">
+                        <div class="cross">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <span class="wrong-msg">Wrong!</span>
+                    </div>
+
+                    <div class="code-snippet">
+                        <span class="k4">let name </span>= "<span class="k1">Jimmy</span>"; 
+                        <br>
+                        <span class="k4">function hello</span>( <input type="text" id="quiz"> ) {
+                        <br>
+                        <span class="k1">console</span>.<span class="k2">log</span>("<span class="k1">hello</span>" + name); 
+                        <br>
+                        }
+                       
+                    </div>
+    
+                    <div class="btn-wrapper">
+                        <button id="submit">Submit your answer</button>
+                        <br>
+                        <button id="show-answer">Show Answer</button>
+                    </div>
+                </div>
+            </form>
+        </article>
         <article class="return-keyword">
             <div class="explanation">
                 <h2 class="heading">return Keyword</h2>
@@ -136,5 +180,7 @@
         </article>
         
     </main>
+    <script src="../script/styleLi.js"></script>
+    <script src="./script/validate js-answer.js"></script>
 </body>
 </html>

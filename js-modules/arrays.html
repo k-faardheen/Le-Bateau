@@ -32,7 +32,7 @@
 
 
     <section class="header">
-        <div class="header-wrapper" id="1">
+        <div class="header-wrapper" id="4">
             <h1>Arrays</h1>
             <div class="menu">
                 <ul>
@@ -97,33 +97,45 @@
                 <span class="k1">numbers</span>.<span class="k2">length</span> <span class="comments">// 4</span>
             </div>
         </article>
-        <article class="return-keyword">
+        <article class="activity">
             <div class="explanation">
-                <h2 class="heading">return Keyword</h2>
-                <p>
-                    Functions return (pass back) values using the <span class="highlight-keyword">return</span> keyword. <span class="highlight-keyword">return</span> ends function execution and returns the specified value to the location where it was called.
-                    A common mistake is to forget the <span class="highlight-keyword">return</span> keyword, in which case the function will return <span class="highlight-keyword">undefined</span> by default.
-                </p>
+                <h2 class="heading">An activity for you!</h2>
+                <p>Declare an array, cars with the value "Ferrari", "Mercedes", "Red Bull"</p>
             </div>
-            <div class="code-snippet">
-                <span class="comments">// With return</span>
-                <br>
-                <span class="k4">function sum</span>(<span class="k4">num1</span>,<span class="k4">num2</span>) {
-                <br>
-                <span class="k4">return</span> <span class="k1">num1</span> + <span class="k1">num2</span>; 
-                <br>
-                }
-                <br><br>
-                <span class="comments">// Without return, so the function doesn't output the sum</span>
-                <br>
-                <span class="k4">function sum</span>(<span class="k4">num1</span>,<span class="k4">num2</span>) {
-                <br>
-                <span class="k1">num1</span> + <span class="k1">num2</span>; 
-                <br>
-                }
-            </div>
+
+            <form action="" id="1" class="activity">
+                <div class="code-snippet-wrapper">
+
+                    <div class="correct" style="display: none;">
+                        <div class="tick">
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                        <span class="correct-msg">Correct!</span>
+                        <br>
+                        <a href="./exercises-arrays.html">Try More -></a>
+                    </div>
+
+                    <div class="wrong" style="display: none;">
+                        <div class="cross">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <span class="wrong-msg">Wrong!</span>
+                    </div>
+
+                    <div class="code-snippet">
+                        <span class="k4">let cars </span>= ["<input type="text" id="quiz">", "<input type="text" id="quiz">", "<input type="text" id="quiz">"]; 
+                    </div>
+    
+                    <div class="btn-wrapper">
+                        <button id="submit">Submit your answer</button>
+                        <br>
+                        <button id="show-answer">Show Answer</button>
+                    </div>
+                </div>
+            </form>
         </article>
-        
     </main>
+    <script src="../script/styleLi.js"></script>
+    <script src="./script/validate js-answer.js"></script>
 </body>
 </html>

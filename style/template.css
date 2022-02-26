@@ -20,6 +20,15 @@
     top:80%;
 }
 
+.menu .selected a{ 
+    color: #1F7A8C;
+}
+
+.menu .selected { 
+    border: 4px;
+    border-style: none solid;
+}
+
 .menu ul { 
     display: flex;
     flex-direction: column;
@@ -35,7 +44,7 @@
 }
 
 
-.menu ul > li:nth-child(2):hover, .menu ul > li:nth-child(3):hover ,.menu ul > li:nth-child(4):hover { 
+.menu ul > li:nth-child(2):hover, .menu ul > li:nth-child(3):hover ,.menu ul > li:nth-child(4):hover,.menu ul > li:nth-child(5):hover,.menu ul > li:nth-child(6):hover { 
     border-left: 4px black solid;
 }
 

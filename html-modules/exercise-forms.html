@@ -37,9 +37,9 @@
             <div class="menu">
                 <ul>
                     <li><h3>TOPICS</h3></li>
-                    <li id="1"><a href="./elements and structures.html">Elements and Structures</a></li>
-                    <li id="2"><a href="./tables.html">Tables</a></li>
-                    <li id="3"><a href="./forms.html">Forms</a></li>
+                    <li id="1"><a href="./exercises-elements and structures.html">Elements and Structures</a></li>
+                    <li id="2"><a href="./exercises-table.html">Tables</a></li>
+                    <li id="3"><a href="./exercise-forms.html">Forms</a></li>
                 </ul>
             </div>
         </div>
@@ -88,7 +88,7 @@
         </section>
         <section>
             <div class="explanation">
-                <p>In the form below, add two radio buttons: </p>
+                <p>In the form below, add the following: </p>
                 <ul>
                     <li>An input of type text with a label for "name"</li>
                     <li>An input of type number with a label for "balance"</li>
@@ -132,35 +132,43 @@
                 </div>
             </form>
         </section>
-        <form action="" id="4">
-            <div class="code-snippet-wrapper">
-                <div class="correct" style="display: none;">
-                    <div class="tick">
-                        <i class="fa-regular fa-circle-check"></i>
+        <section>
+            <form action="" id="4">
+                <div class="explanation">
+                    <p>In the form below, add the a <span class="highlight-keyword">&lt;button&gt;</span> element with the text "Click Me".</p>
+                </div>
+                <div class="code-snippet-wrapper">
+                    <div class="correct" style="display: none;">
+                        <div class="tick">
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                        <span class="correct-msg">Correct!</span>
+                        <br>
                     </div>
-                    <span class="correct-msg">Correct!</span>
-                    <br>
-                </div>
 
-                <div class="wrong" style="display: none;">
-                    <div class="cross">
-                        <i class="fa-regular fa-circle-xmark"></i>
+                    <div class="wrong" style="display: none;">
+                        <div class="cross">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <span class="wrong-msg">Wrong!</span>
                     </div>
-                    <span class="wrong-msg">Wrong!</span>
-                </div>
 
-                <div class="code-snippet">
-                  
-                </div>
+                    <div class="code-snippet">
+                        <span>&lt;form action="/action_page.php"&gt;</span>
+                        <br>
+                        <input type="text" id="quiz" style="width: 40%;">
+                        <br>
+                        <span>&lt;/form&gt;</span>
+                    </div>
 
-                <div class="btn-wrapper">
-                    <button id="submit">Submit your answer</button>
-                    <br>
-                    <button id="show-answer">Show Answer</button>
+                    <div class="btn-wrapper">
+                        <button id="submit">Submit your answer</button>
+                        <br>
+                        <button id="show-answer">Show Answer</button>
+                    </div>
                 </div>
-            </div>
-        </form>
-    </section>
+            </form>
+        </section>
     </main>
     <script src="./script/validateAnswer.js"></script>
 </body>
