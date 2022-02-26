@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/template.css" />
+    <link rel="stylesheet" href="../style/exercises-template.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Syntanx And Slectors - Exercises</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="lebateau">
+          <a href="../index.html"> >_Le Bateau</a>
+        </div>
+
+        <nav>
+          <div class="links">
+            <ul>
+              <li><a href="../tutorial.html">Tutorials</a></li>
+              <li><a href="../code-challenge.html">Code Challenges</a></li>
+              <li><a href="../about-us.html">About Us</a></li>
+              <li><a href="../log-in.html">Log in</a></li>
+              <li><a href="../sign-up.html">Sign up</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="header">
+      <div class="header-wrapper" id="3">
+        <h1>Exercises</h1>
+        <div class="menu">
+          <ul>
+            <li><h3>TOPICS</h3></li>
+            <li>
+              <a href="./syntax-and-selectors.html">Syntax and Slectors</a>
+            </li>
+            <li><a href="./visual-rules.html">Visual rules</a></li>
+            <li><a href="./box-model.html">The Box Model</a></li>
+            <li>
+              <a href="./display-and-positioning.html"
+                >Display and Positioning</a
+              >
+            </li>
+            <li><a href="./colors.html">Colors</a></li>
+            <li><a href="./typography.html">Typography</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <main class="main-wrapper">
+      <section>
+        <div class="explanation">
+          <p>Set the color of the element with id="para1", to red.</p>
+        </div>
+
+        <form action="" id="10">
+          <div class="code-snippet-wrapper">
+            <div class="correct" style="display: none">
+              <div class="tick">
+                <i class="fa-regular fa-circle-check"></i>
+              </div>
+              <span class="correct-msg">Correct!</span>
+              <br />
+            </div>
+
+            <div class="wrong" style="display: none">
+              <div class="cross">
+                <i class="fa-regular fa-circle-xmark"></i>
+              </div>
+              <span class="wrong-msg">Wrong!</span>
+            </div>
+
+            <div class="code-snippet">
+              <span>&lt;style&gt;</span>
+              <br />
+              <input type="text" id="quiz" style="width: 5%" /><span>{</span
+              ><br />
+              <input type="text" id="quiz" style="width: 5%" />
+              <span>red;</span>
+              <br />
+              <span>}</span><br />
+
+              <br />
+              <span>&lt;/style&gt;</span><br />
+              <br />
+              <span>&lt;body&gt;</span><br /><br />
+              <span>&lt;h1&gt;This is a heading&lt;/h1&gt;</span><br />
+              <span>&lt;p id="para1"&gt;This is a paragraph&lt;/p&gt;</span
+              ><br />
+
+              <br />
+              <span>&lt;/body&gt;</span>
+            </div>
+
+            <div class="btn-wrapper">
+              <button id="submit">Submit your answer</button>
+              <br />
+              <button id="show-answer">Show Answer</button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section>
+        <div class="explanation">
+          <p>Set the color of all elements with the class colortext, to red.</p>
+        </div>
+
+        <form action="" id="11">
+          <div class="code-snippet-wrapper">
+            <div class="correct" style="display: none">
+              <div class="tick">
+                <i class="fa-regular fa-circle-check"></i>
+              </div>
+              <span class="correct-msg">Correct!</span>
+              <br />
+            </div>
+
+            <div class="wrong" style="display: none">
+              <div class="cross">
+                <i class="fa-regular fa-circle-xmark"></i>
+              </div>
+              <span class="wrong-msg">Wrong!</span>
+            </div>
+
+            <div class="code-snippet">
+              <span>&lt;style&gt;</span>
+              <br />
+              <input type="text" id="quiz" style="width: 10%" /><span>{</span
+              ><br />
+              <input type="text" id="quiz" style="width: 5%" />
+              <span>red;</span>
+              <br />
+              <span>}</span><br />
+
+              <br />
+              <span>&lt;/style&gt;</span><br />
+              <br />
+              <span>&lt;body&gt;</span><br /><br />
+              <span>&lt;h1&gt;This is a heading&lt;/h1&gt;</span><br />
+              <span>&lt;p&gt;This is a paragraph&lt;/p&gt;</span><br />
+              <span
+                >&lt;p class="colortext"&gt;This is a paragraph&lt;/p&gt;</span
+              ><br />
+              <span
+                >&lt;p class="colortext"&gt;This is a paragraph&lt;/p&gt;</span
+              ><br />
+              <br />
+              <span>&lt;/body&gt;</span>
+            </div>
+
+            <div class="btn-wrapper">
+              <button id="submit">Submit your answer</button>
+              <br />
+              <button id="show-answer">Show Answer</button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section>
+        <div>
+          <p>
+            Change the color of all &lt;p&gt; and &lt;h1&gt; elements, to "red".
+            Group the selectors to minimize code.
+          </p>
+        </div>
+        <form action="" id="12">
+          <div class="code-snippet-wrapper">
+            <div class="correct" style="display: none">
+              <div class="tick">
+                <i class="fa-regular fa-circle-check"></i>
+              </div>
+              <span class="correct-msg">Correct!</span>
+              <br />
+            </div>
+
+            <div class="wrong" style="display: none">
+              <div class="cross">
+                <i class="fa-regular fa-circle-xmark"></i>
+              </div>
+              <span class="wrong-msg">Wrong!</span>
+            </div>
+
+            <div class="code-snippet">
+              <span>&lt;style&gt;</span>
+              <br />
+              <input type="text" id="quiz" style="width: 5%" /><span>{</span
+              ><br />
+              <input type="text" id="quiz" style="width: 5%" />
+              <span>red;</span>
+              <br />
+              <span>}</span><br />
+
+              <br />
+              <span>&lt;/style&gt;</span><br />
+              <br />
+              <span>&lt;body&gt;</span><br /><br />
+              <span>&lt;h1&gt;This is a heading&lt;/h1&gt;</span><br />
+              <span>&lt;h2&gt;This is a smaller heading&lt;/h2&gt;</span><br />
+              <span>&lt;p&gt;This is a paragraph&lt;/p&gt;</span><br />
+              <span>&lt;p&gt;This is a paragraph&lt;/p&gt;</span><br />
+
+              <br />
+              <span>&lt;/body&gt;</span>
+            </div>
+
+            <div class="btn-wrapper">
+              <button id="submit">Submit your answer</button>
+              <br />
+              <button id="show-answer">Show Answer</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="./script/validate-css-exercises.js"></script>
+  </body>
+</html>

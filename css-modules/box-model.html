@@ -79,11 +79,11 @@
             /* The vertical margins will collapse to 30 pixels instead of adding
             to 50 pixels. */</span
           ><br />
-          <span>.block-one {</span><br />
+          <span class="tag">.block-one</span><span> {</span><br />
           <span>margin: 20px;</span><br />
           <span>}</span><br />
           <br />
-          <span>.block-two {</span><br />
+          <span class="tag">.block-two</span><span> {</span><br />
           <span>margin: 30px;</span><br />
           <span>}</span><br />
         </div>
@@ -148,7 +148,7 @@
             >/* Any element with class "column" will be at most 200 pixels wide,
             despite the width property value of 500 pixels. */</span
           ><br />
-          <span>.column {</span><br />
+          <span class="tag">.column </span><span>{</span><br />
           <span>max-width: 200px;</span><br />
           <span>width: 500px;</span><br />
           <span>}</span>
@@ -167,7 +167,7 @@
         </div>
 
         <div class="code-snippet">
-          <span>.container {</span><br />
+          <span class="tag">.container </span><span>{</span><br />
           <span> box-sizing: border-box;</span><br />
           <span>}</span>
         </div>
@@ -191,7 +191,7 @@
         </div>
 
         <div class="code-snippet">
-          <span>#box-example {</span><br />
+          <span class="tag">#box-example </span><span>{</span><br />
           <span>box-sizing: border-box;</span><br />
           <span>}</span>
         </div>
@@ -199,61 +199,60 @@
 
       <article class="activity">
         <div class="explanation">
-            <h2 class="heading">An activity for you!</h2>
-            <p>Fill in the missing keywords in the code to your right. 👉</p>
-            <p>Set the width of the &lt;div&gt; element to "200px".</p>
+          <h2 class="heading">An activity for you!</h2>
+          <p>Fill in the missing keywords in the code to your right. 👉</p>
+          <p>Set the width of the &lt;div&gt; element to "200px".</p>
         </div>
 
         <form action="" id="1" class="activity">
-            <div class="code-snippet-wrapper">
-
-                <div class="correct" style="display: none;">
-                    <div class="tick">
-                        <i class="fa-regular fa-circle-check"></i>
-                    </div>
-                    <span class="correct-msg">Correct!</span>
-                    <br>
-                    <a href="">Try More -></a>
-                </div>
-
-                <div class="wrong" style="display: none;">
-                    <div class="cross">
-                        <i class="fa-regular fa-circle-xmark"></i>
-                    </div>
-                    <span class="wrong-msg">Wrong!</span>
-                </div>
-
-                <div class="code-snippet">
-                    <span class="tag">&lt;style&gt; </span>
-                    <br>
-                    <input type="text" id="quiz">
-                    <span>{</span><br>
-                      <input type="text" id="quiz">
-                      <span>:</span>
-                      <input type="text" id="quiz">
-                      <span>;</span><br>
-                    <span>}</span><br>
-                    <span class="tag">&lt;/style&gt; </span><br>
-                    <br>
-                    <span class="tag">&lt;body&gt; </span><br>
-                    <span class="tag">&lt;div&gt; </span><br>
-                    <span>Lorem ipsum dolor sit amet,</span><br>
-                    <span>consectetur adipiscing elit,</span><br>
-                    <span>sed do eiusmod tempor incididunt</span><br>
-                    <span>ut labore et dolore magna aliqua.</span><br>
-                    <span class="tag">&lt;/div&gt; </span><br>
-                    <br>
-                    <span class="tag">&lt;body&gt; </span><br>
-                </div>
-
-                <div class="btn-wrapper">
-                    <button id="submit">Submit your answer</button>
-                    <br>
-                    <button id="show-answer">Show Answer</button>
-                </div>
+          <div class="code-snippet-wrapper">
+            <div class="correct" style="display: none">
+              <div class="tick">
+                <i class="fa-regular fa-circle-check"></i>
+              </div>
+              <span class="correct-msg">Correct!</span>
+              <br />
+              <a href="">Try More -></a>
             </div>
+
+            <div class="wrong" style="display: none">
+              <div class="cross">
+                <i class="fa-regular fa-circle-xmark"></i>
+              </div>
+              <span class="wrong-msg">Wrong!</span>
+            </div>
+
+            <div class="code-snippet">
+              <span class="tag">&lt;style&gt; </span>
+              <br />
+              <input type="text" id="quiz" />
+              <span>{</span><br />
+              <input type="text" id="quiz" />
+              <span>:</span>
+              <input type="text" id="quiz" />
+              <span>;</span><br />
+              <span>}</span><br />
+              <span class="tag">&lt;/style&gt; </span><br />
+              <br />
+              <span class="tag">&lt;body&gt; </span><br />
+              <span class="tag">&lt;div&gt; </span><br />
+              <span>Lorem ipsum dolor sit amet,</span><br />
+              <span>consectetur adipiscing elit,</span><br />
+              <span>sed do eiusmod tempor incididunt</span><br />
+              <span>ut labore et dolore magna aliqua.</span><br />
+              <span class="tag">&lt;/div&gt; </span><br />
+              <br />
+              <span class="tag">&lt;body&gt; </span><br />
+            </div>
+
+            <div class="btn-wrapper">
+              <button id="submit">Submit your answer</button>
+              <br />
+              <button id="show-answer">Show Answer</button>
+            </div>
+          </div>
         </form>
-    </article>
+      </article>
     </main>
 
     <script src="./script/css-module.js"></script>
