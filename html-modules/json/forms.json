@@ -1,0 +1,17 @@
+[
+    {}, 
+    {
+        "0": "input type=\"button\" value=\"ok\"",
+        "1": "</form>"
+    }, 
+    {
+        "0": "input type=\"radio\" name=\"fav_language\"", 
+        "1": "input type=\"radio\" name=\"fav_language\""
+    },
+    {
+        "0": "<label for=\"name\">Name</label>",
+        "1": "input type=\"text\"", 
+        "2": "<label for=\"balance\">Balance</label>", 
+        "3": "input type=\"number\""
+    }
+]

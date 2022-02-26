@@ -1,12 +1,26 @@
 //Selectors
 const submitBtns = document.querySelectorAll('.btn-wrapper > #submit');
 const showAnsBtns = document.querySelectorAll('.btn-wrapper > #show-answer'); 
-let val; 
-let flag; 
+let val = ''; 
+let PATH = ''; 
+let get_path; 
+const id = document.querySelector('.header-wrapper').id; 
 
-//Retrieve the JSON FILE. 
+getId = () => { 
+    switch(id) { 
+        case '1':
+            return PATH = 'json/elements and structures.json'; 
+        case '2': 
+            return PATH = 'json/tables.json'; 
+        case '3':
+            return PATH = 'json/forms.json'; 
+    }
+}
+
+
+console.log(getId()); 
 const getAnswer = async () => { 
-    const response = await fetch('./script/answers.json'); 
+    const response = await fetch(getId()); 
     const data = await response.json(); 
     return data; 
 }
@@ -15,31 +29,35 @@ getAnswer().then(data => {
     val = data; 
 });
 
-//Event Listeners
 
+//Event Listeners
 submitBtns.forEach(btn => { 
     btn.addEventListener('click', (e) => { 
         e.preventDefault();
+        const root = e.target.getRootNode(); 
+        const getId = root.querySelector('.header > .header-wrapper').id
         const parent = e.target.parentNode.parentNode.parentNode; //Grab the parent element (form tag)
         const inputBox = parent.querySelectorAll('input'); //Query the form --> Grab all the input fields in the form
-        const codeSnippetWrapper = parent.querySelector('.code-snippet-wrapper'); //Retrieve the wrapper to change the contents(i.e if answer is wrong or correct) 
-
+        const codeSnippetWrapper = parent.querySelector('.code-snippet-wrapper'); //Retrieve the wrapper to change the contents(i.e if answer is wrong or correct)  
+        let correct; 
+            
         if(e.target.className === 'try-again') { 
             tryAgain(e.target, parent); 
             showHTMLElements(e.target.parentNode.childNodes[5]);
         }else { 
             for(i = 0; i < inputBox.length; i++) { 
-                flag = false; //If one input value is wrong the flag would return FALSE.
-                if(inputBox[i].value.toLowerCase() === val[parent.id][i]){ //Check input value of user against answer in the JSON file. 
-                    flag = true;  //Sets the a flag to TRUE if each input values are correct. 
+                correct = true; 
+                if(inputBox[i].value.toLowerCase() !== val[parent.id][i]){ //Check input value of user against answer in the JSON file. 
+                    correct = false;  // If one answer is wrong, set flag to FALSE and break from the loop. 
+                    break; 
                 }
             }
         
-            if(flag){ 
-                //CALL ON THE FUNCTION changeHTMLElements. 
-                changeHTMLElements(e.target, codeSnippetWrapper, flag); 
+            if(correct){ 
+                //CALL ON THE FUNCTION changeHTMLElements to show appropriate template (i.e --> either wrong template OR correct template). 
+                changeHTMLElements(e.target, codeSnippetWrapper, correct); 
             }else {
-                changeHTMLElements(e.target, codeSnippetWrapper, flag)
+                changeHTMLElements(e.target, codeSnippetWrapper, correct)
             }
         }
 
@@ -71,6 +89,7 @@ showAnsBtns.forEach(btn => {
 })
 
 
+//Functions
 hideHTMLElements = (element) => { 
     element.style.display = "none"; 
 }
