@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         let display = ""
         data.forEach(country => {
             display+=`<option>${country.name}</option>`
-            console.log(country.callingCodes)
+           
         });
         drop.innerHTML=display
     })
