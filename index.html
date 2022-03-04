@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Le Bateau</title>
     <link rel="icon" href="./assets/rainbow.png">
 </head>
@@ -17,16 +18,33 @@
                     <span>>_Le Bateau</span>
                 </div>
                  <nav>
-                    <div class="links">
-                        <ul>
-                            <li><a href="./tutorial.html">Tutorials</a></li>
-                            <li><a href="./code-challenge.html">Code Challenges</a></li>
-                            <li><a href="./about-us.html">About Us</a></li>
-                            <li><a href="./log-in.html">Log in</a></li>
-                            <li><a href="./sign-up.html">Sign up</a></li>
-                        </ul>
-                    </div>
+                        <div class="links">
+                            <ul>
+                                <li><a href="./tutorial.html">Tutorials</a></li>
+                                <li><a href="./code-challenge.html">Code Challenges</a></li>
+                                <li><a href="./about-us.html">About Us</a></li>
+                                <li><a href="./log-in.html">Log in</a></li>
+                                <li><a href="./sign-up.html">Sign up</a></li>
+                            </ul>
+                        </div>
                 </nav>
+
+                <div class="bar-icon">
+                    <button><i class="fa-solid fa-bars"></i></button>
+                </div>
+                <div class="responsive-menu" style="display: none;">
+                    <nav>
+                        <div class="responsive-links">
+                            <ul>
+                                <li><a href="./tutorial.html">Tutorials</a></li>
+                                <li><a href="./code-challenge.html">Code Challenges</a></li>
+                                <li><a href="./about-us.html">About Us</a></li>
+                                <li><a href="./log-in.html">Log in</a></li>
+                                <li><a href="./sign-up.html">Sign up</a></li>
+                            </ul>
+                        </div>
+                </nav> 
+                </div>
             </div>         
     </header>
 
@@ -41,7 +59,7 @@
                 </div>
             </div>
             <div class="banner">
-                <img src="./assets/ti bolom.png" width="650" height="400">
+                <img src="./assets/ti bolom.png">
             </div>
         </div>
         <div class="line"></div>
@@ -221,7 +239,7 @@
     <section class="sign-up-wrapper">
         <div class="sign-up-container">
             <div class="sign-up-img">
-                <img src="./assets/working.png" width="300" height="300">
+                <img src="./assets/working.png">
             </div>
             <div class="sign-up-text">
                 <span style="font-weight: bold; font-size: 18px;">Start for free</span>
@@ -238,7 +256,7 @@
 
     <footer>
         <div class="footer-container">
-            <div class="footer-nav">
+            <nav class="footer-nav">
                 <ul>
                     <li><a href="./tutorial.html">Tutorials</a></li>
                     <li><a href="./code-challenge.html">Code Challenges</a></li>
@@ -246,11 +264,13 @@
                     <li><a href="./privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="./terms-and-conditions.html">Terms & Conditions</a></li>
                 </ul>
-            </div>
+            </nav>
             <div class="copyright">
                 <span>© 2022 Copyright • Le Bateau</span>
             </div>
         </div>
     </footer>
+
+    <script src="./script/responsive menu.js"></script>
 </body>
 </html>

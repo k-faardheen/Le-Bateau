@@ -1,17 +1,19 @@
 
+
 .hero-container { 
     padding: 2rem;
     position: relative;
     display: flex;
+    justify-content: space-between;
 }
-
-.hero-container .welcome .banner{ 
-    min-width: 50%;
-}
-
 
 .hero-container .welcome { 
     margin-top: 10%;
+    max-width: 50%;
+}
+
+.hero-container .banner img { 
+    max-width: 100%;
 }
 
 .line { 
@@ -45,14 +47,11 @@
     display: block;
     max-width: 100%;
 }
-.start-learning-btn { 
-  position: absolute;
-  bottom: 2vh;
-}
+
 
 section.work { 
     background-color: #E1E5F2;
-    max-height: 100vh;
+    padding: 2rem;
 }
 
 .work-title { 
@@ -69,7 +68,6 @@ section.work {
 .learn-container, .practice-container, .build-container{ 
     text-align: center;
     max-width: 25%;
-    height: 50vh;
 }
 
 section.work span{ 
@@ -85,10 +83,7 @@ section.work span{
 }
 
 .quote { 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     padding-top: 1.5vh;
     color: white;
 }
@@ -144,19 +139,13 @@ section.work span{
     transform: rotate(90deg);
 }
 
-.student-corner { 
-    max-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .student-container { 
     display: flex;
     justify-content: space-evenly;
 }
 
 .student-heading { 
+    text-align: center;
     margin: 5vh;
 }
 
@@ -185,4 +174,85 @@ section.work span{
 .sign-up-text { 
     width: 50%;
     text-align: center;
+}
+
+@media screen and (max-width: 1080px) {
+
+    .hero-container { 
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 10%;
+    }
+
+    .hero-container .welcome{ 
+        text-align: center;
+        max-width: 100%;
+    }
+
+    button { 
+        font-size: .6rem;
+    }
+
+    .work-container { 
+        flex-direction: column;
+    }
+
+    .learn-container, .practice-container, .build-container {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2rem;
+    }
+
+    .learn-img, .practice-img, .build-img { 
+        margin-right: 1rem;
+    }
+
+    .quote { 
+        font-size: 0.8rem;
+    }
+
+    .quiz-container { 
+        flex-direction: column;
+    }
+
+    .lemon, .wanted-poster, .poker-card { 
+        min-width: 100%;
+    }
+
+    .student-container { 
+        flex-direction: column;
+    }
+
+    .first-student, .second-student, .third-student { 
+        position: static;
+        max-width: 100%;
+        margin-bottom: 4rem;
+    }
+   
+    .student-container .name { 
+        margin-top: 2rem;
+        position: static;
+    }
+
+    .sign-up-img img { 
+        max-width: 100%;
+    }
+
+    .sign-up-container { 
+        padding: 0;
+        margin: 1rem;
+        flex-direction: column;
+    }
+
+    .sign-up-text { 
+        width: 100%;
+    }
+
+    .footer-nav ul > li { 
+        margin:0;
+    }
+
+    
 }

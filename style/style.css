@@ -8,9 +8,9 @@
 }
 
 body { 
-    font-family:'Poppins', sans-serif;
-    max-width: 100%;
+    font-family:'Poppins', sans-serif; 
 }
+
 header { 
     padding: 1rem;
     font-size: 1rem;
@@ -49,6 +49,17 @@ li a {
     color: black;
 }
 
+.bar-icon > button { 
+    all: unset;
+    cursor: pointer;
+    margin: 0 0.2rem;
+    display: none;
+}
+
+a:hover, a.active { 
+    color: #1F7A8C;
+}
+
 button { 
     color: white;
     background: #1F7A8C;
@@ -79,4 +90,37 @@ button {
     color: white;
     position: absolute;
     bottom: 1vh;
+}
+
+@media screen and (max-width: 1080px) {    
+    .links { 
+        display: none;
+    }
+
+    .bar-icon > button { 
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .responsive-menu { 
+        margin: 0 0 10% 20%;
+        z-index: 1;
+        background-color: #E1E5F2;
+        position: absolute;
+        right: 0%;
+        top: 15%; 
+        animation-name: slideLeft;
+        animation-duration: 0.5s;
+    }
+
+    .responsive-links ul > li { 
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    @keyframes slideLeft {
+        from {right: -100%;}
+        to {right: 0;}
+    }
+  
 }
