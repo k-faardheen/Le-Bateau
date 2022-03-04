@@ -26,7 +26,7 @@
     </header>
     <div class="main">
       <div class="form-group">
-        <form name="log in form" action="process.php" method="GET">
+        <form name="login-form" action="login.php" method="POST">
           <div class="email">
             <input
               type="email"
@@ -45,7 +45,7 @@
               required
             />
           </div>
-          <button class="btn">Log In</button>
+          <button class="btn" onclick="return validate()">Log In</button>
           <p>Not a member yet?<a href="sign-up.html"> Sign Up</a></p>
           <a href="#">Forget password?</a>
         </form>
@@ -58,5 +58,6 @@
         <h3>Log in to your account to continue</h3>
       </div>
     </div>
+    <script src="/script/log-in.js"></script>
   </body>
 </html>
