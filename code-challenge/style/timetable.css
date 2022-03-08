@@ -107,7 +107,6 @@ button a {
   border-radius: 40px;
   margin: 20px 30px 20px 30px;
   overflow: hidden;
-  position: relative;
   display: flex;
   height: 1000px;
 }
