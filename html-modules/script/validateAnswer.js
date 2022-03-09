@@ -3,7 +3,6 @@ const submitBtns = document.querySelectorAll('.btn-wrapper > #submit');
 const showAnsBtns = document.querySelectorAll('.btn-wrapper > #show-answer'); 
 let val = ''; 
 let PATH = ''; 
-let get_path; 
 const id = document.querySelector('.header-wrapper').id; 
 
 getId = () => { 

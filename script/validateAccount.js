@@ -1,4 +1,5 @@
 function validate() {
+  console.log('in function')
   let vblank = validateBlank();
 
   let vname = validateName();
