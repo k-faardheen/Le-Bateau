@@ -1,7 +1,7 @@
 --Create table course 
     CREATE TABLE course (
         course_id VARCHAR(4) NOT NULL PRIMARY KEY, 
-        name varchar(50)
+        name varchar(50) NOT NULL
     ); 
 
 --Populate the table 
