@@ -44,3 +44,31 @@ INSERT INTO course(course_id, name)
 VALUES(
 	'C008', 'Spring Boot'
 ); 
+INSERT INTO course(course_id, name)
+VALUES(
+	'C009', 'Machine Learning'
+); 
+INSERT INTO course(course_id, name)
+VALUES(
+	'C010', 'Go'
+); 
+INSERT INTO course(course_id, name)
+VALUES(
+	'C011', 'Visual Basic'
+); 
+INSERT INTO course(course_id, name)
+VALUES(
+	'C012', 'Ruby'
+); 
+INSERT INTO course(course_id, name)
+VALUES(
+	'C013', 'C++'
+); 
+INSERT INTO course(course_id, name)
+VALUES(
+	'C014', 'C#'
+); 
+INSERT INTO course(course_id, name)
+VALUES(
+	'C015', 'PHP'
+); 
