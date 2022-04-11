@@ -1,10 +1,10 @@
-CREATE DOMAIN Registration_ID AS VARCHAR(5)
+CREATE DOMAIN Registration_Domain AS VARCHAR(5)
 CHECK (
-    Registration_ID LIKE 'R%'
+    VALUE LIKE 'R%'
 )
 
 CREATE TABLE REGISTRATION (
-        Registration_ID VARCHAR(5) NOT NULL,
+        Registration_ID Registration_Domain,
         first_name varchar(30),
         last_name varchar(30),
         role varchar(15),
@@ -18,9 +18,10 @@ CREATE TABLE REGISTRATION (
         PRIMARY KEY (Registration_ID) 
 )
 
+
 --populate to REGISTRATION TABLE
 INSERT INTO REGISTRATION (Registration_ID, first_name, last_name, role, email, gender, DOB, streetName, city, postalCode, country)
-VALUES ('R001', 'Faardheen', 'Khodaboccus', 'administrator', 'Faardheen@gmail.com', 'M', '2002-01-10', 'Faar lane', 'valle des pretes', '11220', 'Mauritius'),
+VALUES ('R001', 'Faardheen', 'Khodabuccus', 'administrator', 'Faardheen@gmail.com', 'M', '2002-01-10', 'Ally lane', 'vallee des pretes', '11220', 'Mauritius'),
        ('R002', 'muntaswir', 'waliyullah', 'administrator', 'Muntaswir@gmail.com', 'M', '2001-06-26', 'cardinal 4', 'pailles', '11221', 'Mauritius');
 
 INSERT INTO REGISTRATION (Registration_ID, first_name, last_name, role, email, gender, DOB, streetName, city, postalCode, country)
