@@ -2,7 +2,7 @@ CREATE TABLE CONTRIBUTOR(
     Contributor_Id VARCHAR(7) NOT NULL,
     PRIMARY KEY(Contributor_Id),
     Registration_id varchar(5),
-    FOREIGN KEY (Registration_id) REFERENCES REGISTRATION(Registration_ID)
+    FOREIGN KEY (Registration_id) REFERENCES REGISTRATION(Registration_ID) ON DELETE CASCADE
 )
 
 --populate to CONTRIBUTOR TABLE

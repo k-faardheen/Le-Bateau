@@ -6,7 +6,7 @@ CREATE VIEW student_data AS
     AND s.student_id = e.student_id 
     AND e.course_id = c.course_id;  
 
--- Granted view access to SUZY 
+-- Granted view(student_data) access to SUZY 
 GRANT SELECT ON student_data TO suzy; 
 
 --List the names of the contributor and the number of courses they contributed to. 

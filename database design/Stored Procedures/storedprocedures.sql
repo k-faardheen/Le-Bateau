@@ -15,6 +15,8 @@ RAISE NOTICE 'Error Message : % %', SQLERRM, SQLSTATE;
 END; $$
 LANGUAGE plpgsql;
 
+SELECT insertReg('damien', 'smith', 'student', 'damian@gmail.com', 'M', '2002-12-12', 'xxx', 'xxx', 'xxx', 'xxx');
+
 -- calling the function/ adding new data
 SELECT insertReg('R1002', 'Fran', 'Jeness', 'contributor', 'fjeness1d@webnode.com', 'M', '1905-03-22', 'Westport', 'Gereykhanovskoye', '368792', 'Russia')
 

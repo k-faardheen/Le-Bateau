@@ -2,7 +2,7 @@ CREATE TABLE STUDENT(
     Student_Id VARCHAR(4) NOT NULL,
     PRIMARY KEY(Student_Id),
     Registration_id varchar(5),
-    FOREIGN KEY (Registration_id) REFERENCES REGISTRATION(Registration_ID)
+    FOREIGN KEY (Registration_id) REFERENCES REGISTRATION(Registration_ID) ON DELETE CASCADE
 )
 
 insert into Student (Student_Id, Registration_Id)
