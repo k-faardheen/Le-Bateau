@@ -26,6 +26,8 @@ $$
 LANGUAGE plpgsql; 
 
 -- TRIGGER 
+
+--Creating a trigger that will automatically make an entry to the respective table based on the user's role. 
 CREATE OR REPLACE TRIGGER trigger_insert AFTER INSERT 
 ON registration
 FOR EACH ROW
