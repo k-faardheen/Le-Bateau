@@ -31,10 +31,10 @@ LANGUAGE plpgsql;
 CREATE OR REPLACE TRIGGER trigger_insert AFTER INSERT 
 ON registration
 FOR EACH ROW
-EXECUTE PROCEDURE insert_function(); 
+EXECUTE PROCEDURE insert_function();  
 
 
--- 2nd trigger
+-- 2nd trigger 
 
 CREATE OR REPLACE FUNCTION delete_function() RETURNS trigger AS 
 $$
@@ -50,4 +50,3 @@ LANGUAGE plpgsql;
 CREATE OR REPLACE TRIGGER trigger_delete BEFORE DELETE ON registration
 FOR EACH ROW
 EXECUTE PROCEDURE delete_function(); 
-
