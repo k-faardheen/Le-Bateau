@@ -24,13 +24,14 @@
     <div class="content-wrapper">
       <h1>Join <span style="color: #1f7a8c">Le bateau</span> for free!</h1>
       <div class="form-wrapper">
-        <form name="accountForm" action="account.php" method="POST">
+        <form name="accountForm" action="./php/create-account.php" method="POST">
           <h2>Create Your Account</h2>
           <div class="align">
             <div class="style1">
               <input
                 type="text"
                 id="fname"
+                name="fname"
                 placeholder="Enter Your First Name"
                 required
                 oninvalid="this.setCustomValidity('Please enter your first name')"
@@ -40,6 +41,7 @@
               <input
                 type="text"
                 id="lname"
+                name="lname"
                 placeholder="Enter Your last Name"
                 required
                 oninvalid="this.setCustomValidity('Please enter your last name')"
@@ -50,30 +52,34 @@
             <input
               type="email"
               id="email"
+              name="email"
               placeholder="Enter Your Email Address"
               required
               oninvalid="this.setCustomValidity('Please enter your email address')"
             />
           </div>
           <div class="style1">
-            <input
-              type="text"
-              id="profession"
-              placeholder="What Is Your Profession"
-              required
-              oninvalid="this.setCustomValidity('Please enter your profession')"
-            />
+            <label>I'm a  </label>
+            <select name="profession" id="profession">
+              <option value="student">student</option>
+              <option value="contributor">contributor</option>
+            </select>
           </div>
           <div class="align">
             <div>
               <label for="gender">Gender: </label>
               <input type="radio" name="gender" value="male" />Male
               <input type="radio" name="gender" value="female" />Female
-              <input type="radio" name="gender" value="null" />Prefer Not to Say
             </div>
             <div>
               <label for="dob">Date Of Birth:</label>
-              <input type="date" id="dob" required oninvalid="this.setCustomValidity('You need to be at least 11 yrs old')"/>
+              <input
+                type="date"
+                id="dob"
+                name="dob"
+                required
+                oninvalid="this.setCustomValidity('You need to be at least 11 yrs old')"
+              />
             </div>
           </div>
 
@@ -83,6 +89,7 @@
             <input
               type="text"
               id="street"
+              name="street"
               placeholder="Street Address"
               required
               oninvalid="this.setCustomValidity('Please enter your street address')"
@@ -97,10 +104,24 @@
           </div>
           <div class="align">
             <div class="style1">
-              <input type="text" id="city" placeholder="City" required oninvalid="this.setCustomValidity('Please enter your city you live in')"/>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="City"
+                required
+                oninvalid="this.setCustomValidity('Please enter your city you live in')"
+              />
             </div>
             <div class="style1">
-              <input type="text" id="state" placeholder="State" required oninvalid="this.setCustomValidity('Please enter your state you live in')" />
+              <input
+                type="text"
+                id="state"
+                name="state"
+                placeholder="State"
+                required
+                oninvalid="this.setCustomValidity('Please enter your state you live in')"
+              />
             </div>
           </div>
           <div class="align">
@@ -108,17 +129,19 @@
               <input
                 type="number"
                 id="p-code"
+                name="p-code"
                 placeholder="Postal code"
                 required
                 oninvalid="this.setCustomValidity('Please enter your postal code')"
               />
             </div>
-            <div><select id="countries"></select></div>
+            <div><select id="countries" name="country"></select></div>
           </div>
           <div class="style2">
             <input
               type="password"
               id="password"
+              name="pass"
               placeholder="Enter Your Password"
               required
               oninvalid="this.setCustomValidity('Your password must be a Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character')"
@@ -129,6 +152,7 @@
             <input
               type="password"
               id="confirm-pass"
+              name="c-pass"
               placeholder="Confirm Your Password"
               required
               oninvalid="this.setCustomValidity('This password should match the password entered above')"
@@ -145,7 +169,7 @@
             <button onclick="return validate()">Sign In</button>
           </div>
           <div class="member">
-            <small>Already A Member?<a href="./log-in.html">Log In</a></small>
+            <small>Already A Member?<a href="./login-form.php">Log In</a></small>
           </div>
         </form>
       </div>
