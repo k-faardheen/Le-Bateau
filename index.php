@@ -12,41 +12,9 @@
 </head>
 <body>
 
-    <header>
-            <div class="nav-container">
-                <div class="lebateau">
-                    <span>>_Le Bateau</span>
-                </div>
-                 <nav>
-                        <div class="links">
-                            <ul>
-                                <li><a href="./tutorial.html">Tutorials</a></li>
-                                <li><a href="./code-challenge.html">Code Challenges</a></li>
-                                <li><a href="./about-us.html">About Us</a></li>
-                                <li><a href="./log-in.html">Log in</a></li>
-                                <li><a href="./sign-up.html">Sign up</a></li>
-                            </ul>
-                        </div>
-                </nav>
-
-                <div class="bar-icon">
-                    <button><i class="fa-solid fa-bars"></i></button>
-                </div>
-                <div class="responsive-menu" style="display: none;">
-                    <nav>
-                        <div class="responsive-links">
-                            <ul>
-                                <li><a href="./tutorial.html">Tutorials</a></li>
-                                <li><a href="./code-challenge.html">Code Challenges</a></li>
-                                <li><a href="./about-us.html">About Us</a></li>
-                                <li><a href="./log-in.html">Log in</a></li>
-                                <li><a href="./sign-up.html">Sign up</a></li>
-                            </ul>
-                        </div>
-                </nav> 
-                </div>
-            </div>         
-    </header>
+    <?php
+        include('header.php'); 
+    ?>
 
     <section>
         <div class="hero-container">
@@ -254,22 +222,9 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-container">
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="./tutorial.html">Tutorials</a></li>
-                    <li><a href="./code-challenge.html">Code Challenges</a></li>
-                    <li><a href="./about-us.html">About Us</a></li>
-                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="./terms-and-conditions.html">Terms & Conditions</a></li>
-                </ul>
-            </nav>
-            <div class="copyright">
-                <span>© 2022 Copyright • Le Bateau</span>
-            </div>
-        </div>
-    </footer>
+    <?php 
+        include('footer.php'); 
+    ?> 
 
     <script src="./script/responsive menu.js"></script>
 </body>
