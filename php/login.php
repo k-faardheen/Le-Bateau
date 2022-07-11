@@ -20,9 +20,7 @@
         } else {
             while ($row = $rs->fetch_assoc()) {
                 $_SESSION['name'] = $row['firstName'];
-                echo $_SESSION['name'];
                $_SESSION['lname'] = $row['lastName'];
-               echo 'hello'.$_SESSION['lname'];
             }
             echo '<script src="./auth.js"></script>'; 
             header('location:dashboard.php');
