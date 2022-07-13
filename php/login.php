@@ -11,7 +11,7 @@
         $email = $_POST['email'];
         $pass = $_POST['password'];
 
-        $sql = "select firstName from registration where email = '$email' and password = '$pass'";
+        $sql = "select * from registration where email = '$email' and password = '$pass'";
         $rs = mysqli_query($conn, $sql);
     
         if (mysqli_num_rows($rs) < 1) {
@@ -20,6 +20,7 @@
         } else {
             while ($row = $rs->fetch_assoc()) {
                 $_SESSION['lName'] = $row['lastName'];
+
             }
             header('location:dashboard.php');
         }
