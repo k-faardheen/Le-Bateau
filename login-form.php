@@ -14,7 +14,7 @@
     <nav>
       <div class="menu-container">
         <div class="logo">
-          <a href="./index.html">>_Le Bateau</a>
+          <a href="./index.php">>_Le Bateau</a>
         </div>
         <div class="menu">
           <ul>

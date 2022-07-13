@@ -15,11 +15,19 @@
                                 <li><a href="./tutorial.html">Tutorials</a></li>
                                 <li><a href="./code-challenge.html">Code Challenges</a></li>
                                 <li><a href="./about-us.html">About Us</a></li>
-                                <div class="auth"> 
-                                    <li><a href="./login-form.php">Log in</a></li>
-                                    <li><a href="./sign-up.html">Sign up</a></li>
-                                </div>
-                                <li class="user-icon" style="display: none; "><a href=""><img src="./assets/user.png" style="width: 20px; height: 20px;"></a></li>
+
+                                <?php
+                                    session_start(); 
+                                    if(!isset($_SESSION['name'])) { 
+                                ?>
+                                        <div class="auth"> 
+                                            <li><a href="./login-form.php">Log in</a></li>
+                                            <li><a href="./sign-up.html">Sign up</a></li>
+                                        </div>
+                                    
+                                   <?php }else { ?>
+                                        <li class="user-icon" style="display: block; "><a href="./php/dashboard.php"><img src="./assets/user.png" style="width: 20px; height: 20px;"></a></li>
+                                   <?php } ?>
                             </ul>
                         </div>
                 </nav>
