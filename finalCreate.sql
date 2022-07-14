@@ -1,3 +1,4 @@
+--registration
 CREATE TABLE `registration` (
   `registrationId` int(11) NOT NULL AUTO_INCREMENT,
   `firstName` varchar(30) NOT NULL,
@@ -12,3 +13,17 @@ CREATE TABLE `registration` (
   `country` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
   PRIMARY KEY (`registrationId`))
+
+  --student 
+CREATE TABLE `student` (
+  `studentId` int(11) NOT NULL AUTO_INCREMENT,
+  `registrationId` int(11) NOT NULL,
+  PRIMARY KEY (`studentId`)
+)
+
+  --contributor
+  CREATE TABLE `contributor` (
+  `contributorId` int(11) NOT NULL AUTO_INCREMENT,
+  `registrationId` int(11) NOT NULL,
+  PRIMARY KEY (`contributorId`)
+) 
