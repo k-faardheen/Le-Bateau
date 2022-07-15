@@ -39,15 +39,6 @@
         <p>Not a member yet?<a href="sign-up.html"> Sign Up</a></p>
         <a href="#">Forget password?</a><br>
         <?php
-        // session_start();
-        // if (isset($_SESSION['auth'])){
-        //   echo $_SESSION['auth'];
-        //   if ($_SESSION['auth']== 'wrong'){
-        //     echo 'invalid password/username';
-        //   }
-
-        // }
-        //-----------------------------------------
         if (isset($_GET['status'])) {
           if ($_GET['status'] == 'invalid') {
             echo "<font color='red'>wrong password/username</font>";
