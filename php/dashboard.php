@@ -1,5 +1,6 @@
 <?php 
     include('./connection.php'); 
+    session_start(); 
 ?> 
 
 <!DOCTYPE html>
@@ -13,7 +14,6 @@
     <link rel="stylesheet" href="../style/dashboard.css">
     <title>
         <?php
-        session_start(); 
         echo $_SESSION['fName'] . "'s profile | Le Bateau"
         ?>
     </title>
@@ -31,7 +31,6 @@
                 <div class="username">
                     <span>
                         <?php 
-                            session_start(); 
                             echo "@" . $_SESSION['fName'] 
                         ?> 
                     </span>
