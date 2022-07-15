@@ -19,7 +19,7 @@ if (isset($_session['name'])) {
     } else {
         while ($row = $rs->fetch_assoc()) {
             $_SESSION['registrationId'] = $row['registrationId']; 
-            $_SESSION['name'] = $row['firstName'];
+            $_SESSION['fName'] = $row['firstName'];
             $_SESSION['lname'] = $row['lastName'];
             $_SESSION['role'] = $row['role'];
             $_SESSION['city'] = $row['city']; 

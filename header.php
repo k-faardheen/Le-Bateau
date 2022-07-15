@@ -8,7 +8,7 @@
     <header>
             <div class="nav-container">
                 <div class="lebateau">
-                    <span>>_Le Bateau</span>
+                    <a href="./index.php">>_Le Bateau</a>
                 </div>
                  <nav>
                         <div class="links">
