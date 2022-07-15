@@ -1,0 +1,55 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+h1 {
+  text-align: center;
+}
+img {
+  max-width: 100%;
+}
+.post,
+.users {
+  background-color: #e1e5f2;
+  border-radius: 10px;
+  padding: 2%;
+}
+.course {
+  background-color: #bfdbf7;
+  border-radius: 10px;
+  padding: 2%;
+}
+h4 {
+  display: inline;
+  margin-left: 30%;
+}
+button a {
+  text-decoration: none;
+  color: white;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+.table-wrapper {
+  margin-top: 5%;
+}
+h2 {
+  margin-left: 5%;
+}
+table {
+  margin-left: 5%;
+  margin-top: 1%;
+  width:60%;
+}
+table,
+th,
+td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+td{
+    text-align: center;
+}

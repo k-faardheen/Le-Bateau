@@ -1,0 +1,27 @@
+
+.wrapper-newPost{
+    background-color: #E1E5F2;
+    display: flex;
+    justify-content: center;
+    margin-left:10%;
+    margin-right: 10%;
+    padding: 3%;
+    border-radius: 20px;
+}
+label{
+    margin:2%;
+}
+input[type=text]{
+    width: 70%;
+    height:30px;
+    font-size: 15px;
+}
+select{
+    font-size: 15px; 
+}
+option{
+    font-size: 15px; 
+}
+input{
+    margin: 1%;
+}
