@@ -65,7 +65,7 @@
       <h3>Log in to your account to continue</h3>
     </div>
   </div>
-  <script src="/script/log-in.js"></script>
+  <script src="./script/log-in.js"></script>
 </body>
 
 </html>

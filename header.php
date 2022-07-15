@@ -2,6 +2,7 @@
 <html> 
     <head>
         <link rel="stylesheet" href="./style/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body> 
     <header>
@@ -18,15 +19,16 @@
 
                                 <?php
                                     session_start(); 
-                                    if(!isset($_SESSION['name'])) { 
+                                    if(!isset($_SESSION['fName'])) { 
                                 ?>
                                         <div class="auth"> 
                                             <li><a href="./login-form.php">Log in</a></li>
                                             <li><a href="./sign-up.html">Sign up</a></li>
+                                            <li><a href=""><i class="fa-solid fa-user"></i></a></li>
                                         </div>
                                     
                                    <?php }else { ?>
-                                        <li class="user-icon" style="display: block; "><a href="./php/dashboard.php"><img src="./assets/user.png" style="width: 20px; height: 20px;"></a></li>
+                                        <li class="user-icon"><a href="./php/dashboard.php"><i class="fa-solid fa-user"></i></a></li>
                                    <?php } ?>
                             </ul>
                         </div>

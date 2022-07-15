@@ -19,8 +19,10 @@
 
         } else {
             while ($row = $rs->fetch_assoc()) {
-                $_SESSION['lName'] = $row['lastName'];
-
+                $_SESSION['registrationId'] = $row['registrationId']; 
+                $_SESSION['fName'] = $row['firstName'];
+                $_SESSION['city'] = $row['city']; 
+                $_SESSION['country'] = $row['country']; 
             }
             header('location:dashboard.php');
         }
