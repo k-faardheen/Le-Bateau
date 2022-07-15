@@ -18,7 +18,6 @@
                                 <li><a href="./about-us.html">About Us</a></li>
 
                                 <?php
-                                    session_start(); 
                                     if(!isset($_SESSION['fName'])) { 
                                 ?>
                                         <div class="auth"> 

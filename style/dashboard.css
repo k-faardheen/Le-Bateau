@@ -3,7 +3,6 @@
     padding: 2rem;
     display: flex; 
     justify-content: space-evenly;
-    height: 62.5vh;
 }
 
 .profile-wrapper { 
@@ -148,5 +147,3 @@
 .courseDetails .courseName span:first-child { 
     font-family: monospace;
 }
-
-

@@ -27,3 +27,16 @@ CREATE TABLE `student` (
   `registrationId` int(11) NOT NULL,
   PRIMARY KEY (`contributorId`)
 ) 
+
+--enrollment
+CREATE TABLE `enrollment` (
+  `enrollId` int(11) NOT NULL AUTO_INCREMENT,
+  `courseId` int(11) NOT NULL,
+  `studentId` int(11) NOT NULL,
+  `dateEnrolled` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`enrollId`),
+  KEY `course_fk` (`courseId`),
+  KEY `student_fk` (`studentId`),
+  CONSTRAINT `course_fk` FOREIGN KEY (`courseId`) REFERENCES `course` (`courseId`),
+  CONSTRAINT `student_fk` FOREIGN KEY (`studentId`) REFERENCES `student` (`studentId`)
+) 
