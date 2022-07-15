@@ -9,43 +9,6 @@
 body {
   font-family: "poppins", sans-serif;
 }
-.menu-container {
-  position: auto;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  color: #1f7a8c;
-
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
-
-.logo {
-  flex: 1;
-  font-size: 30px;
-}
-.menu {
-  justify-content: right;
-  font-size: 18px;
-}
-.menu ul {
-  list-style-type: none;
-}
-
-li {
-  display: inline-block;
-  margin: 0 0.5rem;
-  padding: 10px;
-}
-a {
-  text-decoration: none;
-  color: #1f7a8c;
-}
-a:visited {
-  color: #1f7a8c;
-}
 
 /*body*/
 .main {

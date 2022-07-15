@@ -3,7 +3,7 @@ include('connection.php');
 session_start();
 
 
-if (isset($_session['name'])) {
+if (isset($_session['fName'])) {
     header('location:dashboard.php');
 } else {
 
@@ -20,7 +20,7 @@ if (isset($_session['name'])) {
         while ($row = $rs->fetch_assoc()) {
             $_SESSION['registrationId'] = $row['registrationId']; 
             $_SESSION['fName'] = $row['firstName'];
-            $_SESSION['lname'] = $row['lastName'];
+            $_SESSION['lName'] = $row['lastName'];
             $_SESSION['role'] = $row['role'];
             $_SESSION['city'] = $row['city']; 
             $_SESSION['country'] = $row['country']; 
@@ -33,5 +33,4 @@ if (isset($_session['name'])) {
     }
 }
 
-mysqli_close($conn);
-?>
+mysqli_close($conn); 
