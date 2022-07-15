@@ -14,7 +14,7 @@
     <nav>
       <div class="menu-container">
         <div class="logo">
-          <a href="./index.html">>_Le Bateau</a>
+          <a href="./index.php">>_Le Bateau</a>
         </div>
         <div class="menu">
           <ul>
@@ -56,7 +56,7 @@
       <h3>Log in to your account to continue</h3>
     </div>
   </div>
-  <script src="/script/log-in.js"></script>
+  <script src="./script/log-in.js"></script>
 </body>
 
 </html>

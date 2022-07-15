@@ -1,0 +1,152 @@
+.dashboard-wrapper { 
+    margin: 3rem;
+    padding: 2rem;
+    display: flex; 
+    justify-content: space-evenly;
+    height: 62.5vh;
+}
+
+.profile-wrapper { 
+    width: 35%;
+}
+
+.profile-wrapper .profileDetail img { 
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 99rem;
+}
+
+.profile-wrapper .profileDetail .username span:first-child{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.profile-wrapper .profileDetail .editProfile { 
+    margin: 1.5rem 0;
+}
+
+.moral-wrapper { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    display: none;
+}
+.moral-wrapper.active {
+    transition: ease 1s;
+    display: flex;
+}
+.moral-wrapper .moral {
+    overflow: scroll;
+    padding: 0.7rem;
+    position: fixed;
+    width: 60%;
+    height: 50%;
+    background-color: #E1E5F2;
+}
+
+.moral .moralHeader { 
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid black;
+}
+
+.moral .moralHeader .label { 
+    font-size: 1.25rem;
+    font-weight: bold;
+    flex: 1;
+}
+
+.moral .moralHeader .cancelBtn button { 
+    all: unset;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #1F7A8C;
+    cursor: pointer;
+}
+
+.moral .moralBody { 
+    padding: 1rem;
+    border-bottom: 1.5px solid black;
+}
+
+.moral .moralBody input { 
+    font-size: 1rem;
+    font-family: monospace;
+    margin-bottom: 1rem;
+    padding: 1rem 0.4rem;
+}
+.moral .moralBody textarea { 
+    margin-bottom: 1rem;
+    padding: 1rem 0.4rem;
+}
+
+.moral .moralBody input, .moral .moralBody label, .moral .moralBody textarea {
+    width: 70%;
+}
+
+.moral .moralFooter {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.moral .moralFooter .cancelBtnFooter { 
+    margin-left: 1rem;
+}
+
+.moral .moralFooter .cancelBtnFooter button {
+    all: unset; 
+    color: #1F7A8C;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.profile-wrapper .profileDetail .editProfile button { 
+    all: unset;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #1F7A8C;
+    border: 3px solid #1F7A8C;
+    border-radius: 15px; 
+    cursor: pointer;
+}
+
+.dashboard-wrapper .course-wrapper { 
+    width: 50%;
+    
+}
+.dashboard-wrapper .course-wrapper li {
+    display: block;
+    background-color: #E1E5F2;
+    width: 70%;
+    margin: 0.7rem 0;
+    padding: 0.5rem
+}   
+
+.course-wrapper .courseBtn { 
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+}
+
+.courseDetails { 
+    display: flex;
+    align-items: center;
+}
+
+.courseDetails .courseName { 
+    flex: 1;
+}
+
+.courseDetails .courseName span:first-child { 
+    font-family: monospace;
+}
+
+

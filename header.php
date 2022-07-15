@@ -2,12 +2,13 @@
 <html> 
     <head>
         <link rel="stylesheet" href="./style/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body> 
     <header>
             <div class="nav-container">
                 <div class="lebateau">
-                    <span>>_Le Bateau</span>
+                    <a href="./index.php">>_Le Bateau</a>
                 </div>
                  <nav>
                         <div class="links">
@@ -15,11 +16,20 @@
                                 <li><a href="./tutorial.html">Tutorials</a></li>
                                 <li><a href="./code-challenge.html">Code Challenges</a></li>
                                 <li><a href="./about-us.html">About Us</a></li>
-                                <div class="auth"> 
-                                    <li><a href="./login-form.php">Log in</a></li>
-                                    <li><a href="./sign-up.html">Sign up</a></li>
-                                </div>
-                                <li class="user-icon" style="display: none; "><a href=""><img src="./assets/user.png" style="width: 20px; height: 20px;"></a></li>
+
+                                <?php
+                                    session_start(); 
+                                    if(!isset($_SESSION['fName'])) { 
+                                ?>
+                                        <div class="auth"> 
+                                            <li><a href="./login-form.php">Log in</a></li>
+                                            <li><a href="./sign-up.html">Sign up</a></li>
+                                            <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                                        </div>
+                                    
+                                   <?php }else { ?>
+                                        <li class="user-icon"><a href="./php/dashboard.php"><i class="fa-solid fa-user"></i></a></li>
+                                   <?php } ?>
                             </ul>
                         </div>
                 </nav>

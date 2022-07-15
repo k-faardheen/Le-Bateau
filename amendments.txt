@@ -1,0 +1,8 @@
+-- added additional columns to registration table. 
+
+ALTER TABLE registration 
+ADD COLUMN bio VARCHAR(160), 
+ADD COLUMN github VARCHAR(50), 
+ADD COLUMN linkedIn VARCHAR(50), 
+ADD COLUMN twitter VARCHAR(50), 
+ADD COLUMN personalWebsite VARCHAR(50)
