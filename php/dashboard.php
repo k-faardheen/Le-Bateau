@@ -109,7 +109,7 @@
             <ul class="courseList">
                 <?php
                     $registrationId = $_SESSION['registrationId']; 
-                    $sql = "SELECT c.courseId, c.name 
+                    $sql = "SELECT s.studentId, c.courseId, c.name 
                             FROM course c, enrollment e, student s, registration r
                             WHERE c.courseId = e.courseId
                             AND s.studentId = e.studentId
@@ -119,7 +119,7 @@
 
                     $result = mysqli_query($conn, $sql); 
                     $courses = mysqli_fetch_all($result, MYSQLI_ASSOC); 
-                    
+         
                     foreach($courses as $course) {
                 ?>
                     <li>
