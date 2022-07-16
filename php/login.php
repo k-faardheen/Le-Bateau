@@ -26,6 +26,12 @@ if (isset($_session['fName'])) {
             $_SESSION['country'] = $row['country']; 
         }
         if ($_SESSION['role'] == 'student') {
+            $registrationId = $_SESSION['registrationId']; 
+            $sql = "select studentId from student WHERE registrationId = '$registrationId'; "; 
+            $result = mysqli_query($conn, $sql); 
+            $studentId = mysqli_fetch_all($result, MYSQLI_ASSOC); 
+
+            $_SESSION['studentId'] = $studentId[0]['studentId']; //need studentid for enrollment
             header('location:dashboard.php');
         } else {
             header('location:../admin/admin.php');
