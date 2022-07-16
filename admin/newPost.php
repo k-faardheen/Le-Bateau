@@ -20,32 +20,56 @@
 </head>
 
 <body>
-    <?php include('../header.php'); ?>
+    <?php include('../header.php');
+    include('../php/connection.php');
+    ?>
     <h1>New Post</h1>
     <div class="wrapper-newPost">
-        <form name="newPost" action="newPost.php" method="POST">
+        <form name="newPost" id="newPost" action="newPost.php" method="POST">
             <!--encoding the uploaded image as we used formData-->
             <label>Post Title: </label><input type="text" name="title" id="title"><br>
-            <label for="Course">Course: </label><select name="course" id="course">
-                <option value="html">html</option>
+            <label for="course">Course: </label><select name="course" id="course">
+                <?php
+                $sql = "select courseName from course";
+                $rs = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($rs) < 1) {
+                    echo 'none';
+                } else {
+                    while ($row = $rs->fetch_assoc()) { ?>
+                        <option value="<?php echo $row['courseName'] ?>"><?php echo $row['courseName'] ?></option>
+                <?php
+                    }
+                } ?>
+
             </select><br>
             <label for="image">Upload An Image: </label><input type="file" name="image" id="image"><br>
-            <label for="content">Post Contents: </label><br><textarea name="" id="default-editor"></textarea><br>
+            <label for="content">Post Contents: </label><br><textarea name="content" id="default-editor"></textarea><br>
             <button id="publish">Publish</button>
         </form>
     </div>
     <script>
-        // using jQuery to listen event of the button
-        $("#publish").click(function(e) {
-            e.preventDefault();
-            let fd = new FormData(); //construct a set of key/value pairs representing form fields and their values, which can then be easily sent using XMLHttpRequest.send() method. 
-            //It uses the same format a form would use if the encoding type were set to "multipart/form-data".
-            //let image = $('#image')[0].files;//storing the image in the variable
-            let blob = $('#image').imageBlob().blob();
-            console.log('size=' + blob.size);
-            console.log('type=' + blob.type);
+        //using jquery
+        $(document).ready(function() {
+            $("#publish").on('click', function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: 'insertPost.php',
+                    data: new FormData(document.getElementById("newPost")),
+                    dataType: 'json',
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function(message) {
+                        if (message != "ok") {
+                            alert(message)
+                        } else {
+                            window.location.replace("admin.php");
+                        }
+                    }
 
-
+                })
+            })
         })
     </script>
 </body>
