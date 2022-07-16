@@ -27,6 +27,10 @@ CREATE TABLE `student` (
   `registrationId` int(11) NOT NULL,
   PRIMARY KEY (`contributorId`)
 ) 
+-- insert into contributor
+INSERT INTO `contributor` (`contributorId`, `registrationId`) VALUES
+(1, 4),
+(4, 0);
 
 --enrollment
 CREATE TABLE `enrollment` (
@@ -40,11 +44,34 @@ CREATE TABLE `enrollment` (
  CONSTRAINT `course_fk` FOREIGN KEY (`courseId`) REFERENCES `course` (`courseId`),
  CONSTRAINT `student_fk` FOREIGN KEY (`studentId`) REFERENCES `student` (`studentId`)
 ) 
-
+---------------------------------------------wally db---------------------------------------------
 --course 
 course	CREATE TABLE `course` (
  `courseId` int(11) NOT NULL AUTO_INCREMENT,
  `name` varchar(20) NOT NULL,
- PRIMARY KEY (`courseId`)
+ PRIMARY KEY (`courseId`),
 )
+
+INSERT INTO `course` (`courseId`, `courseName`, `description`, `image`) VALUES
+(1, 'html', '', ''),
+(2, 'go', '', ''),
+(3, 'dfd', '', 'user.png'),
+(4, 'jquery', '<p><strong>Intro</strong></p>\r\n<p>This is a test</p>', 'download.jpg');
+
+--postcontent
+CREATE TABLE `postcontent` (
+  `postId` int(11) NOT NULL,
+  `author` varchar(50) NOT NULL,
+  `title` varchar(150) NOT NULL,
+  `image` varchar(250) NOT NULL,
+  `course` varchar(50) NOT NULL,
+  `rating` double NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`postId`)
+)
+
+INSERT INTO `postcontent` (`postId`, `author`, `title`, `image`, `course`, `rating`, `content`) VALUES
+(20, 'mun', 'test2', 'learning.png', 'html', 0, '<p>test 33</p>');
+
+
 
