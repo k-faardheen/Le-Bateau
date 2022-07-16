@@ -40,3 +40,11 @@ CREATE TABLE `enrollment` (
  CONSTRAINT `course_fk` FOREIGN KEY (`courseId`) REFERENCES `course` (`courseId`),
  CONSTRAINT `student_fk` FOREIGN KEY (`studentId`) REFERENCES `student` (`studentId`)
 ) 
+
+--course 
+course	CREATE TABLE `course` (
+ `courseId` int(11) NOT NULL AUTO_INCREMENT,
+ `name` varchar(20) NOT NULL,
+ PRIMARY KEY (`courseId`)
+)
+
