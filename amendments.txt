@@ -6,3 +6,6 @@ ADD COLUMN github VARCHAR(50),
 ADD COLUMN linkedIn VARCHAR(50), 
 ADD COLUMN twitter VARCHAR(50), 
 ADD COLUMN personalWebsite VARCHAR(50)
+
+
+	

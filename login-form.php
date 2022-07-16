@@ -10,22 +10,7 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <div class="menu-container">
-        <div class="logo">
-          <a href="./index.php">>_Le Bateau</a>
-        </div>
-        <div class="menu">
-          <ul>
-            <li><a href="./tutorial.html">Tutorial</a></li>
-            <li><a href="./code-challenge.html">Code Challenge</a></li>
-            <li><a href="./about-us.html">About Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <?php include('./header.php'); ?> 
   <div class="main">
     <div class="form-group">
       <form name="login-form" action="./php/login.php" method="POST">
