@@ -27,7 +27,7 @@
             <label>Course Name: </label><input type="text" name="name" id="name"><br>
             <label>Upload an image: </label><input type="file" name="image" id="image"><br><br>
             <label for="description">Course description: </label><br><textarea name="description" id="default-editor"></textarea><br>
-            <button id="new">Add New</button>
+            <button id="new" onclick="tinyMCE.triggerSave(true,true);">Add New</button><!--save and exit tinymce-->
         </form>
     </div>
     <script>

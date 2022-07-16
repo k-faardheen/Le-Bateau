@@ -13,7 +13,7 @@
     <script src="./tinymce/js/tinymce/tinymce.min.js"></script>
     <script>
         tinymce.init({
-            selector: 'textarea#default-editor'
+            selector: '#default-editor'
         });
     </script>
     <title>New Post</title>
@@ -44,7 +44,7 @@
             </select><br>
             <label for="image">Upload An Image: </label><input type="file" name="image" id="image"><br>
             <label for="content">Post Contents: </label><br><textarea name="content" id="default-editor"></textarea><br>
-            <button id="publish">Publish</button>
+            <button id="publish" onclick="tinyMCE.triggerSave(true,true);">Publish</button>//save and exit tinymce
         </form>
     </div>
     <script>
@@ -52,13 +52,16 @@
         $(document).ready(function() {
             $("#publish").on('click', function(e) {
                 e.preventDefault();
+                let formData = new FormData(document.getElementById("newPost"));
                 $.ajax({
                     type: 'POST',
                     url: 'insertPost.php',
-                    data: new FormData(document.getElementById("newPost")),
+                    data: formData,
                     dataType: 'json',
-                    contentType: false,
+                    encode: true,
+                    async: false,
                     cache: false,
+                    contentType: false,
                     processData: false,
                     success: function(message) {
                         if (message != "ok") {
