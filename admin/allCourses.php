@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/admin.css">
 
-    <title>Admin Dashboard</title>
+    <title>All courses</title>
 </head>
 
 <body>
-    <?php include('../header.php'); ?>
-    <h1>All Posts
+    <?php include('../header.php');
+      include('../php/connection.php');
+    ?>
+    <h1>All Courses
     </h1>
-    <button style="margin-left: 5%;">Add New</button>
+    <button style="margin-left: 5%;"><a href="newCourse.php">Add New</a></button>
     <div class="table-wrapper" style="margin-top:0%;">
     <table style="width:80%;">
             <tr>
@@ -24,14 +26,29 @@
                 <th>Name</th>
                 <th>Image</th>
             </tr>
-            <tr>
-                <td>123</td>
-                <td>Html</td>
-                <td><img src="../assets/user (1).png" width="50" height="50"></td>
-                <td><a href="./alluser.php">view course</a><br>
-                <a href="./alluser.php">delete</a><br>
-                <a href="./alluser.php">edit</a></td>
             </tr>
+            <?php
+            $sql = "select * from course ORDER BY courseId DESC";
+            $rs = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($rs)<1){
+                echo 'none';
+        
+            }else{
+                while($row = $rs->fetch_assoc()){ ?>
+                    <tr>
+                    <td><?php echo$row['courseId']?></td>
+                    <td><?php echo$row['courseName']?></td>
+                    <td><img src="./contentImg/<?php echo$row['image']?>" width="50" height="50"></td>
+                    <td><a href="./post.php?id=<?php echo$row['courseId']?>">view course</a><br>
+                    <a href="./delete.php?id=<?php echo$row['courseId']?>">delete</a><br>
+                    <a href="./edit.php?id=<?php echo$row['courseId']?>">edit</a></td>
+                </tr>
+<?php
+                }
+            
+            }
+            ?>
+            
         </table>
     </div>
 </body>

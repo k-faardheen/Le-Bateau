@@ -37,7 +37,7 @@
                     <br>
                     <span>
                         <?php
-                            echo $_SESSION['fName'] . " " . $_SESSION['lName']; 
+                            echo $_SESSION['fName'] . " " . $_SESSION['lname']; 
                         ?> 
                     </span>
                     
