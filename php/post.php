@@ -7,21 +7,46 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/post.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Learn JavaScript - Arrays</title>
+    <title>Reading Post</title>
 </head>
 <body> 
-    <?php include('../header.php'); ?> 
+    <?php include('../header.php'); 
+    include('./connection.php');
+
+    if (isset($_GET['pid'])){
+        $postId = $_GET['pid'];
+        $sql= "select * from postContent where postId = '$postId'";
+        $rs = mysqli_query($conn, $sql);
+        $imgPath = "";
+        $title = "";
+        $content = "";
+        $author = "";
+
+    if (mysqli_num_rows($rs) < 1) {?>
+
+    <h1>404 not found</h1>
+        <?php
+    } else {
+        while ($row = $rs->fetch_assoc()) {
+            $imgPath = $row['image'];
+            $title = $row['title'];
+            $content = $row['content'];
+            $author = $row['author'];
+        }
+    }
+    ?> 
     <div class="wrapper">
         <div class="post-content">
             <div class="title">
-                <h2></h2>
+                <h1><?php echo $title?></h1>
             </div>
             <div class="grab-image">
-                <img src="" alt="">
+                <img src="../admin/contentImg/<?php echo $imgPath?>" alt="image">
             </div>
         </div>
         <div class="post-description">
-            <span></span>
+            <?php echo $content?>
+            <span>Author: <?php echo $author;?></span>
         </div>
 
         <div class="right-section">
@@ -34,7 +59,7 @@
             <div></div>
         </div>
     </div>
-    <?php include('../footer.php'); ?> 
+    <?php }include('../footer.php'); ?> 
 
 </body>
 </html>
