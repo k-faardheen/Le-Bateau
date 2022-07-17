@@ -44,7 +44,7 @@
                         <td><img src="./contentImg/<?php echo $row['image'] ?>" width="50" height="50"></td>
                         <td><?php echo $row['author'] ?></td>
                         <td><?php echo $row['rating'] ?></td>
-                        <td><a href="./post.php?pid=<?php echo $row['postId'] ?>">view post</a><br>
+                        <td><a href="../php/post.php?pid=<?php echo $row['postId'] ?>">view post</a><br>
                             <a href="./delete.php?pid=<?php echo $row['postId'] ?>">delete</a><br>
                     </tr>
             <?php

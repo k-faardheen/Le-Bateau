@@ -10,3 +10,7 @@
 button { 
     all: unset;
 }
+img {
+    width: 200px;
+    height: auto;
+  }
