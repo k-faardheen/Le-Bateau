@@ -1,0 +1,12 @@
+.wrapper { 
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.post-content { 
+    width: 50%;
+}
+
+button { 
+    all: unset;
+}
