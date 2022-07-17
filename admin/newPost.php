@@ -44,7 +44,7 @@
             </select><br>
             <label for="image">Upload An Image: </label><input type="file" name="image" id="image"><br>
             <label for="content">Post Contents: </label><br><textarea name="content" id="default-editor"></textarea><br>
-            <button id="publish" onclick="tinyMCE.triggerSave(true,true);">Publish</button>//save and exit tinymce
+            <button id="publish" onclick="tinyMCE.triggerSave(true,true);">Publish</button><!--save and exit tinymce-->
         </form>
     </div>
     <script>

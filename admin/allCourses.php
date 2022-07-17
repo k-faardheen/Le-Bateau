@@ -14,13 +14,13 @@
 
 <body>
     <?php include('../header.php');
-      include('../php/connection.php');
+    include('../php/connection.php');
     ?>
     <h1>All Courses
     </h1>
     <button style="margin-left: 5%;"><a href="newCourse.php">Add New</a></button>
     <div class="table-wrapper" style="margin-top:0%;">
-    <table style="width:80%;">
+        <table style="width:80%;">
             <tr>
                 <th>courseId</th>
                 <th>Name</th>
@@ -30,25 +30,22 @@
             <?php
             $sql = "select * from course ORDER BY courseId DESC";
             $rs = mysqli_query($conn, $sql);
-            if(mysqli_num_rows($rs)<1){
+            if (mysqli_num_rows($rs) < 1) {
                 echo 'none';
-        
-            }else{
-                while($row = $rs->fetch_assoc()){ ?>
+            } else {
+                while ($row = $rs->fetch_assoc()) { ?>
                     <tr>
-                    <td><?php echo$row['courseId']?></td>
-                    <td><?php echo$row['courseName']?></td>
-                    <td><img src="./contentImg/<?php echo$row['image']?>" width="50" height="50"></td>
-                    <td><a href="./post.php?id=<?php echo$row['courseId']?>">view course</a><br>
-                    <a href="./delete.php?id=<?php echo$row['courseId']?>">delete</a><br>
-                    <a href="./edit.php?id=<?php echo$row['courseId']?>">edit</a></td>
-                </tr>
-<?php
+                        <td><?php echo $row['courseId'] ?></td>
+                        <td><?php echo $row['courseName'] ?></td>
+                        <td><img src="./contentImg/<?php echo $row['image'] ?>" width="50" height="50"></td>
+                        <td><a href="./post.php?cid=<?php echo $row['courseId'] ?>">view course</a><br>
+                            <a href="./delete.php?cid=<?php echo $row['courseId'] ?>">delete</a><br>
+                    </tr>
+            <?php
                 }
-            
             }
             ?>
-            
+
         </table>
     </div>
 </body>

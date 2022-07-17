@@ -13,15 +13,15 @@
 </head>
 
 <body>
-    <?php include('../header.php'); 
-        include('../php/connection.php');
+    <?php include('../header.php');
+    include('../php/connection.php');
     ?>
     <h1>All Users
     </h1>
     <div class="table-wrapper" style="margin-top:0%;">
-        
+
         <table style="width:80%">
-        <tr>
+            <tr>
                 <th>Id</th>
                 <th>First Name</th>
                 <th>Last Name</th>
@@ -30,23 +30,21 @@
             <?php
             $sql = "select * from registration where role = 'contributor'";
             $rs = mysqli_query($conn, $sql);
-            if(mysqli_num_rows($rs)<1){
+            if (mysqli_num_rows($rs) < 1) {
                 echo 'none';
-        
-            }else{
-                while($row = $rs->fetch_assoc()){ ?>
+            } else {
+                while ($row = $rs->fetch_assoc()) { ?>
                     <tr>
-                    <td><?php echo$row['registrationId']?></td>
-                    <td><?php echo$row['firstName']?></td>
-                    <td><?php echo$row['lastName']?></td>
-                    <td><?php echo$row['country']?></td>
-                </tr>
-<?php
+                        <td><?php echo $row['registrationId'] ?></td>
+                        <td><?php echo $row['firstName'] ?></td>
+                        <td><?php echo $row['lastName'] ?></td>
+                        <td><?php echo $row['country'] ?></td>
+                    </tr>
+            <?php
                 }
-            
             }
             ?>
-            
+
         </table>
     </div>
 </body>
