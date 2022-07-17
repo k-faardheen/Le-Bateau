@@ -16,24 +16,24 @@
     <?php include('../header.php');
     include('function.php');
     include('../php/connection.php')
-     ?>
+    ?>
     <h1>Darshboard
     </h1>
     <div class="wrapper">
 
         <div class="post">
             <img src="../assets/docs.png" width="50" height="50">
-            <h4><?php echo total(1);?></h4><br>
+            <h4><?php echo total(1); ?></h4><br>
             <button><a href="allPosts.php">view all posts</a></button>
         </div>
         <div class="course">
             <img src="../assets/learning (1).png" width="50" height="50">
-            <h4><?php echo total(2);?></h4><br>
+            <h4><?php echo total(2); ?></h4><br>
             <button><a href="allCourses.php">view all courses</a></button>
         </div>
         <div class="users">
             <img src="../assets/user (1).png" width="50" height="50">
-            <h4><?php echo total(3);?></h4><br>
+            <h4><?php echo total(3); ?></h4><br>
             <button><a href="allUsers.php">view all users</a></button>
         </div>
     </div>
@@ -57,27 +57,25 @@
             <?php
             $sql = "select * from postcontent ORDER BY postId DESC limit 5";
             $rs = mysqli_query($conn, $sql);
-            if(mysqli_num_rows($rs)<1){
+            if (mysqli_num_rows($rs) < 1) {
                 echo 'none';
-        
-            }else{
-                while($row = $rs->fetch_assoc()){ ?>
+            } else {
+                while ($row = $rs->fetch_assoc()) { ?>
                     <tr>
-                    <td><?php echo$row['postId']?></td>
-                    <td><?php echo$row['title']?></td>
-                    <td><?php echo$row['course']?></td>
-                    <td><img src="./contentImg/<?php echo$row['image']?>" width="50" height="50"></td>
-                    <td><?php echo$row['author']?></td>
-                    <td><a href="./post.php?id=<?php echo$row['postId']?>">view post</a><br>
-                    <a href="./delete.php?id=<?php echo$row['postId']?>">delete</a><br>
-                    <a href="./edit.php?id=<?php echo$row['postId']?>">edit</a></td>
-                </tr>
-<?php
+                        <td><?php echo $row['postId'] ?></td>
+                        <td><?php echo $row['title'] ?></td>
+                        <td><?php echo $row['course'] ?></td>
+                        <td><img src="./contentImg/<?php echo $row['image'] ?>" width="50" height="50"></td>
+                        <td><?php echo $row['author'] ?></td>
+                        <td><a href="./post.php?pid=<?php echo $row['postId'] ?>">view post</a><br>
+                            <a href="./delete.php?pid=<?php echo $row['postId'] ?>">delete</a><br>
+                        </td>
+                    </tr>
+            <?php
                 }
-            
             }
             ?>
-            
+
         </table>
     </div>
 </body>
