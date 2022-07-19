@@ -13,7 +13,7 @@
 
 <body>
     <?php
-        include('./header.php');
+        include('./view/header.php');
         include('./php/connection.php');
     ?>
 <div class="wrapper">
@@ -36,7 +36,11 @@
         }}
         ?>
     </div>
-   
+
+    <?php
+        include('./view/footer.php');
+    ?> 
+
 </body>
 
 </html>

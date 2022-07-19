@@ -17,7 +17,7 @@ if(!isset($_SESSION['role'])){
     <title>Reading Post</title>
 </head>
 <body> 
-    <?php include('../header.php'); 
+    <?php include('./view/header.php'); 
     include('./connection.php');
 
     if (isset($_GET['pid'])){
@@ -70,7 +70,7 @@ if(!isset($_SESSION['role'])){
     </div>
     <?php }else{?>
          <h1>404 not found</h1>
-  <?php  }include('../footer.php'); ?> 
+  <?php  }include('./view/footer.php'); ?> 
 
 </body>
 </html>

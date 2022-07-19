@@ -13,7 +13,7 @@
 <body>
 
     <?php
-        include('header.php'); 
+        include('./header.php'); 
     ?>
 
     <section>
@@ -223,7 +223,7 @@
     </section>
 
     <?php 
-        include('footer.php'); 
+        include('./footer.php'); 
     ?> 
 
     <script src="./script/responsive menu.js"></script>
