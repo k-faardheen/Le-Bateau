@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(!isset($_SESSION['role'])){
+    header('location:../login-form.php');
+}else{
+    if($_SESSION['role']!="contributor"){
+        header('location:../login-form.php');
+    }else{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +27,7 @@
     include('function.php');
     include('../php/connection.php')
     ?>
-    <h1>Darshboard
+    <h1>Dashboard
     </h1>
     <div class="wrapper">
 
@@ -81,3 +91,6 @@
 </body>
 
 </html>
+<?php 
+}}
+?>

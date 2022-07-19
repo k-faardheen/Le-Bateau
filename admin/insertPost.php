@@ -1,8 +1,10 @@
 <?php
+session_start();
+
 include('../php/connection.php');
 $message = "";
 if (isset($_POST['title'])) {
-    $author = "mun";
+    $author = $_SESSION['fName'];
     $title = $_POST['title'];
     $course = $_POST['course'];
     $filename = $_FILES['image']['name']; //retrivving the image

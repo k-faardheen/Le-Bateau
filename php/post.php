@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['role'])){
+    header('location:../login-form.php');
+}else{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,13 +49,15 @@
             </div>
             <div class="grab-image">
                 <img src="../admin/contentImg/<?php echo $imgPath?>" alt="image">
+                
             </div>
-        </div>
-        <div class="post-description">
-            <?php echo $content?>
+            <div class="post-description">
+            <span><?php echo $content?></span>
             <span>Author: <?php echo $author;?></span>
         </div>
 
+        </div>
+        
         <div class="right-section">
             <div class="search-container">
                 <form action="" class="search">
@@ -59,7 +68,13 @@
             <div></div>
         </div>
     </div>
-    <?php }include('../footer.php'); ?> 
+    <?php }else{?>
+         <h1>404 not found</h1>
+  <?php  }include('../footer.php'); ?> 
 
 </body>
 </html>
+
+<?php 
+}
+?>

@@ -1,163 +1,186 @@
+<?php
+session_start();
+if(!isset($_SESSION['role'])){
+    header('location:../login-form.php');
+    
+}else{
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/learn-html.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/learn-html.css">
     <title>course landing page</title>
 </head>
+
 <body>
-<?php
-        include('header.php'); 
-    ?>
+    <?php
+    include('header.php');
+    include('./php/connection.php');
+    if (!isset($_GET['cid'])) {
+        echo '404 not found';
+    } else {
+        $courseName = "";
+        $desc = "";
+        $courseId = $_GET['cid'];
+        $sql = "select * from course where courseId = '$courseId'";
+        $rs = mysqli_query($conn, $sql);
+        if (mysqli_num_rows($rs) < 1) { ?>
+
+            <h1>404 not found</h1>
+        <?php
+        } else {
+            while ($row = $rs->fetch_assoc()) {
+                $courseName = $row['courseName'];
+                $desc = $row['description'];
+            }
+        }
 
 
-    <section>
-        <div class="banner-html">
-            <div class="banner-html-title">
-                <span>Learn HTML</span>
+
+        ?>
+
+
+        <section>
+            <div class="banner-html">
+                <div class="banner-html-title">
+                    <span>Learn <?php echo $courseName ?></span>
+                </div>
+
+                <div class="banner-html-start">
+                    <a href="../html-modules/elements and structures.html">Start</a>
+                </div>
+
             </div>
-        
-            <div class="banner-html-start">
-                <a href="../html-modules/elements and structures.html">Start</a>
+        </section>
+
+        <section class="overview-wrapper">
+
+            <div class="overview-title">
+                <span style="border-bottom: #1F7A8C solid 3.5px;">Overview</span>
             </div>
-            
-        </div>
-    </section>
 
-    <section class="overview-wrapper">
+            <article class="overview-html">
+                <?php echo $desc ?>
+            </article>
 
-        <div class="overview-title">
-            <span style="border-bottom: #1F7A8C solid 3.5px;">Overview</span>
-        </div>
+            <article class="html-syllabus">
 
-        <article class="overview-html">
-            <span style="font-weight: bold; font-size: 1.1rem;">Why Learn HTML?</span>
-            <p>
-                HTML is the foundation of all web pages. 
-                Without HTML, you wouldn't be able to organize text or add images or videos to your web pages. 
-                HTML is the beginning of everything you need to know to create engaging web pages!
-            </p>
+                <ol class="syllabus-list">
 
-            <br>
+                    <?php
 
-            <span style="font-weight:bold; font-size: 1.1rem;">Take-Away Skills</span>
+                    $i = 0;
+                    $postTitle = "";
+                    $pid = 0;
+                    $retSql = "select * from postContent where course = '$courseName'";
+                    $retRs = mysqli_query($conn, $retSql);
+                    if (mysqli_num_rows($retRs) < 1) { ?>
 
-            <p>
-                You will learn all the common HTML tags used to structure HTML pages, the skeleton of all websites. 
-                You will also be able to create HTML tables to present tabular data efficiently.
-            </p>
+                        <h1>404 not found</h1>
+                        <?php
+                    } else {
+                        while ($rowC = $retRs->fetch_assoc()) {
+                            $postTitle = $rowC['title'];
+                            $pid = $rowC['postId']; ?>
+                            <li>
+                                <div class="list-container">
+                                    <div class="list-order">
+                                        <span><?php echo $i ?></span>
+                                    </div>
+                                    <div class="list-description">
+                                        <a href="./php/post.php?pid=<?php echo $pid ?>"><?php echo $postTitle ?></a>
+                                    </div>
+                                </div>
+                            </li>
+
+                <?php
+                            $i++;
+                        }
+                    }
+                }
+                ?>
+
+                </ol>
+            </article>
+        </section>
+
+        <article class="build">
+            <div class="build-wrapper">
+
+                <div class="heading">
+                    <h1>WHAT YOU'LL BE BUILDING.</h1>
+                </div>
+
+                <div class="code-challenge">
+
+                    <div class="rainbow">
+                        <div class="rainbow-img">
+                            <img src="./assets/rainbow.png" width="100" height="100">
+                        </div>
+                        <div class="rainbow-description">
+                            <a href="./rainbow.html">The colours of the rainbow (HTML Task)</a>
+                        </div>
+                        <div class="lets-try">
+                            <a href="./code-challenge/rainbow.html"> Let's try -></a>
+                        </div>
+                    </div>
+
+                    <div class="lemon">
+                        <div class="lemon-img">
+                            <img src="./assets/lemon.png" width="100" height="100">
+                        </div>
+                        <div class="lemon-description">
+                            <a href="./lemon-cake.html">Lemon Drizzle Cake Recipe (HTML Task)</a>
+                        </div>
+                        <div class="lets-try">
+                            <a href="./code-challenge/lemon-cake.html"> Let's try -></a>
+                        </div>
+                    </div>
+
+                    <div class="road-sign">
+                        <div class="road-signs-img">
+                            <img src="./assets/highway-sign.png" width="100" height="100">
+                        </div>
+                        <div class="road-signs-description">
+                            <a href="./road-sign.html">Road Signs (HTML / CSS)</a>
+                        </div>
+                        <div class="lets-try">
+                            <a href="./code-challenge/road-sign.html"> Let's try -></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </article>
 
-        <article class="html-syllabus">
+        <footer>
+            <div class="footer-container">
 
-            <ol class="syllabus-list">
-                <li>
-                    <div class="list-container">
-                        <div class="list-order">
-                            <span>1</span>
-                        </div>
-                        <div class="list-description">
-                            <a href="./elements and structures.html">Elements and Structures</a>
-                            <p>Learn about HTML elements and structure, the building blocks of websites.</p>
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="list-container">
-                        <div class="list-order">
-                            <span>2</span>
-                        </div>
-                        <div class="list-description">
-                            <a href="./tables.html">Tables</a>
-                            <p>You'll learn all the syntax you need to create tables in your HTML documents.</p>
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="list-container">
-                        <div class="list-order">
-                            <span>3</span>
-                        </div>
-                        <div class="list-description">
-                            <a href="./forms.html">Forms</a>
-                            <p>You'll learn on how to create your own forms and integrate HTML5 validation.</p>
-                        </div>
-                    </div>
-                </li>
-
-            </ol>
-        </article>
-    </section>
-
-    <article class="build">
-        <div class="build-wrapper">
-
-            <div class="heading">
-                <h1>WHAT YOU'LL BE BUILDING.</h1>
-            </div>
-
-            <div class="code-challenge">
-
-                <div class="rainbow">
-                    <div class="rainbow-img">
-                        <img src="../assets/rainbow.png" width="100" height="100">
-                    </div>
-                    <div class="rainbow-description">
-                        <a href="../rainbow.html">The colours of the rainbow (HTML Task)</a>
-                    </div>
-                    <div class="lets-try">
-                        <a href="../code-challenge/rainbow.html"> Let's try -></a>
-                    </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="./tutorial.html">Tutorials</a></li>
+                        <li><a href="./code-challenge.html">Code Challenges</a></li>
+                        <li><a href="../about-us.html">About Us</a></li>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-and-conditions.html">Terms & Conditions</a></li>
+                    </ul>
                 </div>
-
-                <div class="lemon">
-                    <div class="lemon-img">
-                        <img src="../assets/lemon.png" width="100" height="100">
-                    </div>
-                    <div class="lemon-description">
-                        <a href="../lemon-cake.html">Lemon Drizzle Cake Recipe (HTML Task)</a>
-                    </div>
-                    <div class="lets-try">
-                        <a href="../code-challenge/lemon-cake.html"> Let's try -></a>
-                    </div>
-                </div>
-
-                <div class="road-sign">
-                    <div class="road-signs-img">
-                        <img src="../assets/highway-sign.png" width="100" height="100">
-                    </div>
-                    <div class="road-signs-description">
-                        <a href="../road-sign.html">Road Signs (HTML / CSS)</a>
-                    </div>
-                    <div class="lets-try">
-                        <a href="../code-challenge/road-sign.html"> Let's try -></a>
-                    </div>
+                <div class="copyright">
+                    <span>© 2022 Copyright • Le Bateau</span>
                 </div>
             </div>
-        </div>
-    </article>
-
-    <footer>
-        <div class="footer-container">
-
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="./tutorial.html">Tutorials</a></li>
-                    <li><a href="./code-challenge.html">Code Challenges</a></li>
-                    <li><a href="../about-us.html">About Us</a></li>
-                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="../terms-and-conditions.html">Terms & Conditions</a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <span>© 2022 Copyright • Le Bateau</span>
-            </div>
-        </div>
-    </footer>
+        </footer>
 </body>
+
 </html>
+
+<?php 
+}
+?>
