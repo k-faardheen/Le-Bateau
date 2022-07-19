@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(!isset($_SESSION['role'])){
+    header('location:../login-form.php');
+}else{
+    if($_SESSION['role']!="contributor"){
+        header('location:../login-form.php');
+    }else{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +36,6 @@
     <h1>New Post</h1>
     <div class="wrapper-newPost">
         <form name="newPost" id="newPost" action="newPost.php" method="POST">
-            <!--encoding the uploaded image as we used formData-->
             <label>Post Title: </label><input type="text" name="title" id="title"><br>
             <label for="course">Course: </label><select name="course" id="course">
                 <?php
@@ -53,6 +62,7 @@
             $("#publish").on('click', function(e) {
                 e.preventDefault();
                 let formData = new FormData(document.getElementById("newPost"));
+                console.log(formData)
                 $.ajax({
                     type: 'POST',
                     url: 'insertPost.php',
@@ -78,3 +88,6 @@
 </body>
 
 </html>
+<?php 
+}}
+?>

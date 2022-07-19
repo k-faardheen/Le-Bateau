@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(!isset($_SESSION['role'])){
+    header('location:../login-form.php');
+}else{
+    if($_SESSION['role']!="contributor"){
+        header('location:../login-form.php');
+    }else{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,3 +67,7 @@
 </body>
 
 </html>
+
+<?php 
+}}
+?>

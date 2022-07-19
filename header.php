@@ -23,7 +23,6 @@
                                         <div class="auth"> 
                                             <li><a href="./login-form.php">Log in</a></li>
                                             <li><a href="./sign-up.html">Sign up</a></li>
-                                            <li><a href=""><i class="fa-solid fa-user"></i></a></li>
                                         </div>
                                     
                                    <?php }else { ?>
