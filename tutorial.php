@@ -13,24 +13,9 @@
     <title>Le Bateau-Tutorial</title>
 </head>
 <body>
-        <header>
-            <div class="nav-container">
-                <div class="lebateau">
-                    <span><a href="./index.html">>_Le Bateau</a></span>
-                </div>
-                 <nav>
-                    <div class="links">
-                        <ul>
-                            <li><a href="./code-challenge.html">Code Challenges</a></li>
-                            <li><a href="./about-us.html">About Us</a></li>
-                            <li><a href="./log-in.html">Log in</a></li>
-                            <li><a href="./sign-up.html">Sign up</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-    </header>
-
+        <?php
+            include('./header.php');
+        ?>
     <section class="card-wrapper">
         <form action="./php/enrollment.php" name="tutorial form" method="POST">
             <div class="html-card-wrapper">
@@ -175,20 +160,8 @@
         </form>
     </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="./code-challenge.html">Code Challenges</a></li>
-                    <li><a href="./about-us.html">About Us</a></li>
-                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="./terms-and-conditions.html">Terms & Conditions</a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <span>© 2022 Copyright • Le Bateau</span>
-            </div>
-        </div>
-    </footer>
+    <?php
+        include('.footer.php');
+    ?>
 </body>
 </html>

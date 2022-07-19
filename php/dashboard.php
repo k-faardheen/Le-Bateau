@@ -21,7 +21,7 @@
 </head>
 <body>
     <?php
-        include('../header.php'); 
+        include('./header.php'); 
     ?>
 
     <div class="dashboard-wrapper">
@@ -148,7 +148,7 @@
     <a href="logout.php" class="logoutBtn" style="text-decoration: none; color:#1F7A8C; ">Logout</a>
 
     <?php 
-        include('../footer.php'); 
+        include('./footer.php'); 
     ?> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../script/dashboard.js"></script>

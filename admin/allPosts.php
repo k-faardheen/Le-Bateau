@@ -23,7 +23,7 @@ if(!isset($_SESSION['role'])){
 </head>
 
 <body>
-    <?php include('../header.php');
+    <?php include('./header.php');
     include('../php/connection.php');
     ?>
     <h1>All Posts

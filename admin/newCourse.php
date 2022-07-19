@@ -30,7 +30,7 @@ if(!isset($_SESSION['role'])){
 </head>
 
 <body>
-    <?php include('../header.php'); ?>
+    <?php include('./header.php'); ?>
     <h1>New Course</h1>
     <div class="wrapper-newPost">
         <form name="newCourse" id = "newCourse" action="newCourse.php" method="POST">
