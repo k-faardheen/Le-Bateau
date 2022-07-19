@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(!isset($_SESSION['role'])){
+    header('location:../login-form.php');
+}else{
+    if($_SESSION['role']!="contributor"){
+        header('location:../login-form.php');
+    }else{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +48,7 @@
                         <td><?php echo $row['courseId'] ?></td>
                         <td><?php echo $row['courseName'] ?></td>
                         <td><img src="./contentImg/<?php echo $row['image'] ?>" width="50" height="50"></td>
-                        <td><a href="./post.php?cid=<?php echo $row['courseId'] ?>">view course</a><br>
+                        <td><a href="../landing-course.php?cid=<?php echo $row['courseId'] ?>">view course</a><br>
                             <a href="./delete.php?cid=<?php echo $row['courseId'] ?>">delete</a><br>
                     </tr>
             <?php
@@ -51,3 +61,7 @@
 </body>
 
 </html>
+
+<?php 
+}}
+?>
