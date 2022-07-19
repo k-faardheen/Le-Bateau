@@ -109,7 +109,7 @@
             <ul class="courseList">
                 <?php
                     $registrationId = $_SESSION['registrationId']; 
-                    $sql = "SELECT s.studentId, c.courseId, c.name 
+                    $sql = "SELECT s.studentId, c.courseId, c.courseName 
                             FROM course c, enrollment e, student s, registration r
                             WHERE c.courseId = e.courseId
                             AND s.studentId = e.studentId
@@ -119,29 +119,33 @@
 
                     $result = mysqli_query($conn, $sql); 
                     $courses = mysqli_fetch_all($result, MYSQLI_ASSOC); 
-         
-                    foreach($courses as $course) {
-                ?>
-                    <li>
-                        <button class="courseBtn" id="<?php echo $course['courseId'] ?>">
-                            <div class="courseDetails">
-                                <div class="courseName">
-                                    <span style="font-size: 0.9rem;">Course</span>
-                                    <br>
-                                    <span><?php echo "Learn " . $course['name'] ?></span>
-                                </div>
-                                <div class="resumeIcon">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </div>
-                            </div>
-                        </button>
-                    </li>
-                <?php } ?>
+
+                    if(mysqli_num_rows($result) < 1) { 
+                    ?>
+                        <span class="noCourse">You have not yet enrolled to a course. You better get started! 🧙‍♂️</span>
+                        <?php }else
+                                foreach($courses as $course) {
+                        ?> 
+                                    <li>
+                                        <div class="courseLi">
+                                            <a href="../<?php echo $course['courseName']?>-modules/learn-<?php echo $course['courseName'] ?>.html"><?php echo "Learn " . $course['courseName']?>
+                                                <div class="courseDetails">
+                                                    <div class="courseName">
+                                                        <span style="font-size: 0.9rem;">Course</span>
+                                                    </div>
+                                                    <div class="resumeIcon">
+                                                        <i class="fa-solid fa-chevron-right"></i>
+                                                    </div>
+                                                </div>
+                                            </a> 
+                                        </div>
+                                    </li>
+                                <?php } ?> 
             </ul>
         </div>
     </div>
 
-    <a href="logout.php">Logout</a>
+    <a href="logout.php" class="logoutBtn" style="text-decoration: none; color:#1F7A8C; ">Logout</a>
 
     <?php 
         include('../footer.php'); 
