@@ -9,25 +9,7 @@
     <title>Le Bateau - CSS</title>
   </head>
   <body>
-    <header>
-      <div class="nav-container">
-        <div class="lebateau">
-          <a href="../index.html"> >_Le Bateau</a>
-        </div>
-
-        <nav>
-          <div class="links">
-            <ul>
-              <li><a href="../tutorial.html">Tutorials</a></li>
-              <li><a href="../code-challenge.html">Code Challenges</a></li>
-              <li><a href="../about-us.html">About Us</a></li>
-              <li><a href="../log-in.html">Log in</a></li>
-              <li><a href="../sign-up.html">Sign up</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
+   <?php include('./header.php');  ?> 
 
     <section>
       <div class="banner-html">
@@ -36,7 +18,7 @@
         </div>
 
         <div class="banner-html-start">
-          <a href="">Start</a>
+          <a href="./syntax-and-selectors.php">Start</a>
         </div>
       </div>
     </section>
@@ -75,7 +57,7 @@
                 <span>0</span>
               </div>
               <div class="list-description">
-                <a href="./syntax-and-selectors.html">Syntax and Selectors</a>
+                <a href="./syntax-and-selectors.php">Syntax and Selectors</a>
                 <p>Learn about how to insert css</p>
               </div>
             </div>
@@ -87,7 +69,7 @@
                 <span>1</span>
               </div>
               <div class="list-description">
-                <a href="./visual-rules.html">Visual Rules</a>
+                <a href="./visual-rules.php">Visual Rules</a>
                 <p>Learn about how to use class and id to change elements</p>
               </div>
             </div>
@@ -99,7 +81,7 @@
                 <span>2</span>
               </div>
               <div class="list-description">
-                <a href="./box-model.html">The Box Model</a>
+                <a href="./box-model.php">The Box Model</a>
                 <p>Learn about how to resize elements</p>
               </div>
             </div>
@@ -111,7 +93,7 @@
                 <span>3</span>
               </div>
               <div class="list-description">
-                <a href="./display-and-positioning.html"
+                <a href="./display-and-positioning.php"
                   >Display And Positioning</a
                 >
                 <p>You'll learn on how to position an element using css</p>
@@ -124,7 +106,7 @@
                 <span>4</span>
               </div>
               <div class="list-description">
-                <a href="./colors.html">Colors</a>
+                <a href="./colors.php">Colors</a>
                 <p>
                   You'll learn on how to change colors of a specific element
                 </p>
@@ -137,7 +119,7 @@
                 <span>5</span>
               </div>
               <div class="list-description">
-                <a href="./typography.html">Typography</a>
+                <a href="./typography.php">Typography</a>
                 <p>You'll learn on how to change the typography</p>
               </div>
             </div>
@@ -192,23 +174,6 @@
       </div>
     </article>
 
-    <footer>
-      <div class="footer-container">
-        <div class="footer-nav">
-          <ul>
-            <li><a href="../tutorial.html">Tutorials</a></li>
-            <li><a href="../code-challenge.html">Code Challenges</a></li>
-            <li><a href="../about-us.html">About Us</a></li>
-            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
-            <li>
-              <a href="../terms-and-conditions.html">Terms & Conditions</a>
-            </li>
-          </ul>
-        </div>
-        <div class="copyright">
-          <span>© 2022 Copyright • Le Bateau</span>
-        </div>
-      </div>
-    </footer>
+    <?php include('./footer.php');?> 
   </body>
 </html>

@@ -43,17 +43,17 @@
           <ul>
             <li><h3>TOPICS</h3></li>
             <li>
-              <a href="./syntax-and-selectors.html">Syntax and Slectors</a>
+              <a href="./syntax-and-selectors.php">Syntax and Slectors</a>
             </li>
-            <li><a href="./visual-rules.html">Visual rules</a></li>
-            <li><a href="./box-model.html">The Box Model</a></li>
+            <li><a href="./visual-rules.php">Visual rules</a></li>
+            <li><a href="./box-model.php">The Box Model</a></li>
             <li>
-              <a href="./display-and-positioning.html"
+              <a href="./display-and-positioning.php"
                 >Display and Positioning</a
               >
             </li>
-            <li><a href="./colors.html">Colors</a></li>
-            <li><a href="./typography.html">Typography</a></li>
+            <li><a href="./colors.php">Colors</a></li>
+            <li><a href="./typography.php">Typography</a></li>
           </ul>
         </div>
       </div>

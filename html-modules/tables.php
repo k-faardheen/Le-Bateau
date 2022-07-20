@@ -10,34 +10,16 @@
     <title>Learn HTML - Tables</title>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <div class="lebateau">
-                <a href="../index.html"> >_Le Bateau</a>
-            </div>
- 
-             <nav>
-                <div class="links">
-                    <ul>
-                        <li><a href="../tutorial.html">Tutorials</a></li>
-                        <li><a href="../code-challenge.html">Code Challenges</a></li>
-                        <li><a href="../about-us.html">About Us</a></li>
-                        <li><a href="../log-in.html">Log in</a></li>
-                        <li><a href="../sign-up.html">Sign up</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>  
-    </header>
+    <?php include('./header.php'); ?>
     <section class="header">
         <div class="header-wrapper" id="2">
-            <h1 style="font-size: 3rem;">Tables</h1>
+            <h1>Tables</h1>
             <div class="menu">
                 <ul>
                     <li><h3>TOPICS</h3></li>
-                    <li id="1"><a href="./elements and structures.html">Elements and Structures</a></li>
-                    <li id="2"><a href="./tables.html">Tables</a></li>
-                    <li id="3"><a href="./forms.html">Forms</a></li>
+                    <li id="1"><a href="./elements and structures.php">Elements and Structures</a></li>
+                    <li id="2"><a href="./tables.php">Tables</a></li>
+                    <li id="3"><a href="./forms.php">Forms</a></li>
                 </ul>
             </div>
         </div>

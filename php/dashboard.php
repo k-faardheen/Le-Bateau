@@ -108,6 +108,7 @@
             <span style="font-size: 1.5rem; font-weight: bold;">Latest Courses</span>
             <ul class="courseList">
                 <?php
+                    // run a query to retrieve of the courses that the student is enrolled to. 
                     $registrationId = $_SESSION['registrationId']; 
                     $sql = "SELECT s.studentId, c.courseId, c.courseName 
                             FROM course c, enrollment e, student s, registration r
@@ -120,15 +121,19 @@
                     $result = mysqli_query($conn, $sql); 
                     $courses = mysqli_fetch_all($result, MYSQLI_ASSOC); 
 
+                    $_SESSION['courses'] = $courses; 
+
                     if(mysqli_num_rows($result) < 1) { 
-                    ?>
+                    ?>  
+                        <!-- if the query returns < than 1 the span tag will be rendered to the browser !--> 
                         <span class="noCourse">You have not yet enrolled to a course. You better get started! 🧙‍♂️</span>
                         <?php }else
+                                // Else, we will loop through the courses where each of the course will be rendered in an li tag. 
                                 foreach($courses as $course) {
                         ?> 
                                     <li>
                                         <div class="courseLi">
-                                            <a href="../<?php echo $course['courseName']?>-modules/learn-<?php echo $course['courseName'] ?>.html"><?php echo "Learn " . $course['courseName']?>
+                                            <a href="../<?php echo $course['courseName']?>-modules/learn-<?php echo $course['courseName'] ?>.php"><?php echo "Learn " . $course['courseName']?>
                                                 <div class="courseDetails">
                                                     <div class="courseName">
                                                         <span style="font-size: 0.9rem;">Course</span>

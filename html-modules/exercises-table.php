@@ -11,28 +11,10 @@
     <title>HTML - Exercises</title>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <div class="lebateau">
-                <a href="../index.html"> >_Le Bateau</a>
-            </div>
- 
-             <nav>
-                <div class="links">
-                    <ul>
-                        <li><a href="../tutorial.html">Tutorials</a></li>
-                        <li><a href="../code-challenge.html">Code Challenges</a></li>
-                        <li><a href="../about-us.html">About Us</a></li>
-                        <li><a href="../log-in.html">Log in</a></li>
-                        <li><a href="../sign-up.html">Sign up</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>  
-    </header>
+    <?php include('./header.php'); ?>
 
     <section class="header">
-        <div class="header-wrapper" id="1">
+        <div class="header-wrapper" id="2">
             <h1>Exercises</h1>
             <div class="menu">
                 <ul>
@@ -48,7 +30,8 @@
     <main class="main-wrapper">
         <section>
             <div class="explanation">
-                <p>Use the correct HTML tag to add a heading with the text "London".</p>
+                <p>Add a table row with two tables headers.</p>
+                <p>The two table headers should have the value "Name" and "Age".</p>
             </div>
 
             <form action="validate.php" method="post" id="2">
@@ -69,9 +52,25 @@
                     </div>
 
                     <div class="code-snippet">
+                        <span>&lt;table&gt;</span>
+                        <br>
+                        <input type="text" id="quiz">
+                        <br>
                         <input type="text" id="quiz" style="width: 40%;">
                         <br>
-                        <span>&lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;</span>
+                        <input type="text" id="quiz" style="width: 40%;">
+                        <br>
+                        <input type="text" id="quiz">
+                        <br>
+                        <span>&lt;tr&gt;</span>
+                        <br>
+                        <span>&lt;td&gt;Jill Smith&lt;/td&gt;</span>
+                        <br>
+                        <span>&lt;td&gt;50&lt;/td&gt;</span>
+                        <br>
+                        <span>&lt;/tr&gt;</span>
+                        <br>
+                        <span>&lt;/table&gt;</span>
                     </div>
     
                     <div class="btn-wrapper">
@@ -82,11 +81,10 @@
                 </div>
             </form>
         </section>
-
         <section>
             <div class="explanation">
-                <p>Add six headings to the document with the text "Hello".</p>
-                <p>Start with the most important heading (the largest) and end with the least important heading (the smallest).</p>
+                <p>Add a table row at the end of the table, with two table cells.</p>
+                <p>The two table cells should have the value "Eve Jackson" and "94".</p>
             </div>
 
             <form action="validate.php" method="post" id="3">
@@ -107,25 +105,33 @@
                     </div>
 
                     <div class="code-snippet">
-                        <span class="tag">&lt;html&gt;</span>
+                        <span>&lt;table&gt;</span>
                         <br>
-                        <span class="tag">&lt;body&gt;</span>
+                        <span>&lt;tr&gt;</span>
+                        <br>
+                        <span>&lt;th&gt;Name&lt;/th&gt;</span>
+                        <br>
+                        <span>&lt;th&gt;Age&lt;/th&gt;</span>
+                        <br>
+                        <span>&lt;/tr&gt;</span>
+                        <br>
+                        <span>&lt;tr&gt;</span>
+                        <br>
+                        <span>&lt;td&gt;Jill Smith&lt;/td&gt;</span>
+                        <br>
+                        <span>&lt;td&gt;50&lt;/td&gt;</span>
+                        <br>
+                        <span>&lt;/tr&gt;</span>
+                        <br>
+                        <input type="text" id="quiz">
                         <br>
                         <input type="text" id="quiz" style="width: 40%;">
                         <br>
                         <input type="text" id="quiz" style="width: 40%;">
                         <br>
-                        <input type="text" id="quiz" style="width: 40%;">
+                        <input type="text" id="quiz">
                         <br>
-                        <input type="text" id="quiz" style="width: 40%;">
-                        <br>
-                        <input type="text" id="quiz" style="width: 40%;">
-                        <br>
-                        <input type="text" id="quiz" style="width: 40%;">
-                        <br>
-                        <span class="tag">&lt;/body&gt;</span>
-                        <br>
-                        <span class="tag">&lt;/html&gt;</span>
+                        <span>&lt;/table&gt;</span>
                     </div>
     
                     <div class="btn-wrapper">
@@ -136,51 +142,60 @@
                 </div>
             </form>
         </section>
-        <section>
-            <div class="explanation">
-                <p>Mark up the text with appropriate tags:</p>
-                <p>"Universal Studios Presents" is the most important heading.</p>
-                <p>"Jurassic Park" is the next most important heading.</p>
-                <p>"About" is the third most important heading.</p>
-                <p>The last sentence is just a paragraph.</p>
-                <p>Start with the most important heading (the largest) and end with the least important heading (the smallest).</p>
+        <form action="validate.php" method="post" id="4">
+            <div class="code-snippet-wrapper">
+                <div class="correct" style="display: none;">
+                    <div class="tick">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </div>
+                    <span class="correct-msg">Correct!</span>
+                    <br>
+                </div>
+
+                <div class="wrong" style="display: none;">
+                    <div class="cross">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </div>
+                    <span class="wrong-msg">Wrong!</span>
+                </div>
+
+                <div class="code-snippet">
+                    <span>&lt;table&gt;</span>
+                    <br>
+                    <span>&lt;tr&gt;</span>
+                    <br>
+                    <span>&lt;th&gt;<input type="text" id="quiz" style="width: 20%;">&gt;Name&lt;/th&gt;</span>
+                    <br>
+                    <span>&lt;th&gt;Age&lt;/th&gt;</span>
+                    <br>
+                    <span>&lt;/tr&gt;</span>
+                    <br>
+                    <span>&lt;tr&gt;</span>
+                    <br>
+                    <span>&lt;td&gt;Jill Smith&lt;/td&gt;</span>
+                    <br>
+                    <span>&lt;td&gt;50&lt;/td&gt;</span>
+                    <br>
+                    <span>&lt;/tr&gt;</span>
+                    <br>
+                    <span>&lt;tr&gt;</span>
+                    <br>
+                    <span>&lt;td&gt;Eve Smith&lt;/td&gt;</span>
+                    <br>
+                    <span>&lt;td&gt;45&lt;/td&gt;</span>
+                    <br>
+                    <span>&lt;/tr&gt;</span>
+                    <span>&lt;/table&gt;</span>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button id="submit">Submit your answer</button>
+                    <br>
+                    <button id="show-answer">Show Answer</button>
+                </div>
             </div>
-
-            <form action="validate.php" method="post" id="4">
-                <div class="code-snippet-wrapper">
-                    <div class="correct" style="display: none;">
-                        <div class="tick">
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                        <span class="correct-msg">Correct!</span>
-                        <br>
-                    </div>
-
-                    <div class="wrong" style="display: none;">
-                        <div class="cross">
-                            <i class="fa-regular fa-circle-xmark"></i>
-                        </div>
-                        <span class="wrong-msg">Wrong!</span>
-                    </div>
-
-                    <div class="code-snippet">
-                        <input type="text" id="quiz"><span>Univesal Studio Presents</span><input type="text" id="quiz">
-                        <br>
-                        <input type="text" id="quiz"><span>Jurassic Park</span><input type="text" id="quiz">
-                        <br>
-                        <input type="text" id="quiz"><span>About</span><input type="text" id="quiz">
-                        <br>
-                        <input type="text" id="quiz"><span>On the Island of Isla Nublar, a new park has been built: Jurassic Park is a theme park of cloned dinosaurs!!</span><input type="text" id="quiz">
-                    </div>
-    
-                    <div class="btn-wrapper">
-                        <button id="submit">Submit your answer</button>
-                        <br>
-                        <button id="show-answer">Show Answer</button>
-                    </div>
-                </div>
-            </form>
-        </section>
+        </form>
+    </section>
     </main>
     <script src="../script/styleLi.js"></script>
     <script src="./script/validateAnswer.js"></script>
