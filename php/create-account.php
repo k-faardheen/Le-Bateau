@@ -2,7 +2,7 @@
 include('connection.php');
 session_start();
 
-$fName = mysqli_real_escape_string($conn, $_POST['fname']); //Escape special characters in strings to avoid sql injection
+$fName = mysqli_real_escape_string($conn, $_POST['fname']); //Escape special characters in strings to avoid sql injection and store value taken from the form
 $lName = mysqli_real_escape_string($conn, $_POST['lname']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $role = mysqli_real_escape_string($conn, $_POST['profession']);
@@ -30,19 +30,18 @@ $rs_retId = mysqli_query($conn, $retId);
 
 if (mysqli_num_rows($rs_retId) > 0) {
     while ($row = $rs_retId->fetch_assoc()) {
-        $regId = $row['registrationId'];
+        $regId = $row['registrationId'];// store the registrationid
     }
 }
 
 $_SESSION['fName'] = $fName;
 $_SESSION['lName'] = $lName;
-
+$_SESSION['role'] = $role;
 //if the curent registered account is a student insert into student table else in the contributor table
 if ($role == 'student') {
     $insert = "insert into student(registrationId) values ('" . $regId . "')";//insert into student table
     if (mysqli_query($conn, $insert)) {
-        header('location:dashboard.php');
-        $_SESSION['role'] = $role;
+        
         $_SESSION['city'] = $city;
         $_SESSION['country'] = $country;
         $_SESSION['registrationId'] = $regId;
@@ -51,6 +50,7 @@ if ($role == 'student') {
         $studentId = mysqli_fetch_all($rs_stud, MYSQLI_ASSOC); 
 
         $_SESSION['studentId'] = $studentId[0]['studentId'];
+        header('location:dashboard.php');
     } else {
         echo "failed to insert into table student " . mysqli_error($conn);
     }
@@ -58,7 +58,7 @@ if ($role == 'student') {
     $insert = "insert into contributor(registrationId) values ('" . $regId . "')";//insert into contributor table
     if (mysqli_query($conn, $insert)) {
         header('location:../admin/admin.php');
-        $_SESSION['role'] = $role;
+        
     } else {
         echo "failed to insert into table contributor " . mysqli_error($conn);
     }

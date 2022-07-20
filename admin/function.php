@@ -1,6 +1,6 @@
 <?php
 
-function total($x){
+function total($x){//function that count total number of records
     include('../php/connection.php');
 if($x==1){
     //counting the total number posts 
