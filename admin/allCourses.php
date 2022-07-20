@@ -1,13 +1,12 @@
 <?php
 session_start();
-if(!isset($_SESSION['role'])){
-    header('location:../login-form.php');
+if(!isset($_SESSION['role'])){//looking if login
+    header('location:../login-form.php'); // if not login then redirect
 }else{
-    if($_SESSION['role']!="contributor"){
-        header('location:../login-form.php');
+    if($_SESSION['role']!="contributor"){// look if it is a contributor
+        header('location:../login-form.php');// if not login then redirect
     }else{
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +37,7 @@ if(!isset($_SESSION['role'])){
             </tr>
             </tr>
             <?php
-            $sql = "select * from course ORDER BY courseId DESC";
+            $sql = "select * from course ORDER BY courseId DESC";//selecting all the courses in the database by desc order
             $rs = mysqli_query($conn, $sql);
             if (mysqli_num_rows($rs) < 1) {
                 echo 'none';
