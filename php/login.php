@@ -27,11 +27,11 @@ if (isset($_session['fName'])) {
         }
         if ($_SESSION['role'] == 'student') {
             $registrationId = $_SESSION['registrationId']; 
-            $sql = "select studentId from student WHERE registrationId = '$registrationId'; "; 
+            $sql = "select studentId from student WHERE registrationId = '$registrationId'; "; //retrieving studentid for enrollement
             $result = mysqli_query($conn, $sql); 
             $studentId = mysqli_fetch_all($result, MYSQLI_ASSOC); 
 
-            $_SESSION['studentId'] = $studentId[0]['studentId']; //need studentid for enrollment
+            $_SESSION['studentId'] = $studentId[0]['studentId']; 
             header('location:dashboard.php');
         } else {
             header('location:../admin/admin.php');

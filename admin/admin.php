@@ -1,10 +1,10 @@
 <?php
 session_start();
-if(!isset($_SESSION['role'])){
-    header('location:../login-form.php');
+if(!isset($_SESSION['role'])){//looking if login
+    header('location:../login-form.php'); // if not login then redirect
 }else{
-    if($_SESSION['role']!="contributor"){
-        header('location:../login-form.php');
+    if($_SESSION['role']!="contributor"){// look if it is a contributor
+        header('location:../login-form.php');// if not login then redirect
     }else{
 ?>
 
@@ -33,17 +33,17 @@ if(!isset($_SESSION['role'])){
 
         <div class="post">
             <img src="../assets/docs.png" width="50" height="50">
-            <h4><?php echo total(1); ?></h4><br>
+            <h4><?php echo total(1); // calling a function where it calculate the total number of post?></h4><br>
             <button><a href="allPosts.php">view all posts</a></button>
         </div>
         <div class="course">
             <img src="../assets/learning (1).png" width="50" height="50">
-            <h4><?php echo total(2); ?></h4><br>
+            <h4><?php echo total(2); // calling a function where it calculate the total number of courses?></h4><br>
             <button><a href="allCourses.php">view all courses</a></button>
         </div>
         <div class="users">
             <img src="../assets/user (1).png" width="50" height="50">
-            <h4><?php echo total(3); ?></h4><br>
+            <h4><?php echo total(3); // calling a function where it calculate the total number of users?></h4><br>
             <button><a href="allUsers.php">view all users</a></button>
         </div>
     </div>
@@ -65,7 +65,7 @@ if(!isset($_SESSION['role'])){
                 <th>Author</th>
             </tr>
             <?php
-            $sql = "select * from postcontent ORDER BY postId DESC limit 5";
+            $sql = "select * from postcontent ORDER BY postId DESC limit 5";//selecting the last 5 recent post added in the dabase
             $rs = mysqli_query($conn, $sql);
             if (mysqli_num_rows($rs) < 1) {
                 echo 'none';
