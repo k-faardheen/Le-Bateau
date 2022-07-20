@@ -3,7 +3,7 @@
     session_start(); 
 
     echo $_SESSION['studentId']; 
-    
+
     if(!isset($_SESSION['fName'])) { 
         echo 'you need to first login';
     }else { 
@@ -27,6 +27,7 @@
         if(mysqli_query($conn, $sql)) { 
             header('location:' . $path);
         }else { 
+            echo mysqli_error($conn);
             header('./enrollment.php');
         }
     }

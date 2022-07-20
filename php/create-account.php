@@ -25,7 +25,7 @@ if ($rs) {
 }
 
 $regId = 0;
-$retId = "select registrationId from registration where firstName = '$fName' and lastName = '$lName'";
+$retId = "select registrationId from registration where firstName = '$fName' and lastName = '$lName'";//getting the registrationid of the current user
 $rs_retId = mysqli_query($conn, $retId);
 
 if (mysqli_num_rows($rs_retId) > 0) {
@@ -37,9 +37,9 @@ if (mysqli_num_rows($rs_retId) > 0) {
 $_SESSION['fName'] = $fName;
 $_SESSION['lName'] = $lName;
 
-//if the registered account is a student insert into student table else in the contributor table
+//if the curent registered account is a student insert into student table else in the contributor table
 if ($role == 'student') {
-    $insert = "insert into student(registrationId) values ('" . $regId . "')";
+    $insert = "insert into student(registrationId) values ('" . $regId . "')";//insert into student table
     if (mysqli_query($conn, $insert)) {
         header('location:dashboard.php');
         $_SESSION['role'] = $role;
@@ -55,7 +55,7 @@ if ($role == 'student') {
         echo "failed to insert into table student " . mysqli_error($conn);
     }
 } else {
-    $insert = "insert into contributor(registrationId) values ('" . $regId . "')";
+    $insert = "insert into contributor(registrationId) values ('" . $regId . "')";//insert into contributor table
     if (mysqli_query($conn, $insert)) {
         header('location:../admin/admin.php');
         $_SESSION['role'] = $role;

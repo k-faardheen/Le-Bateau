@@ -10,7 +10,7 @@ if (isset($_session['fName'])) {
     $email = $_POST['email'];
     $pass = $_POST['password'];
 
-    $sql = "select * from registration where email = '$email' and password = '$pass'";
+    $sql = "select * from registration where email = '$email' and password = '$pass'";//check for password match in the database
     $rs = mysqli_query($conn, $sql);
 
 

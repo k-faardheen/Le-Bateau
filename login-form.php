@@ -22,7 +22,7 @@
         </div>
         <button class="btn" onclick="return validate()">Log In</button>
         <p>Not a member yet?<a href="sign-up.html"> Sign Up</a></p>
-        <a href="#">Forget password?</a><br>
+        <a href="forget-pwd.php">Forget password?</a><br>
         <?php
         if (isset($_GET['status'])) {
           if ($_GET['status'] == 'invalid') {

@@ -18,7 +18,7 @@ if (isset($_POST['name'])) {
         $sql = "insert into course(courseName, description, image) values('" . $name . "', '" . $decs . "', '" . $filename . "')";//insert into table
         $rs = mysqli_query($conn, $sql);
         if ($rs) {
-            move_uploaded_file($_FILES['image']['tmp_name'], $location);//ipload the image in the folder
+            move_uploaded_file($_FILES['image']['tmp_name'], $location);//upload the image in the folder
             $message = "ok";
         } else {
             $message =  mysqli_error($conn);
