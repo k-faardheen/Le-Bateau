@@ -11,28 +11,9 @@
     <title>HTML - Exercises</title>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <div class="lebateau">
-                <a href="../index.html"> >_Le Bateau</a>
-            </div>
- 
-             <nav>
-                <div class="links">
-                    <ul>
-                        <li><a href="../tutorial.html">Tutorials</a></li>
-                        <li><a href="../code-challenge.html">Code Challenges</a></li>
-                        <li><a href="../about-us.html">About Us</a></li>
-                        <li><a href="../log-in.html">Log in</a></li>
-                        <li><a href="../sign-up.html">Sign up</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>  
-    </header>
-
+    <?php include('./header.php'); ?>
     <section class="header">
-        <div class="header-wrapper" id="3">
+        <div class="header-wrapper" id="1">
             <h1>Exercises</h1>
             <div class="menu">
                 <ul>
@@ -48,7 +29,7 @@
     <main class="main-wrapper">
         <section>
             <div class="explanation">
-                <p>In the form below, add two radio buttons, both with the name "fav_language".</p>
+                <p>Use the correct HTML tag to add a heading with the text "London".</p>
             </div>
 
             <form action="validate.php" method="post" id="2">
@@ -69,13 +50,9 @@
                     </div>
 
                     <div class="code-snippet">
-                        <span>&lt;form&gt;</span>
+                        <input type="text" id="quiz" style="width: 40%;">
                         <br>
-                        <input type="text" id="quiz" style="width: 60%;"> <span> value = "html"&gt; HTML</span>
-                        <br>
-                        <input type="text" id="quiz" style="width: 60%;"> <span> value = "css"&gt; CSS</span>
-                        <br>
-                        <span>&lt;/form&gt;</span>
+                        <span>&lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;</span>
                     </div>
     
                     <div class="btn-wrapper">
@@ -86,13 +63,11 @@
                 </div>
             </form>
         </section>
+
         <section>
             <div class="explanation">
-                <p>In the form below, add the following: </p>
-                <ul>
-                    <li>An input of type text with a label for "name"</li>
-                    <li>An input of type number with a label for "balance"</li>
-                </ul>
+                <p>Add six headings to the document with the text "Hello".</p>
+                <p>Start with the most important heading (the largest) and end with the least important heading (the smallest).</p>
             </div>
 
             <form action="validate.php" method="post" id="3">
@@ -111,17 +86,27 @@
                         </div>
                         <span class="wrong-msg">Wrong!</span>
                     </div>
-                    
 
                     <div class="code-snippet">
-                        <span>&lt;form&gt;</span>
+                        <span class="tag">&lt;html&gt;</span>
                         <br>
-                        <input type="text" id="quiz" style="width: 40%;"> <input type="text" id="quiz" style="width: 60%;"> <span> value = "name"&gt;</span>
+                        <span class="tag">&lt;body&gt;</span>
                         <br>
                         <input type="text" id="quiz" style="width: 40%;">
-                        <input type="text" id="quiz" style="width: 60%;"> <span> value = "balance"&gt;</span>
                         <br>
-                        <span>&lt;/form&gt;</span>
+                        <input type="text" id="quiz" style="width: 40%;">
+                        <br>
+                        <input type="text" id="quiz" style="width: 40%;">
+                        <br>
+                        <input type="text" id="quiz" style="width: 40%;">
+                        <br>
+                        <input type="text" id="quiz" style="width: 40%;">
+                        <br>
+                        <input type="text" id="quiz" style="width: 40%;">
+                        <br>
+                        <span class="tag">&lt;/body&gt;</span>
+                        <br>
+                        <span class="tag">&lt;/html&gt;</span>
                     </div>
     
                     <div class="btn-wrapper">
@@ -133,10 +118,16 @@
             </form>
         </section>
         <section>
+            <div class="explanation">
+                <p>Mark up the text with appropriate tags:</p>
+                <p>"Universal Studios Presents" is the most important heading.</p>
+                <p>"Jurassic Park" is the next most important heading.</p>
+                <p>"About" is the third most important heading.</p>
+                <p>The last sentence is just a paragraph.</p>
+                <p>Start with the most important heading (the largest) and end with the least important heading (the smallest).</p>
+            </div>
+
             <form action="validate.php" method="post" id="4">
-                <div class="explanation">
-                    <p>In the form below, add the a <span class="highlight-keyword">&lt;button&gt;</span> element with the text "Click Me".</p>
-                </div>
                 <div class="code-snippet-wrapper">
                     <div class="correct" style="display: none;">
                         <div class="tick">
@@ -154,13 +145,15 @@
                     </div>
 
                     <div class="code-snippet">
-                        <span>&lt;form action="/action_page.php"&gt;</span>
+                        <input type="text" id="quiz"><span>Univesal Studio Presents</span><input type="text" id="quiz">
                         <br>
-                        <input type="text" id="quiz" style="width: 40%;">
+                        <input type="text" id="quiz"><span>Jurassic Park</span><input type="text" id="quiz">
                         <br>
-                        <span>&lt;/form&gt;</span>
+                        <input type="text" id="quiz"><span>About</span><input type="text" id="quiz">
+                        <br>
+                        <input type="text" id="quiz"><span>On the Island of Isla Nublar, a new park has been built: Jurassic Park is a theme park of cloned dinosaurs!!</span><input type="text" id="quiz">
                     </div>
-
+    
                     <div class="btn-wrapper">
                         <button id="submit">Submit your answer</button>
                         <br>

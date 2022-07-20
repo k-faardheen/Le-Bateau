@@ -158,10 +158,24 @@
                 </div>
             </div>
         </form>
+
+        <div class="showMoreBtn" style="display: flex; justify-content: center; padding: 1.45rem">
+            <a href="./courses.php" 
+            style=" text-decoration: none;
+            background-color: #1F7A8C;
+            color: white;
+            display: inline-block;
+            margin: 0.5rem 0;
+            padding: 0.5rem 2rem;
+            border-radius: 40px;">
+                Show More
+            </a>
+        </div>
+
     </section>
 
     <?php
-        include('.footer.php');
+        include('./footer.php');
     ?>
 </body>
 </html>

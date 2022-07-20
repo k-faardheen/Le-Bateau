@@ -9,26 +9,7 @@
     <title>Le Bateau - HTML</title>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <div class="lebateau">
-                <a href="../index.html"> >_Le Bateau</a>
-            </div>
- 
-             <nav>
-                <div class="links">
-                    <ul>
-                        <li><a href="../tutorial.html">Tutorials</a></li>
-                        <li><a href="../code-challenge.html">Code Challenges</a></li>
-                        <li><a href="../about-us.html">About Us</a></li>
-                        <li><a href="../log-in.html">Log in</a></li>
-                        <li><a href="../sign-up.html">Sign up</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-        </div>  
-    </header>
+    <?php include('./header.php'); ?>
 
     <section>
         <div class="banner-html">
@@ -37,7 +18,7 @@
             </div>
         
             <div class="banner-html-start">
-                <a href="../html-modules/elements and structures.html">Start</a>
+                <a href="../html-modules/elements and structures.php">Start</a>
             </div>
             
         </div>
@@ -76,7 +57,7 @@
                             <span>1</span>
                         </div>
                         <div class="list-description">
-                            <a href="./elements and structures.html">Elements and Structures</a>
+                            <a href="./elements and structures.php">Elements and Structures</a>
                             <p>Learn about HTML elements and structure, the building blocks of websites.</p>
                         </div>
                     </div>
@@ -88,7 +69,7 @@
                             <span>2</span>
                         </div>
                         <div class="list-description">
-                            <a href="./tables.html">Tables</a>
+                            <a href="./tables.php">Tables</a>
                             <p>You'll learn all the syntax you need to create tables in your HTML documents.</p>
                         </div>
                     </div>
@@ -100,7 +81,7 @@
                             <span>3</span>
                         </div>
                         <div class="list-description">
-                            <a href="./forms.html">Forms</a>
+                            <a href="./forms.php">Forms</a>
                             <p>You'll learn on how to create your own forms and integrate HTML5 validation.</p>
                         </div>
                     </div>
@@ -158,22 +139,6 @@
         </div>
     </article>
 
-    <footer>
-        <div class="footer-container">
-
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="./tutorial.html">Tutorials</a></li>
-                    <li><a href="./code-challenge.html">Code Challenges</a></li>
-                    <li><a href="../about-us.html">About Us</a></li>
-                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="../terms-and-conditions.html">Terms & Conditions</a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <span>© 2022 Copyright • Le Bateau</span>
-            </div>
-        </div>
-    </footer>
+    <?php include('./footer.php') ?>
 </body>
 </html>
