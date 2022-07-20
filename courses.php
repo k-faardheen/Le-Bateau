@@ -30,7 +30,7 @@
         <div class="card">
             <img src="./admin/contentImg/<?php echo $row['image']?>" width="100" height="100">
             <h3><?php echo $row['courseName']?></h3>
-            <button><a href="./php/enrollment.php?cid=<?php echo $row['courseId']?>">enrol</a></button>
+            <button><a href="./php/enrollment.php?cid=<?php echo $row['courseId']?>">enroll</a></button>
         </div>
         <?php
         }}
