@@ -9,26 +9,7 @@
     <title>Le Bateau - Javascript</title>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <div class="lebateau">
-                <a href="../index.html"> >_Le Bateau</a>
-            </div>
- 
-             <nav>
-                <div class="links">
-                    <ul>
-                        <li><a href="../tutorial.html">Tutorials</a></li>
-                        <li><a href="../code-challenge.html">Code Challenges</a></li>
-                        <li><a href="../about-us.html">About Us</a></li>
-                        <li><a href="../log-in.html">Log in</a></li>
-                        <li><a href="../sign-up.html">Sign up</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-        </div>  
-    </header>
+    <?php include('./header.php');  ?> 
 
     <section>
         <div class="banner-html">
@@ -37,7 +18,7 @@
             </div>
         
             <div class="banner-html-start">
-                <a href="../html-modules/elements and structures.html">Start</a>
+                <a href="../html-modules/elements and structures.php">Start</a>
             </div>
             
         </div>
@@ -73,7 +54,7 @@
                             <span>1</span>
                         </div>
                         <div class="list-description">
-                            <a href="./introduction.html">Introduction</a>
+                            <a href="./introduction.php">Introduction</a>
                             <p>You will learn all about JavaScript Fundamentals.</p>
                         </div>
                     </div>
@@ -85,7 +66,7 @@
                             <span>2</span>
                         </div>
                         <div class="list-description">
-                            <a href="./conditionals.html">Conditionals</a>
+                            <a href="./conditionals.php">Conditionals</a>
                             <p>Learn how to use conditional statements.</p>
                         </div>
                     </div>
@@ -97,7 +78,7 @@
                             <span>3</span>
                         </div>
                         <div class="list-description">
-                            <a href="./functions.html">Functions</a>
+                            <a href="./functions.php">Functions</a>
                             <p>Learn about JavaScript function syntax, passing data to functions, the return keyword, and concise body syntax.</p>
                         </div>
                     </div>
@@ -108,7 +89,7 @@
                             <span>4</span>
                         </div>
                         <div class="list-description">
-                            <a href="./arrays.html">Arrays</a>
+                            <a href="./arrays.php">Arrays</a>
                             <p>You will learn about the fundamentals of arrays.</p>
                         </div>
                     </div>
@@ -120,7 +101,7 @@
                             <span>5</span>
                         </div>
                         <div class="list-description">
-                            <a href="./loops.html">Loops</a>
+                            <a href="./loops.php">Loops</a>
                             <p>In this course, you will learn how to use for and while loops to execute blocks of code multiple times.</p>
                         </div>
                     </div>
@@ -178,22 +159,6 @@
         </div>
     </article>
 
-    <footer>
-        <div class="footer-container">
-
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="../tutorial.html">Tutorials</a></li>
-                    <li><a href="../code-challenge.html">Code Challenges</a></li>
-                    <li><a href="../about-us.html">About Us</a></li>
-                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="../terms-and-conditions.html">Terms & Conditions</a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <span>© 2022 Copyright • Le Bateau</span>
-            </div>
-        </div>
-    </footer>
+    <?php include('./footer.php');  ?> 
 </body>
 </html>
