@@ -14,39 +14,7 @@
 
 <body>
   <header>
-    <div class="nav-container">
-      <div class="lebateau">
-        <span>>_Le Bateau</span>
-      </div>
-      <nav>
-        <div class="links">
-          <ul>
-            <li><a href="./tutorial.html">Tutorials</a></li>
-            <li><a href="./code-challenge.html">Code Challenges</a></li>
-            <li><a href="./about-us.html">About Us</a></li>
-            <li><a href="./login-form.php">Log in</a></li>
-            <li><a href="./sign-up.html">Sign up</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <div class="bar-icon">
-        <button><i class="fa-solid fa-bars"></i></button>
-      </div>
-      <div class="responsive-menu" style="display: none;">
-        <nav>
-          <div class="responsive-links">
-            <ul>
-              <li><a href="./tutorial.html">Tutorials</a></li>
-              <li><a href="./code-challenge.html">Code Challenges</a></li>
-              <li><a href="./about-us.html">About Us</a></li>
-              <li><a href="./login-form.php">Log in</a></li>
-              <li><a href="./sign-up.html">Sign up</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
+   <?php include('header.php')?>
   </header>
   <div id="wrapper">
     <div id="container">
@@ -60,7 +28,7 @@
         include('./php/connection.php');
         if (isset($_POST['submit'])) {
           $email = $_POST['email'];
-          $sql = "select * from registration where email = '$email'";
+          $sql = "select * from registration where email = '$email'";//look for email in the database
           $rs = mysqli_query($conn, $sql);
 
           if (mysqli_num_rows($rs) < 1) {

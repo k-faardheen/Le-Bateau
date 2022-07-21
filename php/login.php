@@ -10,7 +10,7 @@ if (isset($_session['fName'])) {
     $email = $_POST['email'];
     $pass = $_POST['password'];
 
-    $sql = "select * from registration where email = '$email' and password = '$pass'";
+    $sql = "select * from registration where email = '$email' and password = '$pass'";//check for password match in the database
     $rs = mysqli_query($conn, $sql);
 
 
@@ -26,6 +26,12 @@ if (isset($_session['fName'])) {
             $_SESSION['country'] = $row['country']; 
         }
         if ($_SESSION['role'] == 'student') {
+            $registrationId = $_SESSION['registrationId']; 
+            $sql = "select studentId from student WHERE registrationId = '$registrationId'; "; //retrieving studentid for enrollement
+            $result = mysqli_query($conn, $sql); 
+            $studentId = mysqli_fetch_all($result, MYSQLI_ASSOC); 
+
+            $_SESSION['studentId'] = $studentId[0]['studentId']; 
             header('location:dashboard.php');
         } else {
             header('location:../admin/admin.php');

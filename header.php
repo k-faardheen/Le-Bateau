@@ -1,3 +1,4 @@
+<?session_start();?>
 <!DOCTYPE html>
 <html> 
     <head>
@@ -13,17 +14,17 @@
                  <nav>
                         <div class="links">
                             <ul style="display: flex; ">
-                                <li><a href="./tutorial.html">Tutorials</a></li>
+                                <li><a href="./tutorial.php">Courses</a></li>
                                 <li><a href="./code-challenge.html">Code Challenges</a></li>
                                 <li><a href="./about-us.html">About Us</a></li>
 
                                 <?php
+                                    session_start(); 
                                     if(!isset($_SESSION['fName'])) { 
                                 ?>
                                         <div class="auth"> 
                                             <li><a href="./login-form.php">Log in</a></li>
                                             <li><a href="./sign-up.html">Sign up</a></li>
-                                            <li><a href=""><i class="fa-solid fa-user"></i></a></li>
                                         </div>
                                     
                                    <?php }else { ?>
@@ -40,10 +41,10 @@
                     <nav>
                         <div class="responsive-links">
                             <ul>
-                                <li><a href="./tutorial.html">Tutorials</a></li>
+                                <li><a href="./tutorial.php">Tutorials</a></li>
                                 <li><a href="./code-challenge.html">Code Challenges</a></li>
                                 <li><a href="./about-us.html">About Us</a></li>
-                                <li><a href="./log-in.html">Log in</a></li>
+                                <li><a href="./login-form.php">Log in</a></li>
                                 <li><a href="./sign-up.html">Sign up</a></li>
                             </ul>
                         </div>

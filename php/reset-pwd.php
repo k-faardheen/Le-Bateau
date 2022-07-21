@@ -62,17 +62,17 @@
                 include('connection.php');
                 if (isset($_POST['submit'])) {
 
-                    $pass = mysqli_real_escape_string($conn, $_POST['pass']);
+                    $pass = mysqli_real_escape_string($conn, $_POST['pass']);//Escape special characters in strings to avoid sql injection
                     $cpass = mysqli_real_escape_string($conn, $_POST['cpass']);
                     $email = $_SESSION['email'];
-                    if (strcmp($pass, $cpass) !== 0) {
+                    if (strcmp($pass, $cpass) !== 0) {//compare password
                         echo "<font color='red'>password doesnot match</font>";
                     }else{
-                        $sql = "UPDATE registration SET password = '" . $pass . "' WHERE email = '$email'";
+                        $sql = "UPDATE registration SET password = '" . $pass . "' WHERE email = '$email'";//update password in the database
                         $rs = mysqli_query($conn, $sql);
     
                         if ($rs) {
-                            header('location:dashboard.php');
+                            header('location:../login-form.php');
                         } else {
                             echo 'A error has occured';
                         }

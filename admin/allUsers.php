@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(!isset($_SESSION['role'])){//looking if login
+    header('location:../login-form.php'); // if not login then redirect
+}else{
+    if($_SESSION['role']!="contributor"){// look if it is a contributor
+        header('location:../login-form.php');// if not login then redirect
+    }else{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,42 +23,44 @@
 </head>
 
 <body>
-    <?php include('../header.php'); 
-        include('../php/connection.php');
+    <?php include('./header.php');
+    include('../php/connection.php');
     ?>
     <h1>All Users
     </h1>
     <div class="table-wrapper" style="margin-top:0%;">
-        
+
         <table style="width:80%">
-        <tr>
+            <tr>
                 <th>Id</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Country</th>
             </tr>
             <?php
-            $sql = "select * from registration where role = 'contributor'";
+            $sql = "select * from registration where role = 'contributor'";// selecting all the contributor in the databse
             $rs = mysqli_query($conn, $sql);
-            if(mysqli_num_rows($rs)<1){
+            if (mysqli_num_rows($rs) < 1) {
                 echo 'none';
-        
-            }else{
-                while($row = $rs->fetch_assoc()){ ?>
+            } else {
+                while ($row = $rs->fetch_assoc()) { ?>
                     <tr>
-                    <td><?php echo$row['registrationId']?></td>
-                    <td><?php echo$row['firstName']?></td>
-                    <td><?php echo$row['lastName']?></td>
-                    <td><?php echo$row['country']?></td>
-                </tr>
-<?php
+                        <td><?php echo $row['registrationId'] ?></td>
+                        <td><?php echo $row['firstName'] ?></td>
+                        <td><?php echo $row['lastName'] ?></td>
+                        <td><?php echo $row['country'] ?></td>
+                    </tr>
+            <?php
                 }
-            
             }
             ?>
-            
+
         </table>
     </div>
 </body>
 
 </html>
+
+<?php 
+}}
+?>

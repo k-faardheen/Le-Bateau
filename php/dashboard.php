@@ -21,7 +21,7 @@
 </head>
 <body>
     <?php
-        include('../header.php'); 
+        include('./header.php'); 
     ?>
 
     <div class="dashboard-wrapper">
@@ -37,7 +37,7 @@
                     <br>
                     <span>
                         <?php
-                            echo $_SESSION['fName'] . " " . $_SESSION['lname']; 
+                            echo $_SESSION['fName'] . " " . $_SESSION['lName']; 
                         ?> 
                     </span>
                     
@@ -108,8 +108,9 @@
             <span style="font-size: 1.5rem; font-weight: bold;">Latest Courses</span>
             <ul class="courseList">
                 <?php
+                    // run a query to retrieve of the courses that the student is enrolled to. 
                     $registrationId = $_SESSION['registrationId']; 
-                    $sql = "SELECT c.courseId, c.name 
+                    $sql = "SELECT s.studentId, c.courseId, c.courseName 
                             FROM course c, enrollment e, student s, registration r
                             WHERE c.courseId = e.courseId
                             AND s.studentId = e.studentId
@@ -119,32 +120,40 @@
 
                     $result = mysqli_query($conn, $sql); 
                     $courses = mysqli_fetch_all($result, MYSQLI_ASSOC); 
-                    
-                    foreach($courses as $course) {
-                ?>
-                    <li>
-                        <button class="courseBtn" id="<?php echo $course['courseId'] ?>">
-                            <div class="courseDetails">
-                                <div class="courseName">
-                                    <span style="font-size: 0.9rem;">Course</span>
-                                    <br>
-                                    <span><?php echo "Learn " . $course['name'] ?></span>
-                                </div>
-                                <div class="resumeIcon">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </div>
-                            </div>
-                        </button>
-                    </li>
-                <?php } ?>
+
+                    $_SESSION['courses'] = $courses; 
+
+                    if(mysqli_num_rows($result) < 1) { 
+                    ?>  
+                        <!-- if the query returns < than 1 the span tag will be rendered to the browser !--> 
+                        <span class="noCourse">You have not yet enrolled to a course. You better get started! 🧙‍♂️</span>
+                        <?php }else
+                                // Else, we will loop through the courses where each of the course will be rendered in an li tag. 
+                                foreach($courses as $course) {
+                        ?> 
+                                    <li>
+                                        <div class="courseLi">
+                                            <a href="../<?php echo $course['courseName']?>-modules/learn-<?php echo $course['courseName'] ?>.php"><?php echo "Learn " . $course['courseName']?>
+                                                <div class="courseDetails">
+                                                    <div class="courseName">
+                                                        <span style="font-size: 0.9rem;">Course</span>
+                                                    </div>
+                                                    <div class="resumeIcon">
+                                                        <i class="fa-solid fa-chevron-right"></i>
+                                                    </div>
+                                                </div>
+                                            </a> 
+                                        </div>
+                                    </li>
+                                <?php } ?> 
             </ul>
         </div>
     </div>
 
-    <a href="logout.php">Logout</a>
+    <a href="logout.php" class="logoutBtn" style="text-decoration: none; color:#1F7A8C; ">Logout</a>
 
     <?php 
-        include('../footer.php'); 
+        include('./footer.php'); 
     ?> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../script/dashboard.js"></script>

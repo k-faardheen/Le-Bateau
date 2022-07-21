@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(!isset($_SESSION['role'])){//looking if login
+    header('location:../login-form.php'); // if not login then redirect
+}else{
+    if($_SESSION['role']!="contributor"){// look if it is a contributor
+        header('location:../login-form.php');// if not login then redirect
+    }else{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,27 +23,27 @@
 </head>
 
 <body>
-    <?php include('../header.php');
+    <?php include('./header.php');
     include('function.php');
     include('../php/connection.php')
-     ?>
-    <h1>Darshboard
+    ?>
+    <h1>Dashboard
     </h1>
     <div class="wrapper">
 
         <div class="post">
             <img src="../assets/docs.png" width="50" height="50">
-            <h4><?php echo total(1);?></h4><br>
+            <h4><?php echo total(1); // calling a function where it calculate the total number of post?></h4><br>
             <button><a href="allPosts.php">view all posts</a></button>
         </div>
         <div class="course">
             <img src="../assets/learning (1).png" width="50" height="50">
-            <h4><?php echo total(2);?></h4><br>
+            <h4><?php echo total(2); // calling a function where it calculate the total number of courses?></h4><br>
             <button><a href="allCourses.php">view all courses</a></button>
         </div>
         <div class="users">
             <img src="../assets/user (1).png" width="50" height="50">
-            <h4><?php echo total(3);?></h4><br>
+            <h4><?php echo total(3); // calling a function where it calculate the total number of users?></h4><br>
             <button><a href="allUsers.php">view all users</a></button>
         </div>
     </div>
@@ -55,31 +65,32 @@
                 <th>Author</th>
             </tr>
             <?php
-            $sql = "select * from postcontent ORDER BY postId DESC limit 5";
+            $sql = "select * from postcontent ORDER BY postId DESC limit 5";//selecting the last 5 recent post added in the dabase
             $rs = mysqli_query($conn, $sql);
-            if(mysqli_num_rows($rs)<1){
+            if (mysqli_num_rows($rs) < 1) {
                 echo 'none';
-        
-            }else{
-                while($row = $rs->fetch_assoc()){ ?>
+            } else {
+                while ($row = $rs->fetch_assoc()) { ?>
                     <tr>
-                    <td><?php echo$row['postId']?></td>
-                    <td><?php echo$row['title']?></td>
-                    <td><?php echo$row['course']?></td>
-                    <td><img src="./contentImg/<?php echo$row['image']?>" width="50" height="50"></td>
-                    <td><?php echo$row['author']?></td>
-                    <td><a href="./post.php?id=<?php echo$row['postId']?>">view post</a><br>
-                    <a href="./delete.php?id=<?php echo$row['postId']?>">delete</a><br>
-                    <a href="./edit.php?id=<?php echo$row['postId']?>">edit</a></td>
-                </tr>
-<?php
+                        <td><?php echo $row['postId'] ?></td>
+                        <td><?php echo $row['title'] ?></td>
+                        <td><?php echo $row['course'] ?></td>
+                        <td><img src="./contentImg/<?php echo $row['image'] ?>" width="50" height="50"></td>
+                        <td><?php echo $row['author'] ?></td>
+                        <td><a href="../php/post.php?pid=<?php echo $row['postId'] ?>">view post</a><br>
+                            <a href="./delete.php?pid=<?php echo $row['postId'] ?>">delete</a><br>
+                        </td>
+                    </tr>
+            <?php
                 }
-            
             }
             ?>
-            
+
         </table>
     </div>
 </body>
 
 </html>
+<?php 
+}}
+?>
