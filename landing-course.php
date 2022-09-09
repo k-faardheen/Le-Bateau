@@ -1,12 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION['role'])){
-    header('location:../login-form.php');
-    
-}else{
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +14,10 @@ if(!isset($_SESSION['role'])){
 <body>
     <?php
     include('header.php');
+    if(!isset($_SESSION['role'])){
+        header('location:../login-form.php');
+        
+    }else{
     include('./php/connection.php');
     if (!isset($_GET['cid'])) {
         echo '404 not found';

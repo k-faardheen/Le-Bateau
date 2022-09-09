@@ -78,6 +78,7 @@ if(!isset($_SESSION['role'])){//looking if login
                         <td><img src="./contentImg/<?php echo $row['image'] ?>" width="50" height="50"></td>
                         <td><?php echo $row['author'] ?></td>
                         <td><a href="../php/post.php?pid=<?php echo $row['postId'] ?>">view post</a><br>
+                        <a href="./updatePost.php?pid=<?php echo $row['postId'] ?>">update post</a><br>
                             <a href="./delete.php?pid=<?php echo $row['postId'] ?>">delete</a><br>
                         </td>
                     </tr>
